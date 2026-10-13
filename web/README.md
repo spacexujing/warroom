@@ -4,7 +4,15 @@
 
 ## 启动
 
-需要 Node.js 20 或以上：
+需要 Node.js 20 或以上。在仓库根目录运行：
+
+```sh
+./run.sh
+```
+
+脚本可从其他目录通过完整路径调用，前台运行并支持 `Ctrl+C` 停止；继承 `HOST`、`PORT`、`WARROOM_SAVE_PATH` 设置。不需要安装 npm 依赖。
+
+也可直接从 `web/` 启动：
 
 ```sh
 cd web

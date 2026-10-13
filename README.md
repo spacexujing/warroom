@@ -3,11 +3,12 @@
 当前可运行的开发入口为 `web/`。需要 Node.js 20+，运行：
 
 ```sh
-cd web
-npm start
+./run.sh
 ```
 
 打开 http://127.0.0.1:3000 。独立引擎提供七阶段的主要结算、操作预览、自动存档与结算记录。
+
+`run.sh` 可从任意工作目录调用，检查 Node.js 版本后在前台启动服务，按 `Ctrl+C` 停止。可用 `HOST`、`PORT`、`WARROOM_SAVE_PATH` 指定监听地址、端口和存档路径，例如 `PORT=8080 ./run.sh`。
 
 - [运行与规则说明](web/README.md)
 - [界面截图与审阅顺序](docs/UI_REVIEW.md)
