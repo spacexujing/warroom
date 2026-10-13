@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAR ROOM</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- 世界地图层 -->
+  <div id="map-wrap">
+    <canvas id="map-canvas"></canvas>
+  </div>
+
+  <!-- 左上：单侧阵营栏（自己置顶 + 同阵营 + 敌对，三段） -->
+  <div id="nation-panel">
+    <div id="panel-self" class="panel-group"></div>
+    <div id="panel-ally" class="panel-group"></div>
+    <div id="panel-enemy" class="panel-group"></div>
+    <!-- 向上收起：收起除自己外的所有国家 -->
+    <button id="collapse-all" class="collapse-all" title="收起其他国家">▲</button>
+  </div>
+
+  <!-- 右侧：行动界面占位区（约占宽度 30%） -->
+  <div id="action-panel">
+    <!-- 顶部标签栏 -->
+    <div class="action-tabs">
+      <button class="action-tab active" data-tab="action">行动</button>
+      <button class="action-tab" data-tab="territory">地块</button>
+      <button class="action-tab" data-tab="unit">部队</button>
+      <button class="action-tab" data-tab="production">生产</button>
+    </div>
+
+    <!-- 内容区（四个页面，切换显示） -->
+    <div class="action-body">
+      <div class="action-page" data-page="action">
+        <!-- 顶部：7 格阶段进度条 + 右侧「确认」大红按钮 -->
+        <div class="phase-progress">
+          <div id="phase-steps" class="phase-steps"></div>
+          <button id="confirm-btn" class="confirm-btn" title="确认 / 取消确认">确认</button>
+        </div>
+        <!-- 行动页内容（阶段1 国民经济）：新增资源 / 结算后储量 / 地块变化 -->
+        <div id="action-content" class="action-content"></div>
+      </div>
+      <div class="action-page" data-page="territory" hidden>
+        <div id="territory-cards" class="territory-cards">
+          <div id="tc-left" class="tc-col tc-col-left"></div>
+          <div id="tc-right" class="tc-col tc-col-right"></div>
+        </div>
+      </div>
+      <div class="action-page" data-page="unit" hidden>
+        <div id="unit-panel-reserve" class="unit-reserve"></div>
+        <div id="unit-panel-active" class="unit-active"></div>
+      </div>
+      <div class="action-page" data-page="production" hidden>生产 — 内容占位</div>
+    </div>
+  </div>
+
+  <!-- 行动界面收起/展开标签（独立于面板，永远贴视口右上角可见） -->
+  <button id="action-toggle" class="action-toggle" title="收起/展开行动界面（空格）">▶</button>
+
+  <!-- 底部状态条（阶段/轮次，占位） -->
+  <div id="status-bar">
+    <span id="phase-label">—</span>
+    <span id="round-label">—</span>
+  </div>
+
+  <!-- 左下角：视窗类按钮工具栏（可扩展，后续在此增加更多开关） -->
+  <div id="view-toolbar" class="view-toolbar">
+    <button class="view-btn" id="vt-card-marks" title="显示/隐藏 地块卡编号标注">地块编号</button>
+  </div>
+
+  <!-- 轻提示（非法指令等） -->
+  <div id="toast" class="toast" hidden></div>
+
+  <!-- 部分压制：部队拆分弹窗 -->
+  <div id="split-backdrop" class="split-backdrop" hidden></div>
+  <div id="split-modal" class="split-modal" hidden>
+    <div class="split-title">部分压制 · 拆分留守部队</div>
+    <div class="split-body">
+      <div class="split-col">
+        <div class="split-col-title">当前部队</div>
+        <div class="split-src" id="split-src"></div>
+      </div>
+      <div class="split-arrow">→</div>
+      <div class="split-col">
+        <div class="split-col-title">留守番号 <span id="split-free-label"></span></div>
+        <div class="split-dst" id="split-dst"></div>
+      </div>
+    </div>
+    <div class="split-actions">
+      <button class="split-confirm" id="split-confirm-btn">确认</button>
+      <button class="split-cancel" id="split-cancel-btn">取消指令</button>
+    </div>
+  </div>
+
+  <!-- 回合顺位区（阶段2 步骤2-3）：地图上方中部向下展开 -->
+  <div id="turn-order" class="turn-order" hidden>
+    <div class="to-top" id="to-bids"></div>
+    <div class="to-slots" id="to-slots"></div>
+  </div>
+
+  <!-- 阶段3 移动结算提示（仅当前指令所属国可见）：点击路线移动 / 点击取消 -->
+  <div id="move-prompt" class="move-prompt" hidden>
+    <span class="move-pinned-msg" id="move-pinned-msg" hidden>部队被压制</span>
+    <button class="move-prompt-btn move-confirm" id="move-confirm-btn">点击路线以移动</button>
+    <button class="move-prompt-btn move-cancel" id="move-cancel-btn">点击此处取消指令</button>
+  </div>
+
+  <!-- 顶部标题 -->
+  <div id="title">WAR ROOM</div>
+
+  <!-- 合并与拆分部队 弹窗（半透明；以左起35%为中心，高60%、宽40%） -->
+  <div id="merge-backdrop" class="merge-backdrop" hidden></div>
+  <div id="merge-modal" class="merge-modal" hidden>
+    <div class="merge-modal-inner">
+      <div class="merge-header">
+        <span id="merge-title">合并与拆分部队</span>
+        <button id="merge-close" class="merge-close" title="关闭">✕</button>
+      </div>
+      <div id="merge-body" class="merge-body"></div>
+    </div>
+  </div>
+
+  <!-- 底部：强制推进按钮（默认收起的小圆点；点击后 0.5s 上升到页面正中，占高 50%） -->
+  <button id="force-advance-tab" class="force-advance-tab" title="强制推进阶段">▲</button>
+  <div id="force-advance-backdrop" class="force-advance-backdrop" hidden></div>
+  <button id="force-advance-btn" class="force-advance-btn" hidden>强制推进阶段<br><span class="fa-sub">（全体视为已确认）</span></button>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

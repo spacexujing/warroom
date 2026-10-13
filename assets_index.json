@@ -1,0 +1,1252 @@
+{
+ "Air_return_allied.png": {
+  "bytes": 6462,
+  "w": null,
+  "h": null
+ },
+ "Air_return_axis.png": {
+  "bytes": 6640,
+  "w": null,
+  "h": null
+ },
+ "Armor.jpg": {
+  "bytes": 3695,
+  "w": null,
+  "h": null
+ },
+ "Arrow_allied.png": {
+  "bytes": 6462,
+  "w": null,
+  "h": null
+ },
+ "Arrow_axis.png": {
+  "bytes": 6640,
+  "w": null,
+  "h": null
+ },
+ "Artillery.jpg": {
+  "bytes": 3647,
+  "w": null,
+  "h": null
+ },
+ "Battleship.jpg": {
+  "bytes": 6357,
+  "w": null,
+  "h": null
+ },
+ "Bomb.png": {
+  "bytes": 9041,
+  "w": null,
+  "h": null
+ },
+ "Bomber.jpg": {
+  "bytes": 4499,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_11.png": {
+  "bytes": 30909,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_12.png": {
+  "bytes": 33320,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_13.png": {
+  "bytes": 32467,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_14.png": {
+  "bytes": 31468,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_15.png": {
+  "bytes": 31849,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_16.png": {
+  "bytes": 33595,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_17.png": {
+  "bytes": 26968,
+  "w": null,
+  "h": null
+ },
+ "Britain_Air_18.png": {
+  "bytes": 29470,
+  "w": null,
+  "h": null
+ },
+ "Britain_Flag.jpg": {
+  "bytes": 13140,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_28.png": {
+  "bytes": 30377,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_32.png": {
+  "bytes": 29429,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_36.png": {
+  "bytes": 35143,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_45.png": {
+  "bytes": 32879,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_47.png": {
+  "bytes": 30709,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_53.png": {
+  "bytes": 32544,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_60.png": {
+  "bytes": 35773,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_63.png": {
+  "bytes": 34099,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_68.png": {
+  "bytes": 35202,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_71.png": {
+  "bytes": 29538,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_75.png": {
+  "bytes": 31013,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_80.png": {
+  "bytes": 34797,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_88.png": {
+  "bytes": 31011,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_90.png": {
+  "bytes": 34115,
+  "w": null,
+  "h": null
+ },
+ "Britain_Land_96.png": {
+  "bytes": 30263,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_1.png": {
+  "bytes": 48091,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_2.png": {
+  "bytes": 59073,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_3.png": {
+  "bytes": 60565,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_4.png": {
+  "bytes": 49095,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_5.png": {
+  "bytes": 50439,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_6.png": {
+  "bytes": 61486,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_7.png": {
+  "bytes": 58370,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_8.png": {
+  "bytes": 62044,
+  "w": null,
+  "h": null
+ },
+ "Britain_Sea_9.png": {
+  "bytes": 62146,
+  "w": null,
+  "h": null
+ },
+ "Britain_land_back.jpg": {
+  "bytes": 2552948,
+  "w": null,
+  "h": null
+ },
+ "Britain_land_back_cn.jpg": {
+  "bytes": 3570992,
+  "w": null,
+  "h": null
+ },
+ "Britain_land_front.jpg": {
+  "bytes": 2728828,
+  "w": null,
+  "h": null
+ },
+ "Britain_land_front_cn.jpg": {
+  "bytes": 3642365,
+  "w": null,
+  "h": null
+ },
+ "Carrier.jpg": {
+  "bytes": 5164,
+  "w": null,
+  "h": null
+ },
+ "CarrierFighter_allied.png": {
+  "bytes": 20403,
+  "w": null,
+  "h": null
+ },
+ "CarrierFighter_axis.png": {
+  "bytes": 20352,
+  "w": null,
+  "h": null
+ },
+ "China_Flag.jpg": {
+  "bytes": 8567,
+  "w": null,
+  "h": null
+ },
+ "China_Land_100.png": {
+  "bytes": 23614,
+  "w": null,
+  "h": null
+ },
+ "China_Land_101.png": {
+  "bytes": 27509,
+  "w": null,
+  "h": null
+ },
+ "China_Land_102.png": {
+  "bytes": 30438,
+  "w": null,
+  "h": null
+ },
+ "China_Land_103.png": {
+  "bytes": 30257,
+  "w": null,
+  "h": null
+ },
+ "China_Land_104.png": {
+  "bytes": 29273,
+  "w": null,
+  "h": null
+ },
+ "China_Land_105.png": {
+  "bytes": 29372,
+  "w": null,
+  "h": null
+ },
+ "China_Land_106.png": {
+  "bytes": 24449,
+  "w": null,
+  "h": null
+ },
+ "China_Land_107.png": {
+  "bytes": 22339,
+  "w": null,
+  "h": null
+ },
+ "China_land_back.jpg": {
+  "bytes": 403940,
+  "w": null,
+  "h": null
+ },
+ "China_land_back_cn.jpg": {
+  "bytes": 699248,
+  "w": null,
+  "h": null
+ },
+ "China_land_front.jpg": {
+  "bytes": 417125,
+  "w": null,
+  "h": null
+ },
+ "China_land_front_cn.jpg": {
+  "bytes": 676682,
+  "w": null,
+  "h": null
+ },
+ "CivilianGoods.png": {
+  "bytes": 66607,
+  "w": null,
+  "h": null
+ },
+ "Convoy_Casualties.png": {
+  "bytes": 23665,
+  "w": null,
+  "h": null
+ },
+ "Cruiser.jpg": {
+  "bytes": 5678,
+  "w": null,
+  "h": null
+ },
+ "Dived_Submarine.png": {
+  "bytes": 23576,
+  "w": null,
+  "h": null
+ },
+ "Fighter.jpg": {
+  "bytes": 3782,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_11.png": {
+  "bytes": 28652,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_12.png": {
+  "bytes": 31496,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_13.png": {
+  "bytes": 31172,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_14.png": {
+  "bytes": 29155,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_15.png": {
+  "bytes": 30499,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_16.png": {
+  "bytes": 30936,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_17.png": {
+  "bytes": 29239,
+  "w": null,
+  "h": null
+ },
+ "Germany_Air_18.png": {
+  "bytes": 27922,
+  "w": null,
+  "h": null
+ },
+ "Germany_Flag.jpg": {
+  "bytes": 8694,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_22.png": {
+  "bytes": 25465,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_33.png": {
+  "bytes": 29110,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_37.png": {
+  "bytes": 26645,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_38.png": {
+  "bytes": 30230,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_40.png": {
+  "bytes": 27152,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_48.png": {
+  "bytes": 29959,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_49.png": {
+  "bytes": 28110,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_55.png": {
+  "bytes": 29341,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_56.png": {
+  "bytes": 29311,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_59.png": {
+  "bytes": 28972,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_61.png": {
+  "bytes": 28918,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_72.png": {
+  "bytes": 29101,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_84.png": {
+  "bytes": 23742,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_86.png": {
+  "bytes": 25971,
+  "w": null,
+  "h": null
+ },
+ "Germany_Land_91.png": {
+  "bytes": 22383,
+  "w": null,
+  "h": null
+ },
+ "Germany_Sea_1.png": {
+  "bytes": 51914,
+  "w": null,
+  "h": null
+ },
+ "Germany_Sea_2.png": {
+  "bytes": 42250,
+  "w": null,
+  "h": null
+ },
+ "Germany_Sea_3.png": {
+  "bytes": 53046,
+  "w": null,
+  "h": null
+ },
+ "Germany_Sea_4.png": {
+  "bytes": 40528,
+  "w": null,
+  "h": null
+ },
+ "Germany_Sea_5.png": {
+  "bytes": 55215,
+  "w": null,
+  "h": null
+ },
+ "Germany_Sea_6.png": {
+  "bytes": 42681,
+  "w": null,
+  "h": null
+ },
+ "Germany_land_back.jpg": {
+  "bytes": 1416021,
+  "w": null,
+  "h": null
+ },
+ "Germany_land_back_cn.jpg": {
+  "bytes": 1926877,
+  "w": null,
+  "h": null
+ },
+ "Germany_land_front.jpg": {
+  "bytes": 1319793,
+  "w": null,
+  "h": null
+ },
+ "Germany_land_front_cn.jpg": {
+  "bytes": 1631145,
+  "w": null,
+  "h": null
+ },
+ "Hotspot_active.png": {
+  "bytes": 40627,
+  "w": null,
+  "h": null
+ },
+ "Hotspot_inactive.png": {
+  "bytes": 21603,
+  "w": null,
+  "h": null
+ },
+ "Industry.png": {
+  "bytes": 15747,
+  "w": null,
+  "h": null
+ },
+ "Infantry.jpg": {
+  "bytes": 5551,
+  "w": null,
+  "h": null
+ },
+ "Iron.png": {
+  "bytes": 7515,
+  "w": null,
+  "h": null
+ },
+ "Italy_Air_11.png": {
+  "bytes": 28862,
+  "w": null,
+  "h": null
+ },
+ "Italy_Air_12.png": {
+  "bytes": 31534,
+  "w": null,
+  "h": null
+ },
+ "Italy_Air_13.png": {
+  "bytes": 27852,
+  "w": null,
+  "h": null
+ },
+ "Italy_Air_14.png": {
+  "bytes": 26669,
+  "w": null,
+  "h": null
+ },
+ "Italy_Air_15.png": {
+  "bytes": 27853,
+  "w": null,
+  "h": null
+ },
+ "Italy_Flag.jpg": {
+  "bytes": 4826,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_108.png": {
+  "bytes": 21742,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_109.png": {
+  "bytes": 21016,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_110.png": {
+  "bytes": 18836,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_111.png": {
+  "bytes": 16988,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_112.png": {
+  "bytes": 23331,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_113.png": {
+  "bytes": 24304,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_114.png": {
+  "bytes": 23474,
+  "w": null,
+  "h": null
+ },
+ "Italy_Land_115.png": {
+  "bytes": 24170,
+  "w": null,
+  "h": null
+ },
+ "Italy_Sea_1.png": {
+  "bytes": 51099,
+  "w": null,
+  "h": null
+ },
+ "Italy_Sea_2.png": {
+  "bytes": 41617,
+  "w": null,
+  "h": null
+ },
+ "Italy_Sea_3.png": {
+  "bytes": 41208,
+  "w": null,
+  "h": null
+ },
+ "Italy_Sea_4.png": {
+  "bytes": 39961,
+  "w": null,
+  "h": null
+ },
+ "Italy_land_back.jpg": {
+  "bytes": 472894,
+  "w": null,
+  "h": null
+ },
+ "Italy_land_back_cn.jpg": {
+  "bytes": 656737,
+  "w": null,
+  "h": null
+ },
+ "Italy_land_front.jpg": {
+  "bytes": 381264,
+  "w": null,
+  "h": null
+ },
+ "Italy_land_front_cn.jpg": {
+  "bytes": 514837,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_11.png": {
+  "bytes": 35366,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_12.png": {
+  "bytes": 38207,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_13.png": {
+  "bytes": 38134,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_14.png": {
+  "bytes": 36737,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_15.png": {
+  "bytes": 37506,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_16.png": {
+  "bytes": 37611,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_17.png": {
+  "bytes": 35715,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_18.png": {
+  "bytes": 34145,
+  "w": null,
+  "h": null
+ },
+ "Japan_Air_19.png": {
+  "bytes": 33808,
+  "w": null,
+  "h": null
+ },
+ "Japan_Flag.jpg": {
+  "bytes": 13671,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_24.png": {
+  "bytes": 38169,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_25.png": {
+  "bytes": 38235,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_30.png": {
+  "bytes": 38876,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_39.png": {
+  "bytes": 40143,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_41.png": {
+  "bytes": 30501,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_44.png": {
+  "bytes": 36146,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_46.png": {
+  "bytes": 37467,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_52.png": {
+  "bytes": 39510,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_54.png": {
+  "bytes": 35516,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_62.png": {
+  "bytes": 39113,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_65.png": {
+  "bytes": 40002,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_76.png": {
+  "bytes": 37963,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_77.png": {
+  "bytes": 34915,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_78.png": {
+  "bytes": 36770,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_81.png": {
+  "bytes": 38263,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_85.png": {
+  "bytes": 39318,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_87.png": {
+  "bytes": 37831,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_89.png": {
+  "bytes": 40129,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_92.png": {
+  "bytes": 39949,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_95.png": {
+  "bytes": 38634,
+  "w": null,
+  "h": null
+ },
+ "Japan_Land_97.png": {
+  "bytes": 32168,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_1.png": {
+  "bytes": 64186,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_2.png": {
+  "bytes": 54205,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_3.png": {
+  "bytes": 67717,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_4.png": {
+  "bytes": 65139,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_5.png": {
+  "bytes": 64180,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_6.png": {
+  "bytes": 54608,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_7.png": {
+  "bytes": 51503,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_8.png": {
+  "bytes": 54991,
+  "w": null,
+  "h": null
+ },
+ "Japan_Sea_9.png": {
+  "bytes": 62506,
+  "w": null,
+  "h": null
+ },
+ "Japan_land_back.jpg": {
+  "bytes": 2327292,
+  "w": null,
+  "h": null
+ },
+ "Japan_land_back_cn.jpg": {
+  "bytes": 3305617,
+  "w": null,
+  "h": null
+ },
+ "Japan_land_front.jpg": {
+  "bytes": 2469494,
+  "w": null,
+  "h": null
+ },
+ "Japan_land_front_cn.jpg": {
+  "bytes": 3344489,
+  "w": null,
+  "h": null
+ },
+ "Land_Battle_Board.jpg": {
+  "bytes": 629641,
+  "w": null,
+  "h": null
+ },
+ "Land_Battle_Board_cn.jpg": {
+  "bytes": 1064650,
+  "w": null,
+  "h": null
+ },
+ "MapOverlay_NORTH_AFRICA.png": {
+  "bytes": 422630,
+  "w": null,
+  "h": null
+ },
+ "MapOverlay_THE_EASTERN_FRONT.png": {
+  "bytes": 507152,
+  "w": null,
+  "h": null
+ },
+ "MapOverlay_WAR_IN_EUROPE.png": {
+  "bytes": 272700,
+  "w": null,
+  "h": null
+ },
+ "MapOverlay_WAR_IN_THE_PACIFIC.png": {
+  "bytes": 357035,
+  "w": null,
+  "h": null
+ },
+ "Medal.png": {
+  "bytes": 71660,
+  "w": null,
+  "h": null
+ },
+ "Neutral_land_back.jpg": {
+  "bytes": 1297561,
+  "w": null,
+  "h": null
+ },
+ "Neutral_land_back_cn.jpg": {
+  "bytes": 2080491,
+  "w": null,
+  "h": null
+ },
+ "Neutral_land_front.jpg": {
+  "bytes": 1033574,
+  "w": null,
+  "h": null
+ },
+ "Neutral_land_front_cn.jpg": {
+  "bytes": 1444104,
+  "w": null,
+  "h": null
+ },
+ "OCR.png": {
+  "bytes": 7802,
+  "w": null,
+  "h": null
+ },
+ "Oil.png": {
+  "bytes": 7326,
+  "w": null,
+  "h": null
+ },
+ "Sea_Battle_Board.jpg": {
+  "bytes": 613500,
+  "w": null,
+  "h": null
+ },
+ "Sea_Battle_Board_cn.jpg": {
+  "bytes": 1046437,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Air_11.png": {
+  "bytes": 30803,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Air_12.png": {
+  "bytes": 28745,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Air_13.png": {
+  "bytes": 32785,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Air_14.png": {
+  "bytes": 27623,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Air_15.png": {
+  "bytes": 32608,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Air_16.png": {
+  "bytes": 29164,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Flag.jpg": {
+  "bytes": 6637,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_21.png": {
+  "bytes": 25550,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_23.png": {
+  "bytes": 30624,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_26.png": {
+  "bytes": 29747,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_29.png": {
+  "bytes": 29637,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_34.png": {
+  "bytes": 27169,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_57.png": {
+  "bytes": 26350,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_58.png": {
+  "bytes": 29395,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_66.png": {
+  "bytes": 28950,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_67.png": {
+  "bytes": 26648,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_74.png": {
+  "bytes": 18545,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_94.png": {
+  "bytes": 22139,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Land_98.png": {
+  "bytes": 23964,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Sea_1.png": {
+  "bytes": 47503,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Sea_2.png": {
+  "bytes": 41236,
+  "w": null,
+  "h": null
+ },
+ "Soviet_Sea_3.png": {
+  "bytes": 40725,
+  "w": null,
+  "h": null
+ },
+ "Soviet_land_back.jpg": {
+  "bytes": 1451214,
+  "w": null,
+  "h": null
+ },
+ "Soviet_land_back_cn.jpg": {
+  "bytes": 2399282,
+  "w": null,
+  "h": null
+ },
+ "Soviet_land_front.jpg": {
+  "bytes": 975596,
+  "w": null,
+  "h": null
+ },
+ "Soviet_land_front_cn.jpg": {
+  "bytes": 1570866,
+  "w": null,
+  "h": null
+ },
+ "Submarine.jpg": {
+  "bytes": 5273,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_11.png": {
+  "bytes": 33509,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_12.png": {
+  "bytes": 35705,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_13.png": {
+  "bytes": 35900,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_14.png": {
+  "bytes": 34150,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_15.png": {
+  "bytes": 35783,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_16.png": {
+  "bytes": 36155,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_17.png": {
+  "bytes": 33362,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_18.png": {
+  "bytes": 33190,
+  "w": null,
+  "h": null
+ },
+ "USA_Air_19.png": {
+  "bytes": 32637,
+  "w": null,
+  "h": null
+ },
+ "USA_Flag.jpg": {
+  "bytes": 10732,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_27.png": {
+  "bytes": 31438,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_31.png": {
+  "bytes": 31340,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_35.png": {
+  "bytes": 33116,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_42.png": {
+  "bytes": 29552,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_43.png": {
+  "bytes": 32887,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_50.png": {
+  "bytes": 33631,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_51.png": {
+  "bytes": 32377,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_64.png": {
+  "bytes": 33321,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_69.png": {
+  "bytes": 36108,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_73.png": {
+  "bytes": 31586,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_79.png": {
+  "bytes": 28502,
+  "w": null,
+  "h": null
+ },
+ "USA_Land_82.png": {
+  "bytes": 35374,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_1.png": {
+  "bytes": 58820,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_2.png": {
+  "bytes": 61274,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_3.png": {
+  "bytes": 60470,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_4.png": {
+  "bytes": 62295,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_5.png": {
+  "bytes": 49689,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_6.png": {
+  "bytes": 50629,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_7.png": {
+  "bytes": 47568,
+  "w": null,
+  "h": null
+ },
+ "USA_Sea_8.png": {
+  "bytes": 51019,
+  "w": null,
+  "h": null
+ },
+ "USA_land_back.jpg": {
+  "bytes": 940330,
+  "w": null,
+  "h": null
+ },
+ "USA_land_back_cn.jpg": {
+  "bytes": 1292997,
+  "w": null,
+  "h": null
+ },
+ "USA_land_front.jpg": {
+  "bytes": 674476,
+  "w": null,
+  "h": null
+ },
+ "USA_land_front_cn.jpg": {
+  "bytes": 861816,
+  "w": null,
+  "h": null
+ },
+ "map.jpg": {
+  "bytes": 3663620,
+  "w": null,
+  "h": null
+ },
+ "map_cn.jpg": {
+  "bytes": 4947482,
+  "w": null,
+  "h": null
+ }
+}

@@ -1,0 +1,1290 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: #0e0e0e;
+  color: #e0d5b0;
+  font-family: "Georgia", "Songti SC", serif;
+  user-select: none;
+}
+
+/* ---------- 地图 ---------- */
+#map-wrap {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+}
+#map-canvas {
+  display: block;
+  cursor: grab;
+  touch-action: none;   /* 触摸交给 JS 处理，禁用浏览器手势 */
+}
+#map-canvas:active { cursor: grabbing; }
+
+/* ---------- 顶部标题 ---------- */
+#title {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  letter-spacing: 0.35em;
+  color: #6b6250;
+  pointer-events: none;
+}
+
+/* ============================================================
+ * 左侧单栏：自己置顶 + 同阵营(亮) + 敌对(暗)，三段
+ * ============================================================ */
+#nation-panel {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 10;
+}
+
+.panel-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+/* 段间间隔：自己 / 同阵营 / 敌对 */
+#panel-self:not(:empty) { margin-bottom: 8px; }
+#panel-ally:not(:empty) { margin-bottom: 8px; }
+
+/* ---------- 一行 = 旗帜 + 资源信息条 ---------- */
+.nation-row {
+  display: flex;
+  align-items: stretch;
+  height: 30px;
+}
+.nation-row.hidden { display: none; }
+
+/* 旗帜 */
+.nation-icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: #1a1a1a;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.12s ease, border-color 0.12s ease, filter 0.12s ease, opacity 0.2s ease;
+}
+.nation-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.nation-icon:hover { transform: scale(1.06); }
+
+.nation-icon.lit {
+  filter: none;
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(255, 220, 120, 0.35);
+}
+.nation-icon.lit.axis   { border-color: #8b1a1a; }
+.nation-icon.lit.allies { border-color: #1c6ea4; }
+
+/* 敌对：变暗 */
+.nation-icon.dim {
+  filter: grayscale(0.85) brightness(0.5);
+  opacity: 0.5;
+}
+
+/* 自己（当前视角） */
+.nation-icon.active {
+  border-color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+}
+
+/* ---------- 资源信息条（横向展开，半透明背板，高度=旗帜高） ---------- */
+.info-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 30px;
+  padding: 0 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: rgba(12, 14, 22, 0.72);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+  transition: max-width 0.22s ease, opacity 0.18s ease, margin 0.22s ease, padding 0.22s ease;
+}
+.nation-row.show-info .info-bar {
+  max-width: 170px;
+  opacity: 1;
+  margin-left: 5px;
+  padding: 0 7px;
+}
+
+/* ---------- 资源项 / 压力项 ---------- */
+.res-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  font-family: monospace;
+  color: #e8dfc0;
+}
+.stress-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  font-family: monospace;
+  color: #cfcfcf;
+  padding-left: 4px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+.inc { color: #3f7d3f; }   /* 资源增长 暗绿 */
+.max { color: #8b1a1a; }   /* 压力阈值 暗红 */
+
+.dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex: 0 0 7px;
+}
+.dot.oil    { background: #8b1a1a; }
+.dot.iron   { background: #1c4e8b; }
+.dot.osr    { background: #8b7a1a; }
+.dot.stress { background: #888; }
+
+/* ---------- 自己资源条的单独收起按钮 ---------- */
+.self-toggle {
+  width: 14px;
+  height: 30px;
+  flex: 0 0 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 3px;
+  background: rgba(12,14,22,0.72);
+  color: #9a8f70;
+  cursor: pointer;
+  font-size: 8px;
+  line-height: 1;
+  padding: 0;
+  margin-left: 3px;
+  transition: background 0.12s, color 0.12s;
+}
+.self-toggle:hover { background: #242424; color: #ffd700; }
+.nation-row.self-collapsed .info-bar { max-width: 0; opacity: 0; margin-left: 0; padding: 0; }
+
+/* ---------- 向上收起（收起除自己外的所有国家） ---------- */
+.collapse-all {
+  width: 30px;
+  height: 16px;
+  border: 1px solid #3a3a3a;
+  background: #161616;
+  color: #7a7360;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 9px;
+  line-height: 1;
+  padding: 0;
+  margin-top: 6px;
+  transition: background 0.12s, color 0.12s;
+}
+.collapse-all:hover { background: #242424; color: #c8b88a; }
+
+/* ---------- 右侧行动界面占位 ---------- */
+#action-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 36%;
+  max-width: 480px;
+  min-width: 300px;
+  height: 100%;
+  background: rgba(10, 12, 18, 0.55);
+  backdrop-filter: blur(2px);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  /* 拦截鼠标：点击/滚轮不穿透到地图 */
+  pointer-events: auto;
+  transition: transform 0.25s ease;
+}
+/* 收起：向右滑出屏幕，并让该区域恢复地图操作 */
+#action-panel.collapsed {
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+#action-panel .action-tabs {
+  display: flex;
+  flex: 0 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#action-panel .action-tab {
+  flex: 1 1 0;
+  padding: 9px 4px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  color: #8a8068;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: background 0.12s, color 0.12s;
+}
+#action-panel .action-tab:last-child { border-right: none; }
+#action-panel .action-tab:hover { background: rgba(255,255,255,0.05); color: #c8b88a; }
+#action-panel .action-tab.active {
+  background: rgba(255, 215, 0, 0.10);
+  color: #ffd700;
+  box-shadow: inset 0 -2px 0 #ffd700;
+}
+
+/* 内容区：独立滚动，内容超出时自身滚动（不影响地图） */
+#action-panel .action-body {
+  flex: 1 1 auto;
+  padding: 12px 14px;
+  color: #888;
+  font-size: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;   /* 滚到底不带动外层 */
+}
+#action-panel .action-page[hidden] { display: none; }
+
+/* ---------- 地块卡栏目（两列纵向叠放，下一张遮住上一张下 60%） ---------- */
+.territory-cards {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding-bottom: 40px;
+}
+.tc-col {
+  position: relative;   /* 内部卡绝对定位，逐张下移 */
+  flex: 0 0 auto;
+}
+.tc-col-left  { }
+.tc-col-right { }
+/* 单张卡：等比例，宽高由 JS 按 493:347 设定 */
+.tc-card {
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  background: #111;
+  overflow: hidden;
+  cursor: pointer;      /* 双击 = 关注+高亮该地块 */
+}
+.tc-card img { display: block; width: 100%; height: 100%; }
+.tc-card.flipped img { /* 翻面：轻微倾斜示意（暂用） */ }
+/* 右列不占满则给它固定最小宽 */
+.tc-col-right:empty::before { content: ""; }
+
+/* ---------- 部队栏目 ---------- */
+/* 剩余番号区：三组横排（空/海/陆） */
+.unit-reserve {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(255,255,255,0.28);   /* 小格挡（分隔） */
+  margin-bottom: 12px;
+}
+.unit-reserve-cell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.unit-reserve-cell .res-icon {
+  width: 24px; height: 24px; object-fit: contain;
+}
+.unit-reserve-cell .res-icon.sea { width: 48px; height: 20px; }
+.unit-reserve-cell .res-count {
+  color: #f2e4bb;
+  font-weight: 700;
+  font-size: 13px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 1px 1px rgba(0,0,0,0.9);
+}
+
+/* 类别标识（现役分组标题沿用） */
+.cat-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  padding: 1px 5px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #cbbf9a;
+  background: rgba(255,255,255,0.05);
+  white-space: nowrap;
+}
+
+/* 现役单位区 */
+.unit-active { display: flex; flex-direction: column; }
+.unit-group { margin-bottom: 8px; }
+.unit-group-title {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #e8d9a8;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 1px 1px rgba(0,0,0,0.9);
+  margin: 10px 0 4px;
+  letter-spacing: 0.05em;
+}
+
+/* 单个现役单位一行：表格化网格，各列起点跨行统一 */
+.unit-row {
+  display: grid;
+  grid-template-columns: 88px 28px 55px 1fr;   /* 番号图标 | 地块号 | 地名 | 兵种 */
+  align-items: center;
+  column-gap: 8px;
+  padding: 4px 2px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* 番号图标区（列1）：图标居中（其余列左对齐） */
+.unit-row .row-face-box {
+  width: 88px;                 /* 海军番号宽 = 36 × 2.45 ≈ 88 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.unit-row .row-face { width: 36px; height: 36px; object-fit: contain; }
+.unit-row .row-face.sea { width: 88px; height: 36px; }
+
+/* 列2：地块号（左对齐，固定列宽由 grid 决定） */
+.unit-row .loc-code {
+  color: #ffe08a;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 1px 1px rgba(0,0,0,0.9);
+}
+
+/* 列3：地名（左对齐；宽 55px ≈ 5 字，最长 9 字折两行） */
+.unit-row .loc-name {
+  color: #efe3c4;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 1px 1px rgba(0,0,0,0.9);
+  word-break: break-all;
+}
+
+/* 列4：部队兵种罗列（左对齐） */
+.unit-row .row-units {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+}
+.unit-row .row-units .u-icon {
+  width: 20px; height: 20px; object-fit: contain;
+}
+/* 海军兵种：与陆/空军同高(20px)，但海军素材是宽条(2.77:1)，故每格更宽 */
+.unit-row .row-units.naval {
+  display: grid;
+  grid-template-columns: repeat(4, 55px);   /* 55 = 20 × 2.77（船体填满高度） */
+  grid-auto-rows: 20px;
+  gap: 2px;
+  justify-content: start;   /* 左对齐 */
+  justify-items: start;
+}
+.unit-row .row-units.naval .u-icon {
+  width: 55px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* 左上角小标签：点击或空格 收起/展开 */
+.action-toggle {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #3a3a3a;
+  background: rgba(16,18,24,0.85);
+  color: #9a8f70;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+  z-index: 11;              /* 面板之上，收起后仍可见 */
+  pointer-events: auto;
+  transition: background 0.12s, color 0.12s;
+}
+.action-toggle:hover { background: #242424; color: #ffd700; }
+
+/* ---------- 回合顺位区（阶段2 步骤2-3） ---------- */
+.turn-order {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background: rgba(14, 16, 26, 0.96);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 10px 16px 12px;
+  z-index: 45;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.7);
+  transition: transform 0.35s ease;
+  min-width: 420px;
+}
+.turn-order.open { transform: translateX(-50%) translateY(0); }
+.turn-order[hidden] { display: none; }
+/* 收起态：只留下排（位次行），向上收一半 */
+.turn-order.collapsed { padding-top: 6px; }
+.turn-order.collapsed .to-top { display: none; }
+
+/* 上排：国旗 + 竞价 */
+.to-top {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.to-bid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 40px;
+  transition: opacity 0.25s;
+}
+.to-bid.done { opacity: 0.28; }        /* 已选完 → 暗下 */
+.to-bid-flag { width: 26px; height: 18px; object-fit: cover; border-radius: 2px; border: 1px solid #555; }
+.to-bid-num { font-size: 11px; font-weight: bold; color: #ffd700; }
+.to-bid.picking .to-bid-num { color: #7ad07a; }
+
+/* 下排：7 个位次格块 */
+.to-slots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.to-slot {
+  width: 44px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.to-slot .to-slot-no {
+  position: absolute;
+  top: 1px; left: 3px;
+  font-size: 9px; color: #888;
+}
+.to-slot .to-slot-flag { width: 26px; height: 18px; object-fit: cover; border-radius: 2px; }
+/* 可选格块：高亮 + 可点 */
+.to-slot.pickable {
+  border-color: #ffd700;
+  box-shadow: 0 0 8px rgba(255,215,0,0.6);
+  cursor: pointer;
+  animation: toPulse 1.2s ease-in-out infinite;
+}
+.to-slot.pickable:hover { background: rgba(255,215,0,0.18); }
+@keyframes toPulse {
+  0%,100% { box-shadow: 0 0 6px rgba(255,215,0,0.4); }
+  50%     { box-shadow: 0 0 12px rgba(255,215,0,0.85); }
+}
+
+/* ---------- 顺位触发按钮 ---------- */
+.to-trigger-section { margin-top: 10px; }
+.to-trigger-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(180deg, #3a2f10, #241c08);
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  color: #ffd700;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.to-trigger-btn:hover { background: linear-gradient(180deg, #4a3c14, #2e2409); }
+
+/* ---------- 阶段3 移动提示条 ---------- */
+.move-prompt {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 70%;                 /* 对应左侧行动列表外的可视区 */
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  z-index: 46;
+  pointer-events: none;
+}
+.move-prompt[hidden] { display: none; }
+.move-prompt-btn {
+  pointer-events: auto;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid;
+}
+.move-confirm {
+  background: rgba(20, 40, 20, 0.95);
+  border-color: #7ad07a;
+  color: #b6f0b6;
+}
+.move-confirm:hover { background: rgba(30, 60, 30, 0.95); }
+/* 被压制提示 */
+.move-pinned-msg {
+  pointer-events: none;
+  padding: 9px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ff6b6b;
+  background: rgba(40, 10, 10, 0.95);
+  border: 1px solid #ff3b3b;
+  box-shadow: 0 0 14px rgba(255, 60, 60, 0.5);
+  letter-spacing: 2px;
+}
+.move-pinned-msg[hidden] { display: none; }
+.move-cancel {
+  background: rgba(46, 14, 14, 0.95);
+  border-color: #ff6b6b;
+  color: #ffb0b0;
+}
+.move-cancel:hover { background: rgba(66, 20, 20, 0.95); }
+
+/* ---------- 阶段3 行动面板标签（纯展示） ---------- */
+.move-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.move-tab {
+  width: 34px;
+  height: 24px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+.move-tab img { width: 26px; height: 18px; object-fit: cover; border-radius: 2px; }
+.move-tab.active { opacity: 1; border-color: #ffd700; box-shadow: 0 0 6px rgba(255,215,0,0.5); }
+.move-tab.locked { cursor: default; }
+
+/* 阶段3 指令行 */
+.move-order-list { display: flex; flex-direction: column; gap: 4px; }
+.move-order-row {
+  display: grid;
+  grid-template-columns: 88px 1fr 20px auto;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 4px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.03);
+}
+.move-order-row .row-face-box { display: flex; justify-content: center; }
+.move-order-comp { display: flex; flex-wrap: wrap; gap: 2px; align-items: center; }
+.move-order-dest { color: #ffd700; font-size: 12px; }
+.move-order-dest.none { color: #777; }
+/* 行动页指令状态：执行成功=变暗；取消=变暗且打叉 */
+.move-order-row.done { opacity: 0.4; }
+.move-order-row.cancelled { opacity: 0.4; text-decoration: line-through; text-decoration-color: #ff6b6b; }
+
+/* ---------- 部分压制：拆分弹窗 ---------- */
+.split-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 64;
+}
+.split-backdrop[hidden] { display: none; }
+.split-modal {
+  position: fixed;
+  left: 50%; top: 46%;
+  transform: translate(-50%, -50%);
+  background: rgba(16, 18, 28, 0.98);
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  padding: 16px 20px;
+  z-index: 65;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+  min-width: 440px;
+}
+.split-modal[hidden] { display: none; }
+.split-title { color: #ff9a9a; font-weight: bold; margin-bottom: 12px; font-size: 14px; }
+.split-body { display: flex; align-items: center; gap: 14px; }
+.split-col { flex: 1; }
+.split-col-title { color: #b8ad8f; font-size: 12px; margin-bottom: 6px; }
+.split-arrow { color: #ffd700; font-size: 18px; }
+.split-src { display: flex; flex-wrap: wrap; gap: 4px; min-height: 40px; padding: 6px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 5px; }
+.split-dst { display: flex; flex-wrap: wrap; gap: 4px; min-height: 40px; padding: 6px; border: 1px solid rgba(122,208,122,0.5); border-radius: 5px; background: rgba(20,40,20,0.3); }
+.split-src .sp-icon, .split-dst .sp-icon { width: 26px; height: 26px; cursor: grab; }
+.split-dst .sp-slot { width: 26px; height: 26px; border: 1px dashed rgba(255,255,255,0.25); border-radius: 3px; }
+.split-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 14px; }
+.split-confirm { padding: 8px 20px; border-radius: 5px; background: #1e3a1e; border: 1px solid #7ad07a; color: #b6f0b6; font-weight: bold; cursor: pointer; }
+.split-confirm:disabled { opacity: 0.5; cursor: not-allowed; }
+.split-cancel { padding: 8px 20px; border-radius: 5px; background: #3a1e1e; border: 1px solid #ff6b6b; color: #ffb0b0; cursor: pointer; }
+
+/* ---------- 轻提示 toast（非法指令等） ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 64px;
+  transform: translateX(-50%);
+  padding: 8px 18px;
+  background: rgba(40, 12, 12, 0.94);
+  border: 1px solid rgba(255, 90, 90, 0.7);
+  color: #ffb0b0;
+  font-size: 13px;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+.toast[hidden] { display: none; }
+.toast.show { opacity: 1; }
+
+/* ---------- 左下角：视窗类按钮工具栏（可扩展） ---------- */
+.view-toolbar {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;     /* 竖向排列，后续按钮往下叠 */
+  gap: 6px;
+  z-index: 11;
+}
+.view-btn {
+  min-width: 62px;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid #3a3a3a;
+  background: rgba(16,18,24,0.85);
+  color: #c8b88a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1;
+  font-family: inherit;
+  text-align: center;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.view-btn:hover { background: #242424; color: #ffd700; }
+/* 开启状态：金框 + 高亮（与地图上的叠加层联动） */
+.view-btn.active {
+  border-color: #ffd700;
+  color: #ffd700;
+  background: rgba(60,50,20,0.9);
+  box-shadow: 0 0 6px rgba(255,215,0,0.35);
+}
+
+/* ---------- 底部状态条 ---------- */
+#status-bar {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #7a7360;
+  background: #0008;
+  padding: 5px 16px;
+  border-radius: 14px;
+  z-index: 10;
+}
+
+/* ---------- 合并与拆分部队 弹窗 ---------- */
+/* 全屏透明遮罩：点击它（弹窗之外）即确认 */
+.merge-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 29;
+  background: transparent;   /* 透明但可接收点击 */
+}
+.merge-backdrop[hidden] { display: none; }
+
+/* 位置：左半侧中间，以"左起 35%"为中心（水平中心 35%、垂直中心 50%） */
+.merge-modal {
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 60vh;
+  z-index: 30;
+  background: rgba(14, 16, 22, 0.82);        /* 半透明 */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  color: #e8dcc0;
+}
+.merge-modal[hidden] { display: none; }
+
+.merge-modal-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+.merge-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffd700;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9);
+}
+.merge-close {
+  background: transparent;
+  border: none;
+  color: #cbbf9a;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+}
+.merge-close:hover { color: #ffd700; }
+
+.merge-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px 14px;
+  font-size: 12px;
+}
+
+/* 弹窗内：提示行 */
+.merge-hint {
+  color: #b9ad8c;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9);
+}
+
+/* 顶部：空闲番号区 */
+.merge-reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.merge-reserve-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.merge-reserve-label {
+  flex: 0 0 auto;
+  width: 32px;
+  color: #e8d9a8;
+  font-size: 11px;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(0,0,0,0.9);
+}
+.merge-reserve-strip {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.merge-reserve-none { color: #7d7458; font-size: 11px; }
+.merge-reserve-chip {
+  padding: 2px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+  cursor: default;
+}
+.merge-chip-face { width: 34px; height: 34px; object-fit: contain; display: block; }
+.merge-chip-face.sea { width: 74px; height: 30px; }
+
+/* 分隔线 */
+.merge-sep {
+  height: 1px;
+  margin: 10px 0;
+  background: rgba(255,255,255,0.18);
+}
+
+/* 下部：现有番号部队区（每行 3 块） */
+.merge-formations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.merge-block-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 一大行放 3 块（空军/陆军） */
+  gap: 8px;
+}
+.merge-block-row.two {
+  grid-template-columns: repeat(2, 1fr);   /* 海军更宽，一行放 2 块 */
+}
+/* 单个番号块：竖向（番号图标在上居中，兵种网格在下） */
+.merge-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 6px 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  min-width: 0;
+}
+.merge-block.empty { opacity: 0.45; border-style: dashed; }
+.merge-block.drop-ok { border-color: #7ad07a; box-shadow: 0 0 8px rgba(120,220,120,0.5) inset; }
+.merge-block.drop-bad { border-color: #d07a7a; box-shadow: 0 0 8px rgba(220,120,120,0.5) inset; }
+
+/* 番号图标（上方居中） */
+.merge-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 40px;
+}
+.merge-block-face { width: 40px; height: 40px; object-fit: contain; }
+.merge-block-face.sea { width: 84px; height: 34px; }
+
+/* 兵种网格：固定 4 列 × 2 行 */
+.merge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 26px;
+  gap: 3px;
+  width: 100%;
+  justify-content: center;
+}
+.merge-cell {
+  min-width: 0; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed rgba(255,255,255,0.10);
+  border-radius: 3px;
+}
+.merge-cell.vacant { border-color: rgba(255,255,255,0.06); }
+.merge-cell .u-icon { width: 24px; height: 24px; object-fit: contain; cursor: grab; }
+.merge-cell .u-icon.dragging { opacity: 0.4; }
+.merge-reserve-chip.drop-ok { border-color: #7ad07a; box-shadow: 0 0 8px rgba(120,220,120,0.6); }
+.merge-reserve-chip.drop-bad { border-color: #d07a7a; box-shadow: 0 0 8px rgba(220,120,120,0.6); }
+
+/* ============================================================
+ * 阶段进度条 + 确认按钮（行动页顶部）
+ * ============================================================ */
+.phase-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.phase-steps {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 3px;
+}
+.phase-step {
+  flex: 1 1 0;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #7d7565;
+  font-size: 10px;
+  font-family: monospace;
+  line-height: 20px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+/* 已完成的阶段：暗金 */
+.phase-step.done {
+  background: rgba(255, 215, 0, 0.10);
+  color: #b09a4a;
+  border-color: rgba(255, 215, 0, 0.35);
+}
+/* 当前阶段：亮金高亮 */
+.phase-step.current {
+  background: rgba(255, 215, 0, 0.28);
+  color: #ffd700;
+  border-color: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  font-weight: bold;
+}
+
+/* 大红色「确认」按钮（红 ↔ 黑红） */
+.confirm-btn {
+  flex: 0 0 auto;
+  min-width: 62px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #ff4a4a;
+  border-radius: 4px;
+  background: #c81e1e;            /* 红 */
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, box-shadow 0.18s;
+}
+.confirm-btn:hover { background: #e02424; box-shadow: 0 0 10px rgba(255, 60, 60, 0.55); }
+/* 已确认：黑红 */
+.confirm-btn.confirmed {
+  background: #3a0d0d;
+  border-color: #7a1a1a;
+  color: #d98a8a;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.confirm-btn.confirmed:hover { background: #4a1010; }
+
+/* 国家图标「已确认」高亮外框 */
+.nation-icon.confirmed {
+  border-color: #ff4a4a;
+  box-shadow: 0 0 10px rgba(255, 74, 74, 0.8);
+  animation: confirmedPulse 1.4s ease-in-out infinite;
+}
+@keyframes confirmedPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(255, 74, 74, 0.6); }
+  50%      { box-shadow: 0 0 16px rgba(255, 74, 74, 1); }
+}
+
+/* ============================================================
+ * 行动页内容：资源块 / 地块变化
+ * ============================================================ */
+.action-content { color: #cfc7ad; }
+.econ-section { margin-bottom: 14px; }
+.econ-title {
+  font-size: 12px;
+  color: #c8b88a;
+  letter-spacing: 0.08em;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
+  padding-bottom: 4px;
+  margin-bottom: 7px;
+}
+.res-line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-family: monospace;
+  padding: 2px 0;
+}
+.res-line .dot { width: 9px; height: 9px; flex: 0 0 9px; }
+.res-line .res-num { color: #e8dfc0; }
+.res-line .res-num.neg { color: #e05a5a; }   /* 负收入：红 */
+.res-line .res-num.pos { color: #6ac06a; }   /* 正收入：绿 */
+
+/* 地块变化列表 */
+.change-list { display: flex; flex-direction: column; gap: 4px; }
+.change-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.change-row .ch-code { font-family: monospace; color: #9a917a; }
+.change-row .ch-name { color: #ddd4b8; }
+.change-row .ch-delta { display: flex; gap: 6px; font-family: monospace; }
+.change-row .ch-delta .dot { width: 8px; height: 8px; flex: 0 0 8px; }
+.change-row.neg .ch-delta { color: #e05a5a; }
+.change-row.pos .ch-delta { color: #6ac06a; }
+.change-empty { color: #6a6455; font-style: italic; font-size: 11px; }
+
+/* ============================================================
+ * 底部：强制推进（收起的小 tab + 居中弹出的大按钮）
+ * ============================================================ */
+.force-advance-tab {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 16px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid rgba(255, 74, 74, 0.6);
+  border-bottom: none;
+  background: rgba(200, 30, 30, 0.55);
+  color: #ffdede;
+  font-size: 9px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.15s;
+}
+.force-advance-tab:hover { background: rgba(224, 36, 36, 0.85); }
+
+.force-advance-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 40;
+}
+.force-advance-btn {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 46%;
+  max-width: 520px;
+  height: 50vh;                 /* 占页面高度 50% */
+  transform: translate(-50%, 140vh);   /* 初始在屏幕下方（收起） */
+  border: 2px solid #ff4a4a;
+  border-radius: 12px;
+  background: #c81e1e;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  z-index: 41;
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  box-shadow: 0 8px 40px rgba(255, 40, 40, 0.5);
+}
+.force-advance-btn .fa-sub { font-size: 13px; font-weight: normal; color: #ffd0d0; letter-spacing: 0.05em; }
+/* 展开：0.5s 上升到页面正中央 */
+.force-advance-btn.open { transform: translate(-50%, -50%); }
+.force-advance-btn:hover { background: #e02424; }
+.force-advance-btn:active { background: #a01616; }
+
+/* ============================================================
+ * 进度条：可点击回看 / 回看中
+ * ============================================================ */
+.phase-step.clickable { cursor: pointer; }
+.phase-step.clickable:hover { background: rgba(255, 215, 0, 0.20); color: #ffd700; }
+.phase-step.viewing {
+  background: rgba(120, 200, 255, 0.25);
+  color: #a8dcff;
+  border-color: #6fb8e8;
+  box-shadow: 0 0 8px rgba(110, 185, 230, 0.6);
+}
+.confirm-btn.disabled {
+  background: #333;
+  border-color: #555;
+  color: #777;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 回看横幅 */
+.view-banner {
+  font-size: 11px;
+  color: #a8dcff;
+  background: rgba(70, 120, 160, 0.25);
+  border: 1px solid rgba(110, 185, 230, 0.5);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+ * 阶段2：石油竞价
+ * ============================================================ */
+.bid-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: monospace;
+  font-size: 13px;
+}
+.bid-btn {
+  width: 26px; height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ddd4b8;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.bid-btn:hover:not(:disabled) { background: rgba(255, 215, 0, 0.18); border-color: #ffd700; color: #ffd700; }
+.bid-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.bid-input {
+  width: 52px; height: 26px;
+  padding: 0 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  background: rgba(10, 12, 18, 0.7);
+  color: #ffd700;
+  font-size: 14px;
+  font-family: monospace;
+  text-align: center;
+}
+.bid-input:disabled { color: #888; }
+.bid-slash { color: #8a8068; }
+.bid-cap { color: #e8dfc0; min-width: 18px; }
+
+/* ============================================================
+ * 阶段2：指令区（3×3 / 3×2 格块）
+ * ============================================================ */
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.order-cell {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+.order-cell.empty { border-style: dashed; border-color: rgba(255, 255, 255, 0.10); }
+/* 拖拽重排指令 */
+.order-cell.order-draggable { cursor: grab; }
+.order-cell.order-dragging { opacity: 0.4; }
+.order-cell.order-drop-ok { border-color: #ffd700; box-shadow: 0 0 8px rgba(255,215,0,0.5); }
+
+.order-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.order-no {
+  font-family: monospace;
+  font-size: 10px;
+  color: #8a8068;
+  flex: 0 0 auto;
+}
+.order-select {
+  flex: 1 1 60px;
+  min-width: 0;
+  height: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  background: rgba(10, 12, 18, 0.8);
+  color: #ddd4b8;
+  font-size: 10px;
+  font-family: inherit;
+}
+/* 番号区 */
+.order-slot {
+  flex: 1 1 64px;
+  min-width: 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  background: rgba(10, 12, 18, 0.8);
+  overflow: hidden;
+}
+.order-slot.filled { border-color: rgba(255, 215, 0, 0.5); cursor: pointer; }
+.order-slot.drop-ok { border-color: #7ad07a; box-shadow: 0 0 6px rgba(120,220,120,0.6); }
+.order-slot-pick {
+  width: 100%; text-align: center;
+  color: #6a6455; font-size: 10px; cursor: pointer;
+  user-select: none;
+}
+.order-slot-pick:hover { color: #ffd700; }
+.order-slot-face { height: 18px; max-width: 36px; object-fit: contain; }
+.order-slot-face.sea { max-width: 48px; }
+.order-slot-text, .order-slot-select {
+  width: 100%; height: 22px; min-width: 0;
+  border: none; background: transparent;
+  color: #ffd700; font-size: 10px; font-family: monospace;
+  text-align: center; padding: 0 2px;
+}
+.order-slot-select { font-family: inherit; color: #ddd4b8; }
+/* 地块区（可达区块；输入框 + datalist 下拉） */
+.order-dest-wrap { flex: 1 1 60px; min-width: 0; }
+.order-dest-input {
+  width: 100%; height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  background: rgba(10, 12, 18, 0.8);
+  color: #ffd700; font-size: 10px; font-family: inherit;
+  padding: 0 4px; min-width: 0;
+}
+.order-dest-input:disabled { opacity: 0.4; }
+.order-dest-input::placeholder { color: #6a6455; }
+/* 番号 → 地点 的箭头 */
+.order-arrow {
+  flex: 0 0 auto;
+  color: #ffd700;
+  font-size: 11px;
+  line-height: 1;
+}
+.order-clear {
+  flex: 0 0 auto;
+  width: 20px; height: 22px;
+  border: 1px solid rgba(255, 100, 100, 0.35);
+  border-radius: 3px;
+  background: transparent;
+  color: #d98a8a;
+  font-size: 10px;
+  cursor: pointer;
+}
+.order-clear:hover:not(:disabled) { background: rgba(200, 50, 50, 0.25); }
+.order-clear:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* 阶段2 区块3：我方部队（同「部队」标签页的分组行） */
+.planning-units {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.planning-units .unit-group { gap: 2px; }
+.planning-units .unit-group-title { margin-bottom: 2px; }
+/* 行动页的部队行：可拖拽 / 双击选中 */
+.unit-row-draggable { cursor: grab; }
+.unit-row-draggable:hover { background: rgba(255, 215, 0, 0.08); }
+.unit-row-draggable.dragging { opacity: 0.4; }
+/* 已填入指令的番号：变灰、不可拖 */
+.unit-row-used { opacity: 0.38; filter: grayscale(1); pointer-events: none; cursor: default; }
+
+/* 指令格块内的部队信息行（紧凑） */
+.order-info { border-top: 1px dashed rgba(255, 255, 255, 0.12); padding-top: 4px; }
+.order-info .unit-row { grid-template-columns: 34px 24px 40px 1fr; background: none; padding: 0; }
+.order-info .row-face-box.compact { width: 34px; height: 18px; }
+.order-info .row-face { max-height: 18px; max-width: 34px; }
+.order-info .loc-code { font-size: 9px; }
+.order-info .loc-name { font-size: 9px; width: 40px; }
+.order-info .row-units.compact { gap: 1px; }
+.order-info .row-units.compact .u-icon { width: 13px; height: 13px; }
+.order-info-empty { font-size: 10px; color: #6a6455; font-style: italic; }
+
+/* 中国/意大利：3 列改 2 列 */
+.order-grid.limit-6 { grid-template-columns: repeat(2, 1fr); }

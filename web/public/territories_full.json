@@ -1,0 +1,4367 @@
+[
+ {
+  "code": "A1",
+  "name": "Arctic Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A2",
+   "B28",
+   "B29"
+  ]
+ },
+ {
+  "code": "A10",
+  "name": "Western North Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A9",
+   "A11",
+   "A12",
+   "N3",
+   "U1"
+  ]
+ },
+ {
+  "code": "A11",
+  "name": "Caribbean Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A10",
+   "A12",
+   "N1",
+   "N2",
+   "U1",
+   "U2"
+  ]
+ },
+ {
+  "code": "A12",
+  "name": "Gulf of Mexico",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A11",
+   "A10",
+   "A9",
+   "A13",
+   "N2",
+   "N3",
+   "N4",
+   "N5",
+   "N6",
+   "B30"
+  ]
+ },
+ {
+  "code": "A13",
+  "name": "Eastern Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A7",
+   "A8",
+   "A9",
+   "A12",
+   "A14",
+   "A16",
+   "N6"
+  ]
+ },
+ {
+  "code": "A14",
+  "name": "South Atlantic (N)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A7",
+   "A13",
+   "A16",
+   "A15",
+   "B2"
+  ]
+ },
+ {
+  "code": "A15",
+  "name": "Bay of Biscay / Iberian",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A6",
+   "A7",
+   "A14",
+   "A16",
+   "B2",
+   "G3",
+   "N11",
+   "N12",
+   "G11",
+   "B3"
+  ]
+ },
+ {
+  "code": "A16",
+  "name": "Tropical Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A13",
+   "A14",
+   "A15",
+   "A17",
+   "G11",
+   "SAHARA1"
+  ]
+ },
+ {
+  "code": "A17",
+  "name": "South Atlantic (Central)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A16",
+   "A18",
+   "SAHARA1",
+   "B15",
+   "G15"
+  ]
+ },
+ {
+  "code": "A18",
+  "name": "South Atlantic (S)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A17",
+   "A19",
+   "B11",
+   "B12",
+   "B13",
+   "B14"
+  ]
+ },
+ {
+  "code": "A19",
+  "name": "Cape of Good Hope",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A18",
+   "I4",
+   "N16",
+   "B10",
+   "N17"
+  ]
+ },
+ {
+  "code": "A2",
+  "name": "North Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A1",
+   "A3",
+   "A7",
+   "A8",
+   "A9",
+   "N7",
+   "B29",
+   "N8"
+  ]
+ },
+ {
+  "code": "A3",
+  "name": "Norwegian Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A2",
+   "A4",
+   "A6",
+   "A7",
+   "N7",
+   "G10",
+   "G9",
+   "R3"
+  ]
+ },
+ {
+  "code": "A4",
+  "name": "Barents Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A3",
+   "R2",
+   "R3",
+   "R12"
+  ]
+ },
+ {
+  "code": "A5",
+  "name": "Baltic Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "R4",
+   "G8",
+   "G1",
+   "G2",
+   "G10",
+   "N10",
+   "G9"
+  ]
+ },
+ {
+  "code": "A6",
+  "name": "British Coastal Waters",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A3",
+   "A7",
+   "A15",
+   "G10",
+   "G2",
+   "G1",
+   "G3",
+   "B1"
+  ]
+ },
+ {
+  "code": "A7",
+  "name": "Western Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A2",
+   "A3",
+   "A6",
+   "A8",
+   "A13",
+   "A14",
+   "A15",
+   "N8",
+   "N9",
+   "B1"
+  ]
+ },
+ {
+  "code": "A8",
+  "name": "Mid-Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A2",
+   "A9",
+   "A13",
+   "A7",
+   "N8"
+  ]
+ },
+ {
+  "code": "A9",
+  "name": "Central Atlantic",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "A2",
+   "A8",
+   "A13",
+   "A12",
+   "A10",
+   "B29"
+  ]
+ },
+ {
+  "code": "B1",
+  "name": "Great Britain",
+  "type": "land",
+  "stratValue": 8,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "industrySlotsTotal": 8,
+  "hasPort": true,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A6",
+   "A7",
+   "N9"
+  ]
+ },
+ {
+  "code": "B10",
+  "name": "South Africa",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 3,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "B9",
+   "A19",
+   "N16",
+   "N17"
+  ]
+ },
+ {
+  "code": "B11",
+  "name": "Belgian Congo",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A18",
+   "B6",
+   "B8",
+   "B9",
+   "B12",
+   "N16"
+  ]
+ },
+ {
+  "code": "B12",
+  "name": "French Equatorial Africa",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A18",
+   "SAHARA3",
+   "B13",
+   "B6",
+   "B11"
+  ]
+ },
+ {
+  "code": "B13",
+  "name": "Nigeria Cameroon",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A18",
+   "SAHARA2",
+   "SAHARA3",
+   "B12",
+   "B14"
+  ]
+ },
+ {
+  "code": "B14",
+  "name": "Gold Coast",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A18",
+   "SAHARA2",
+   "G15",
+   "B13"
+  ]
+ },
+ {
+  "code": "B15",
+  "name": "Sierra Leone",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A17",
+   "G15"
+  ]
+ },
+ {
+  "code": "B16",
+  "name": "Middle East",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "M3",
+   "I1",
+   "N14",
+   "B17",
+   "N15",
+   "B5"
+  ]
+ },
+ {
+  "code": "B17",
+  "name": "Iran",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "M6",
+   "I1",
+   "B16",
+   "N14",
+   "R6",
+   "R9",
+   "N18",
+   "B18"
+  ]
+ },
+ {
+  "code": "B18",
+  "name": "India",
+  "type": "land",
+  "stratValue": 5,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 5,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "I1",
+   "I10",
+   "I2",
+   "I7",
+   "B17",
+   "N18",
+   "TIBET",
+   "J8"
+  ]
+ },
+ {
+  "code": "B19",
+  "name": "Ceylon",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "I7"
+  ]
+ },
+ {
+  "code": "B2",
+  "name": "Azores",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A14",
+   "A15"
+  ]
+ },
+ {
+  "code": "B20",
+  "name": "Maldives",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "I2",
+   "I6"
+  ]
+ },
+ {
+  "code": "B21",
+  "name": "Western Australia",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P16",
+   "P17",
+   "B22",
+   "B23"
+  ]
+ },
+ {
+  "code": "B22",
+  "name": "Northern Territory",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P17",
+   "B21",
+   "B23",
+   "B24"
+  ]
+ },
+ {
+  "code": "B23",
+  "name": "South Australia",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P18",
+   "B21",
+   "B22",
+   "B24"
+  ]
+ },
+ {
+  "code": "B24",
+  "name": "Eastern Australia",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 3,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P17",
+   "P18",
+   "B22",
+   "B23"
+  ]
+ },
+ {
+  "code": "B25",
+  "name": "Papua",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P17",
+   "P18",
+   "J24"
+  ]
+ },
+ {
+  "code": "B26",
+  "name": "New Hebrides",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P19"
+  ]
+ },
+ {
+  "code": "B27",
+  "name": "New Zealand",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "P19",
+   "P20"
+  ]
+ },
+ {
+  "code": "B28",
+  "name": "Western Canada",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 1,
+   "iron": 2,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "U4",
+   "P4",
+   "U3",
+   "U2",
+   "B29",
+   "A1"
+  ]
+ },
+ {
+  "code": "B29",
+  "name": "Eastern Canada",
+  "type": "land",
+  "stratValue": 4,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 4,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "B28",
+   "A1",
+   "U2",
+   "U1",
+   "A9",
+   "A2"
+  ]
+ },
+ {
+  "code": "B3",
+  "name": "Gibraltar",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A15",
+   "M1",
+   "N11"
+  ]
+ },
+ {
+  "code": "B30",
+  "name": "The Guyanas",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "A12",
+   "N5",
+   "N6"
+  ]
+ },
+ {
+  "code": "B4",
+  "name": "Malta",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "M2"
+  ]
+ },
+ {
+  "code": "B5",
+  "name": "Egypt",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "M3",
+   "M5",
+   "T5",
+   "B6",
+   "B16",
+   "N15",
+   "SAHARA3"
+  ]
+ },
+ {
+  "code": "B6",
+  "name": "Sudan",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "M5",
+   "SAHARA3",
+   "B5",
+   "B7",
+   "B8",
+   "B11",
+   "B12"
+  ]
+ },
+ {
+  "code": "B7",
+  "name": "Horn of Africa",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "M5",
+   "I2",
+   "I3",
+   "B6",
+   "B8"
+  ]
+ },
+ {
+  "code": "B8",
+  "name": "British East Africa",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "I3",
+   "B6",
+   "B7",
+   "B9",
+   "B11",
+   "N17"
+  ]
+ },
+ {
+  "code": "B9",
+  "name": "Rhodesia",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "britain",
+  "adjacentTo": [
+   "B8",
+   "B10",
+   "B11",
+   "N16",
+   "N17"
+  ]
+ },
+ {
+  "code": "C1",
+  "name": "Honan",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "china",
+  "adjacentTo": [
+   "J4",
+   "J5",
+   "C2",
+   "C3",
+   "C4"
+  ]
+ },
+ {
+  "code": "C2",
+  "name": "Kwangsi",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "china",
+  "adjacentTo": [
+   "C1",
+   "C3",
+   "J5",
+   "J6"
+  ]
+ },
+ {
+  "code": "C3",
+  "name": "Szechwan Yunnan",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "china",
+  "adjacentTo": [
+   "C1",
+   "C2",
+   "C4",
+   "TIBET",
+   "J6",
+   "J8"
+  ]
+ },
+ {
+  "code": "C4",
+  "name": "Tsinghai Ningsia",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "china",
+  "adjacentTo": [
+   "N19",
+   "J4",
+   "C1",
+   "C3",
+   "C5",
+   "TIBET"
+  ]
+ },
+ {
+  "code": "C5",
+  "name": "Sinkiang",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "china",
+  "adjacentTo": [
+   "N19",
+   "R9",
+   "R10",
+   "TIBET",
+   "C4"
+  ]
+ },
+ {
+  "code": "G1",
+  "name": "Greater Germany",
+  "type": "land",
+  "stratValue": 8,
+  "resources": {
+   "oil": 1,
+   "iron": 2,
+   "osr": 3
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 3
+  },
+  "industrySlotsTotal": 8,
+  "hasPort": true,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "A5",
+   "A6",
+   "G2",
+   "G3",
+   "N13",
+   "T1",
+   "T2",
+   "G4",
+   "G8"
+  ]
+ },
+ {
+  "code": "G10",
+  "name": "Norway",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "A5",
+   "A6",
+   "A3",
+   "G9",
+   "N10"
+  ]
+ },
+ {
+  "code": "G11",
+  "name": "French Morocco",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "A15",
+   "M1",
+   "A16",
+   "SAHARA1",
+   "G12"
+  ]
+ },
+ {
+  "code": "G12",
+  "name": "Algeria",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "M2",
+   "G11",
+   "G13",
+   "SAHARA1",
+   "SAHARA2"
+  ]
+ },
+ {
+  "code": "G13",
+  "name": "Tunisia",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "M2",
+   "G12",
+   "SAHARA2",
+   "T5"
+  ]
+ },
+ {
+  "code": "G14",
+  "name": "Crete",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "M3"
+  ]
+ },
+ {
+  "code": "G15",
+  "name": "French West Africa",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "A17",
+   "SAHARA1",
+   "SAHARA2",
+   "B14",
+   "B15"
+  ]
+ },
+ {
+  "code": "G16",
+  "name": "Madagascar",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "I4"
+  ]
+ },
+ {
+  "code": "G2",
+  "name": "Denmark",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "G1",
+   "A5",
+   "A6"
+  ]
+ },
+ {
+  "code": "G3",
+  "name": "France",
+  "type": "land",
+  "stratValue": 6,
+  "resources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 3
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 3
+  },
+  "industrySlotsTotal": 6,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "M1",
+   "A15",
+   "A6",
+   "N11",
+   "T1",
+   "N13",
+   "G1"
+  ]
+ },
+ {
+  "code": "G4",
+  "name": "Poland Slovakia Hungary",
+  "type": "land",
+  "stratValue": 4,
+  "resources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 3
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 3
+  },
+  "industrySlotsTotal": 4,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "G1",
+   "T2",
+   "G5",
+   "G6",
+   "G7",
+   "G8"
+  ]
+ },
+ {
+  "code": "G5",
+  "name": "Bulgaria Rumania",
+  "type": "land",
+  "stratValue": 4,
+  "resources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 2
+  },
+  "industrySlotsTotal": 4,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "M4",
+   "N14",
+   "T2",
+   "G4",
+   "G6"
+  ]
+ },
+ {
+  "code": "G6",
+  "name": "Ukraine",
+  "type": "land",
+  "stratValue": 4,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 3
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 3
+  },
+  "industrySlotsTotal": 4,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "M4",
+   "G5",
+   "G4",
+   "G7",
+   "R5",
+   "R6"
+  ]
+ },
+ {
+  "code": "G7",
+  "name": "Belarus",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "industrySlotsTotal": 2,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "G6",
+   "G4",
+   "G8",
+   "R4",
+   "R5"
+  ]
+ },
+ {
+  "code": "G8",
+  "name": "Baltic States",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "A5",
+   "G1",
+   "G4",
+   "G7",
+   "R4"
+  ]
+ },
+ {
+  "code": "G9",
+  "name": "Finland",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "germany",
+  "adjacentTo": [
+   "A5",
+   "N10",
+   "G10",
+   "A3",
+   "R3",
+   "R4"
+  ]
+ },
+ {
+  "code": "I1",
+  "name": "Indian Ocean (W)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I2",
+   "N15",
+   "B16",
+   "B17",
+   "B18"
+  ]
+ },
+ {
+  "code": "I10",
+  "name": "South China Sea (E)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I7",
+   "I9",
+   "B18",
+   "J8",
+   "J7"
+  ]
+ },
+ {
+  "code": "I2",
+  "name": "Indian Ocean (Central)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I1",
+   "M5",
+   "I3",
+   "I6",
+   "I7",
+   "N15",
+   "B7",
+   "B18",
+   "B20"
+  ]
+ },
+ {
+  "code": "I3",
+  "name": "Bay of Bengal",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I2",
+   "I4",
+   "I6",
+   "B7",
+   "B8",
+   "N17"
+  ]
+ },
+ {
+  "code": "I4",
+  "name": "Gulf of Aden",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I3",
+   "I5",
+   "I6",
+   "A19",
+   "N17",
+   "G16"
+  ]
+ },
+ {
+  "code": "I5",
+  "name": "South China Sea (W)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I4",
+   "I6",
+   "I7",
+   "I8"
+  ]
+ },
+ {
+  "code": "I6",
+  "name": "Strait of Malacca",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I2",
+   "I3",
+   "I4",
+   "I5",
+   "I7",
+   "B20"
+  ]
+ },
+ {
+  "code": "I7",
+  "name": "Java Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I2",
+   "I5",
+   "I6",
+   "I8",
+   "I9",
+   "I10",
+   "B18",
+   "B19"
+  ]
+ },
+ {
+  "code": "I8",
+  "name": "Timor Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I5",
+   "I7",
+   "I9",
+   "P16"
+  ]
+ },
+ {
+  "code": "I9",
+  "name": "Eastern Indian Ocean",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I7",
+   "I8",
+   "I10",
+   "P16",
+   "J7",
+   "J9",
+   "J10"
+  ]
+ },
+ {
+  "code": "J1",
+  "name": "Imperial Japan",
+  "type": "land",
+  "stratValue": 8,
+  "resources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 2
+  },
+  "industrySlotsTotal": 8,
+  "hasPort": true,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P1",
+   "P0"
+  ]
+ },
+ {
+  "code": "J10",
+  "name": "Sumatra",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 3,
+   "iron": 0,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P16",
+   "I9",
+   "P15"
+  ]
+ },
+ {
+  "code": "J11",
+  "name": "Java",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P16"
+  ]
+ },
+ {
+  "code": "J12",
+  "name": "Borneo",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P15"
+  ]
+ },
+ {
+  "code": "J13",
+  "name": "Celebes",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P15"
+  ]
+ },
+ {
+  "code": "J14",
+  "name": "Philippines",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P14"
+  ]
+ },
+ {
+  "code": "J15",
+  "name": "Hainan",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P14"
+  ]
+ },
+ {
+  "code": "J16",
+  "name": "Formosa",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P0",
+   "P14"
+  ]
+ },
+ {
+  "code": "J17",
+  "name": "Okinawa",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P0",
+   "P1",
+   "P13",
+   "P14"
+  ]
+ },
+ {
+  "code": "J18",
+  "name": "Palau",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P13",
+   "P14"
+  ]
+ },
+ {
+  "code": "J19",
+  "name": "Japanese Sakhalin Island",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "R18",
+   "P1"
+  ]
+ },
+ {
+  "code": "J2",
+  "name": "Korea",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P1",
+   "P0",
+   "R16",
+   "J3"
+  ]
+ },
+ {
+  "code": "J20",
+  "name": "Iwo Jima",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P1"
+  ]
+ },
+ {
+  "code": "J21",
+  "name": "Mariana Islands",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P1",
+   "P12",
+   "P13"
+  ]
+ },
+ {
+  "code": "J22",
+  "name": "Caroline Islands",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P13"
+  ]
+ },
+ {
+  "code": "J23",
+  "name": "New Britain",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P13"
+  ]
+ },
+ {
+  "code": "J24",
+  "name": "New Guinea",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P13",
+   "B25"
+  ]
+ },
+ {
+  "code": "J25",
+  "name": "Solomon Islands",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P13",
+   "P18",
+   "P19"
+  ]
+ },
+ {
+  "code": "J26",
+  "name": "Wake Island",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P2",
+   "P11",
+   "P12"
+  ]
+ },
+ {
+  "code": "J27",
+  "name": "Marshall Islands",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P11",
+   "P12",
+   "P20"
+  ]
+ },
+ {
+  "code": "J28",
+  "name": "Gilbert Islands",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P12",
+   "P19",
+   "P20"
+  ]
+ },
+ {
+  "code": "J3",
+  "name": "Manchuria",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 0,
+   "iron": 3,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P0",
+   "J2",
+   "R16",
+   "R14",
+   "N19",
+   "J4"
+  ]
+ },
+ {
+  "code": "J4",
+  "name": "Peiping",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "industrySlotsTotal": 2,
+  "hasPort": true,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P0",
+   "J3",
+   "N19",
+   "C4",
+   "C1",
+   "J5"
+  ]
+ },
+ {
+  "code": "J5",
+  "name": "Chekiang Kwangtung",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P0",
+   "P14",
+   "J4",
+   "C1",
+   "C2",
+   "J6"
+  ]
+ },
+ {
+  "code": "J6",
+  "name": "Indochina",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P15",
+   "P14",
+   "J5",
+   "C2",
+   "C3",
+   "J8",
+   "J7"
+  ]
+ },
+ {
+  "code": "J7",
+  "name": "Thailand",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "I9",
+   "I10",
+   "P15",
+   "J6",
+   "J8",
+   "J9"
+  ]
+ },
+ {
+  "code": "J8",
+  "name": "Burma",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "I10",
+   "B18",
+   "TIBET",
+   "C3",
+   "J6",
+   "J7"
+  ]
+ },
+ {
+  "code": "J9",
+  "name": "Malaya",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "japan",
+  "adjacentTo": [
+   "P15",
+   "I9",
+   "J7"
+  ]
+ },
+ {
+  "code": "M1",
+  "name": "Western Mediterranean",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "M2",
+   "G3",
+   "N11",
+   "B3",
+   "G11"
+  ]
+ },
+ {
+  "code": "M2",
+  "name": "Central Mediterranean",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "M1",
+   "M3",
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "B4",
+   "G12",
+   "G13",
+   "T5"
+  ]
+ },
+ {
+  "code": "M3",
+  "name": "Eastern Mediterranean",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "M2",
+   "T2",
+   "N14",
+   "B16",
+   "B5",
+   "T5",
+   "G14"
+  ]
+ },
+ {
+  "code": "M4",
+  "name": "Black Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "G5",
+   "G6",
+   "R6",
+   "N14"
+  ]
+ },
+ {
+  "code": "M5",
+  "name": "Red Sea / Arabian Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "I2",
+   "B5",
+   "N15",
+   "B6",
+   "B7"
+  ]
+ },
+ {
+  "code": "M6",
+  "name": "Caspian Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "R6",
+   "R7",
+   "R8",
+   "R9",
+   "B17"
+  ]
+ },
+ {
+  "code": "N1",
+  "name": "Mexico",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "P6",
+   "A11",
+   "P5",
+   "P7",
+   "N2",
+   "U2",
+   "U3"
+  ]
+ },
+ {
+  "code": "N10",
+  "name": "Sweden",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A5",
+   "G9",
+   "G10"
+  ]
+ },
+ {
+  "code": "N11",
+  "name": "Spain",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "M1",
+   "A15",
+   "G3",
+   "N12",
+   "B3"
+  ]
+ },
+ {
+  "code": "N12",
+  "name": "Portugal",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A15",
+   "N11"
+  ]
+ },
+ {
+  "code": "N13",
+  "name": "Switzerland",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "G1",
+   "G3",
+   "T1"
+  ]
+ },
+ {
+  "code": "N14",
+  "name": "Turkey",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "M3",
+   "M4",
+   "G5",
+   "T2",
+   "R6",
+   "B16",
+   "B17"
+  ]
+ },
+ {
+  "code": "N15",
+  "name": "Arabia",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "I1",
+   "I2",
+   "M5",
+   "B5",
+   "B16"
+  ]
+ },
+ {
+  "code": "N16",
+  "name": "Angola",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A19",
+   "B9",
+   "B10",
+   "B11"
+  ]
+ },
+ {
+  "code": "N17",
+  "name": "Mozambique",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "I3",
+   "I4",
+   "A19",
+   "B8",
+   "B9",
+   "B10"
+  ]
+ },
+ {
+  "code": "N18",
+  "name": "Afghanistan",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "R9",
+   "B17",
+   "B18",
+   "TIBET"
+  ]
+ },
+ {
+  "code": "N19",
+  "name": "Mongolia",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "R10",
+   "R14",
+   "J3",
+   "J4",
+   "C4",
+   "C5"
+  ]
+ },
+ {
+  "code": "N2",
+  "name": "Central America",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "P7",
+   "A11",
+   "A12",
+   "N1",
+   "N4"
+  ]
+ },
+ {
+  "code": "N3",
+  "name": "West Indies",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A10",
+   "A12"
+  ]
+ },
+ {
+  "code": "N4",
+  "name": "Colombia",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "P7",
+   "A12",
+   "N2",
+   "N5",
+   "N6"
+  ]
+ },
+ {
+  "code": "N5",
+  "name": "Venezuela",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A12",
+   "N4",
+   "N6",
+   "B30"
+  ]
+ },
+ {
+  "code": "N6",
+  "name": "Brazil",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A13",
+   "A12",
+   "N4",
+   "N5",
+   "B30"
+  ]
+ },
+ {
+  "code": "N7",
+  "name": "Greenland",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A2",
+   "A3"
+  ]
+ },
+ {
+  "code": "N8",
+  "name": "Iceland",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A2",
+   "A7",
+   "A8"
+  ]
+ },
+ {
+  "code": "N9",
+  "name": "Ireland",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "neutral",
+  "adjacentTo": [
+   "A7",
+   "B1"
+  ]
+ },
+ {
+  "code": "P0",
+  "name": "Sea of Japan",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P1",
+   "P14",
+   "J1",
+   "J2",
+   "J3",
+   "J4",
+   "J5",
+   "J16",
+   "J17"
+  ]
+ },
+ {
+  "code": "P1",
+  "name": "Japan Coastal Waters",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P0",
+   "P13",
+   "P12",
+   "P2",
+   "J1",
+   "J17",
+   "J20",
+   "J21",
+   "J19",
+   "R18",
+   "R16",
+   "J2"
+  ]
+ },
+ {
+  "code": "P10",
+  "name": "Central Pacific (W)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P9",
+   "P3",
+   "P11",
+   "P20",
+   "U7",
+   "U8",
+   "U9"
+  ]
+ },
+ {
+  "code": "P11",
+  "name": "South Pacific (N)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P2",
+   "P3",
+   "P10",
+   "P20",
+   "P12",
+   "J26",
+   "J27"
+  ]
+ },
+ {
+  "code": "P12",
+  "name": "Philippine Sea (N)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P1",
+   "P2",
+   "P11",
+   "P20",
+   "P19",
+   "P13",
+   "J21",
+   "J26",
+   "J27",
+   "J28"
+  ]
+ },
+ {
+  "code": "P13",
+  "name": "Philippine Sea (S)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P1",
+   "P12",
+   "P19",
+   "P18",
+   "P17",
+   "P14",
+   "J21",
+   "J23",
+   "J25",
+   "J22",
+   "J17",
+   "J18",
+   "J24"
+  ]
+ },
+ {
+  "code": "P14",
+  "name": "Western Pacific",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P0",
+   "P13",
+   "P17",
+   "P15",
+   "J6",
+   "J5",
+   "J16",
+   "J17",
+   "J18",
+   "J14",
+   "J15"
+  ]
+ },
+ {
+  "code": "P15",
+  "name": "South China Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P14",
+   "P17",
+   "P16",
+   "J13",
+   "J12",
+   "J10",
+   "J9",
+   "J7",
+   "J6"
+  ]
+ },
+ {
+  "code": "P16",
+  "name": "Coral Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P17",
+   "P15",
+   "I9",
+   "I8",
+   "B21",
+   "J10",
+   "J11"
+  ]
+ },
+ {
+  "code": "P17",
+  "name": "Arafura Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P18",
+   "P13",
+   "P14",
+   "P15",
+   "P16",
+   "B25",
+   "B21",
+   "B22",
+   "B24"
+  ]
+ },
+ {
+  "code": "P18",
+  "name": "South Pacific",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P17",
+   "P13",
+   "P19",
+   "B24",
+   "B25",
+   "J25",
+   "B23"
+  ]
+ },
+ {
+  "code": "P19",
+  "name": "South Pacific (E)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P18",
+   "P13",
+   "P12",
+   "P20",
+   "U10",
+   "B26",
+   "J28",
+   "B27",
+   "J25"
+  ]
+ },
+ {
+  "code": "P2",
+  "name": "North Pacific",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P1",
+   "P12",
+   "P11",
+   "P3",
+   "J26",
+   "R17"
+  ]
+ },
+ {
+  "code": "P20",
+  "name": "South Pacific (SE)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P10",
+   "P11",
+   "P12",
+   "P19",
+   "U9",
+   "J27",
+   "J28",
+   "B27"
+  ]
+ },
+ {
+  "code": "P3",
+  "name": "Bering Sea",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P2",
+   "P11",
+   "P10",
+   "P9",
+   "P4",
+   "U5",
+   "U7",
+   "U4",
+   "R17"
+  ]
+ },
+ {
+  "code": "P4",
+  "name": "Gulf of Alaska",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P3",
+   "P5",
+   "P9",
+   "U4",
+   "B28"
+  ]
+ },
+ {
+  "code": "P5",
+  "name": "North-Central Pacific",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P4",
+   "P9",
+   "P8",
+   "P6",
+   "U3",
+   "N1"
+  ]
+ },
+ {
+  "code": "P6",
+  "name": "Central Pacific (N)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P5",
+   "P8",
+   "P7",
+   "N1"
+  ]
+ },
+ {
+  "code": "P7",
+  "name": "Central Pacific (C)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P6",
+   "N1",
+   "N2",
+   "N4"
+  ]
+ },
+ {
+  "code": "P8",
+  "name": "Central Pacific (S)",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P9",
+   "P5",
+   "P6"
+  ]
+ },
+ {
+  "code": "P9",
+  "name": "Hawaiian Waters",
+  "type": "sea",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "adjacentTo": [
+   "P10",
+   "P3",
+   "P4",
+   "P5",
+   "P8",
+   "U6",
+   "U7",
+   "U8"
+  ]
+ },
+ {
+  "code": "R1",
+  "name": "Moscow",
+  "type": "land",
+  "stratValue": 5,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 5,
+  "hasPort": false,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "R2",
+   "R5",
+   "R7",
+   "R8",
+   "R11",
+   "R12"
+  ]
+ },
+ {
+  "code": "R10",
+  "name": "East Kazakh",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "R8",
+   "R9",
+   "C5",
+   "N19",
+   "R11",
+   "R13",
+   "R14"
+  ]
+ },
+ {
+  "code": "R11",
+  "name": "Sverdlovsk",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "R1",
+   "R8",
+   "R10",
+   "R12",
+   "R13"
+  ]
+ },
+ {
+  "code": "R12",
+  "name": "Urals",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "A4",
+   "R1",
+   "R2",
+   "R11",
+   "R13"
+  ]
+ },
+ {
+  "code": "R13",
+  "name": "Krasnoyarsk",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "R10",
+   "R11",
+   "R12",
+   "R14",
+   "R15"
+  ]
+ },
+ {
+  "code": "R14",
+  "name": "Amur Irkutsk",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "R10",
+   "R13",
+   "R15",
+   "R16",
+   "J3",
+   "N19"
+  ]
+ },
+ {
+  "code": "R15",
+  "name": "Yakut",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "R13",
+   "R14",
+   "R16"
+  ]
+ },
+ {
+  "code": "R16",
+  "name": "Khabarovsky",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 2,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "P1",
+   "R14",
+   "R15",
+   "J2",
+   "J3",
+   "R17"
+  ]
+ },
+ {
+  "code": "R17",
+  "name": "Kamchatsky",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "P2",
+   "P3",
+   "R16"
+  ]
+ },
+ {
+  "code": "R18",
+  "name": "Soviet Sakhalin Island",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "P1",
+   "J19"
+  ]
+ },
+ {
+  "code": "R2",
+  "name": "Arkhangelsk",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 3,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "A4",
+   "R3",
+   "R4",
+   "R5",
+   "R1",
+   "R12"
+  ]
+ },
+ {
+  "code": "R3",
+  "name": "Karelia",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 2,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "A4",
+   "G9",
+   "R4",
+   "R2",
+   "A3"
+  ]
+ },
+ {
+  "code": "R4",
+  "name": "Leningrad",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 3,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "A5",
+   "G7",
+   "G8",
+   "G9",
+   "R5",
+   "R2",
+   "R3"
+  ]
+ },
+ {
+  "code": "R5",
+  "name": "Bryansk",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 2,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "G6",
+   "G7",
+   "R6",
+   "R7",
+   "R1",
+   "R2",
+   "R4"
+  ]
+ },
+ {
+  "code": "R6",
+  "name": "Caucasus",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 2,
+   "iron": 0,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "M4",
+   "M6",
+   "G6",
+   "R5",
+   "R7",
+   "N14",
+   "B17"
+  ]
+ },
+ {
+  "code": "R7",
+  "name": "Volga",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 2,
+  "hasPort": false,
+  "hasRailroad": true,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "M6",
+   "R1",
+   "R5",
+   "R6",
+   "R8"
+  ]
+ },
+ {
+  "code": "R8",
+  "name": "Kazakh",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 2
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "M6",
+   "R1",
+   "R7",
+   "R9",
+   "R10",
+   "R11"
+  ]
+ },
+ {
+  "code": "R9",
+  "name": "Turkmen Uzbek",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "soviet",
+  "adjacentTo": [
+   "M6",
+   "B17",
+   "N18",
+   "TIBET",
+   "C5",
+   "R8",
+   "R10"
+  ]
+ },
+ {
+  "code": "SAHARA1",
+  "name": "Sahara (West)",
+  "type": "barrier",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "airOnly": true,
+  "adjacentTo": [
+   "A16",
+   "A17",
+   "G11",
+   "G12",
+   "G15",
+   "SAHARA2"
+  ]
+ },
+ {
+  "code": "SAHARA2",
+  "name": "Sahara (Central)",
+  "type": "barrier",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "airOnly": true,
+  "adjacentTo": [
+   "SAHARA1",
+   "G12",
+   "G13",
+   "T5",
+   "SAHARA3",
+   "B13",
+   "B14",
+   "G15"
+  ]
+ },
+ {
+  "code": "SAHARA3",
+  "name": "Sahara (East)",
+  "type": "barrier",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "airOnly": true,
+  "adjacentTo": [
+   "SAHARA2",
+   "T5",
+   "B5",
+   "B6",
+   "B12",
+   "B13"
+  ]
+ },
+ {
+  "code": "T1",
+  "name": "Italy",
+  "type": "land",
+  "stratValue": 6,
+  "resources": {
+   "oil": 0,
+   "iron": 1,
+   "osr": 3
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 3
+  },
+  "industrySlotsTotal": 6,
+  "hasPort": true,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "italy",
+  "adjacentTo": [
+   "M2",
+   "N13",
+   "G3",
+   "G1",
+   "T2",
+   "T4"
+  ]
+ },
+ {
+  "code": "T2",
+  "name": "Balkans",
+  "type": "land",
+  "stratValue": 4,
+  "resources": {
+   "oil": 1,
+   "iron": 2,
+   "osr": 3
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 3
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "italy",
+  "adjacentTo": [
+   "M3",
+   "M2",
+   "T1",
+   "G1",
+   "G4",
+   "G5",
+   "N14"
+  ]
+ },
+ {
+  "code": "T3",
+  "name": "Sardinia",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "italy",
+  "adjacentTo": [
+   "M2"
+  ]
+ },
+ {
+  "code": "T4",
+  "name": "Sicily",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "italy",
+  "adjacentTo": [
+   "M2",
+   "T1"
+  ]
+ },
+ {
+  "code": "T5",
+  "name": "Libya",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 2,
+   "iron": 1,
+   "osr": 0
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 1,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "italy",
+  "adjacentTo": [
+   "M2",
+   "M3",
+   "G13",
+   "SAHARA2",
+   "SAHARA3",
+   "B5"
+  ]
+ },
+ {
+  "code": "TIBET",
+  "name": "Tibet",
+  "type": "barrier",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "airOnly": true,
+  "adjacentTo": [
+   "R9",
+   "N18",
+   "B18",
+   "J8",
+   "C3",
+   "C4",
+   "C5"
+  ]
+ },
+ {
+  "code": "U1",
+  "name": "Eastern United States",
+  "type": "land",
+  "stratValue": 10,
+  "resources": {
+   "oil": 2,
+   "iron": 4,
+   "osr": 5
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 4,
+   "osr": 5
+  },
+  "industrySlotsTotal": 10,
+  "hasPort": true,
+  "hasRailroad": true,
+  "isCapital": true,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "A10",
+   "A11",
+   "U2",
+   "B29"
+  ]
+ },
+ {
+  "code": "U10",
+  "name": "New Caledonia",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P19"
+  ]
+ },
+ {
+  "code": "U2",
+  "name": "Central United States",
+  "type": "land",
+  "stratValue": 9,
+  "resources": {
+   "oil": 3,
+   "iron": 4,
+   "osr": 6
+  },
+  "embattledResources": {
+   "oil": 2,
+   "iron": 4,
+   "osr": 6
+  },
+  "industrySlotsTotal": 9,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "A11",
+   "U1",
+   "B29",
+   "B28",
+   "U3",
+   "N1"
+  ]
+ },
+ {
+  "code": "U3",
+  "name": "Western United States",
+  "type": "land",
+  "stratValue": 8,
+  "resources": {
+   "oil": 2,
+   "iron": 3,
+   "osr": 6
+  },
+  "embattledResources": {
+   "oil": 1,
+   "iron": 3,
+   "osr": 6
+  },
+  "industrySlotsTotal": 8,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P5",
+   "N1",
+   "U2",
+   "B28"
+  ]
+ },
+ {
+  "code": "U4",
+  "name": "Alaska",
+  "type": "land",
+  "stratValue": 3,
+  "resources": {
+   "oil": 1,
+   "iron": 2,
+   "osr": 1
+  },
+  "embattledResources": {
+   "oil": 0,
+   "iron": 2,
+   "osr": 1
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": true,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P4",
+   "P3",
+   "B28"
+  ]
+ },
+ {
+  "code": "U5",
+  "name": "Aleutian Islands",
+  "type": "land",
+  "stratValue": 1,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P3"
+  ]
+ },
+ {
+  "code": "U6",
+  "name": "Hawaiian Islands",
+  "type": "land",
+  "stratValue": 2,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": true,
+  "hasRailroad": false,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P9"
+  ]
+ },
+ {
+  "code": "U7",
+  "name": "Midway Islands",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P3",
+   "P9",
+   "P10"
+  ]
+ },
+ {
+  "code": "U8",
+  "name": "Johnston Atoll",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P9",
+   "P10"
+  ]
+ },
+ {
+  "code": "U9",
+  "name": "Samoan Islands",
+  "type": "land",
+  "stratValue": 0,
+  "resources": {
+   "oil": 0,
+   "iron": 0,
+   "osr": 0
+  },
+  "industrySlotsTotal": 0,
+  "hasPort": false,
+  "hasRailroad": false,
+  "startingOwner": "usa",
+  "adjacentTo": [
+   "P10",
+   "P20"
+  ]
+ }
+]

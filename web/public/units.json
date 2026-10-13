@@ -1,0 +1,1720 @@
+[
+ {
+  "id": "britain-land-53",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 53,
+  "code": "B1",
+  "face": "Britain_Land_53.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "britain-air-11",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 11,
+  "code": "B1",
+  "face": "Britain_Air_11.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "britain-air-13",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 13,
+  "code": "B3",
+  "face": "Britain_Air_13.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-47",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 47,
+  "code": "B5",
+  "face": "Britain_Land_47.png",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 1
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "britain-air-15",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 15,
+  "code": "B5",
+  "face": "Britain_Air_15.png",
+  "units": {
+   "fighter": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "britain-land-75",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 75,
+  "code": "B10",
+  "face": "Britain_Land_75.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-63",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 63,
+  "code": "B16",
+  "face": "Britain_Land_63.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-60",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 60,
+  "code": "B18",
+  "face": "Britain_Land_60.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "britain-air-16",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 16,
+  "code": "B18",
+  "face": "Britain_Air_16.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-68",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 68,
+  "code": "B22",
+  "face": "Britain_Land_68.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "britain-air-12",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 12,
+  "code": "B22",
+  "face": "Britain_Air_12.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-80",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 80,
+  "code": "B23",
+  "face": "Britain_Land_80.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-36",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 36,
+  "code": "B24",
+  "face": "Britain_Land_36.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "britain-land-71",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 71,
+  "code": "B25",
+  "face": "Britain_Land_71.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-90",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 90,
+  "code": "B28",
+  "face": "Britain_Land_90.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-land-45",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 45,
+  "code": "B29",
+  "face": "Britain_Land_45.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "britain-air-14",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 14,
+  "code": "B29",
+  "face": "Britain_Air_14.png",
+  "units": {
+   "fighter": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "britain-sea-6",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 6,
+  "code": "A6",
+  "face": "Britain_Sea_6.png",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-sea-7",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 7,
+  "code": "A7",
+  "face": "Britain_Sea_7.png",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-sea-9",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 9,
+  "code": "A19",
+  "face": "Britain_Sea_9.png",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-sea-2",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 2,
+  "code": "I2",
+  "face": "Britain_Sea_2.png",
+  "units": {
+   "carrier": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-sea-3",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 3,
+  "code": "M3",
+  "face": "Britain_Sea_3.png",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "britain-sea-8",
+  "nation": "britain",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 8,
+  "code": "P18",
+  "face": "Britain_Sea_8.png",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-82",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 82,
+  "code": "B1",
+  "face": "USA_Land_82.png",
+  "units": {
+   "armor": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-air-14",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 14,
+  "code": "B1",
+  "face": "USA_Air_14.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-50",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 50,
+  "code": "B27",
+  "face": "USA_Land_50.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "germany-land-48",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 48,
+  "code": "G1",
+  "face": "Germany_Land_48.png",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 3
+  },
+  "unitCount": 7
+ },
+ {
+  "id": "germany-air-11",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 11,
+  "code": "G1",
+  "face": "Germany_Air_11.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "germany-land-38",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 38,
+  "code": "G2",
+  "face": "Germany_Land_38.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "germany-land-72",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 72,
+  "code": "G3",
+  "face": "Germany_Land_72.png",
+  "units": {
+   "armor": 2,
+   "artillery": 3,
+   "infantry": 2
+  },
+  "unitCount": 7
+ },
+ {
+  "id": "germany-air-13",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 13,
+  "code": "G3",
+  "face": "Germany_Air_13.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "germany-land-56",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 56,
+  "code": "G4",
+  "face": "Germany_Land_56.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "germany-air-14",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 14,
+  "code": "G4",
+  "face": "Germany_Air_14.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "germany-land-33",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 33,
+  "code": "G5",
+  "face": "Germany_Land_33.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "germany-air-15",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 15,
+  "code": "G5",
+  "face": "Germany_Air_15.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "germany-land-61",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 61,
+  "code": "G6",
+  "face": "Germany_Land_61.png",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": "germany-air-16",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 16,
+  "code": "G6",
+  "face": "Germany_Air_16.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "germany-land-37",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 37,
+  "code": "G7",
+  "face": "Germany_Land_37.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "germany-land-22",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 22,
+  "code": "G8",
+  "face": "Germany_Land_22.png",
+  "units": {
+   "armor": 1,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "germany-land-40",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 40,
+  "code": "G9",
+  "face": "Germany_Land_40.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "germany-land-55",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 55,
+  "code": "G10",
+  "face": "Germany_Land_55.png",
+  "units": {
+   "armor": 1,
+   "artillery": 3,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": "germany-air-12",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 12,
+  "code": "G10",
+  "face": "Germany_Air_12.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "germany-land-59",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 59,
+  "code": "G13",
+  "face": "Germany_Land_59.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "germany-sea-1",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 1,
+  "code": "A5",
+  "face": "Germany_Sea_1.png",
+  "units": {
+   "cruiser": 2,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "germany-sea-3",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 3,
+  "code": "A13",
+  "face": "Germany_Sea_3.png",
+  "units": {
+   "submarine": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "germany-sea-5",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 5,
+  "code": "A15",
+  "face": "Germany_Sea_5.png",
+  "units": {
+   "submarine": 3
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "japan-land-44",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 44,
+  "code": "J1",
+  "face": "Japan_Land_44.png",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": "japan-air-11",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 11,
+  "code": "J1",
+  "face": "Japan_Air_11.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "japan-land-62",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 62,
+  "code": "J2",
+  "face": "Japan_Land_62.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "japan-land-65",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 65,
+  "code": "J3",
+  "face": "Japan_Land_65.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "japan-air-13",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 13,
+  "code": "J3",
+  "face": "Japan_Air_13.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "japan-land-24",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 24,
+  "code": "J4",
+  "face": "Japan_Land_24.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "japan-land-81",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 81,
+  "code": "J5",
+  "face": "Japan_Land_81.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "japan-air-15",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 15,
+  "code": "J5",
+  "face": "Japan_Air_15.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-46",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 46,
+  "code": "J6",
+  "face": "Japan_Land_46.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-95",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 95,
+  "code": "J7",
+  "face": "Japan_Land_95.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-air-17",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 17,
+  "code": "J7",
+  "face": "Japan_Air_17.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-30",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 30,
+  "code": "J8",
+  "face": "Japan_Land_30.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "japan-land-85",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 85,
+  "code": "J9",
+  "face": "Japan_Land_85.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-78",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 78,
+  "code": "J10",
+  "face": "Japan_Land_78.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "japan-land-54",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 54,
+  "code": "J11",
+  "face": "Japan_Land_54.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "japan-land-25",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 25,
+  "code": "J12",
+  "face": "Japan_Land_25.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "japan-land-77",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 77,
+  "code": "J14",
+  "face": "Japan_Land_77.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "japan-air-14",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 14,
+  "code": "J14",
+  "face": "Japan_Air_14.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-air-16",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 16,
+  "code": "J16",
+  "face": "Japan_Air_16.png",
+  "units": {
+   "fighter": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "japan-land-89",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 89,
+  "code": "J17",
+  "face": "Japan_Land_89.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-52",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 52,
+  "code": "J20",
+  "face": "Japan_Land_52.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-39",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 39,
+  "code": "J22",
+  "face": "Japan_Land_39.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-air-12",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 12,
+  "code": "J22",
+  "face": "Japan_Air_12.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-87",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 87,
+  "code": "J23",
+  "face": "Japan_Land_87.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "japan-land-76",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 76,
+  "code": "J24",
+  "face": "Japan_Land_76.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-land-92",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 92,
+  "code": "J25",
+  "face": "Japan_Land_92.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-sea-1",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 1,
+  "code": "P1",
+  "face": "Japan_Sea_1.png",
+  "units": {
+   "battleship": 1,
+   "carrier": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "japan-sea-3",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 3,
+  "code": "P13",
+  "face": "Japan_Sea_3.png",
+  "units": {
+   "battleship": 1,
+   "carrier": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "japan-sea-4",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 4,
+  "code": "P14",
+  "face": "Japan_Sea_4.png",
+  "units": {
+   "cruiser": 2,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "japan-sea-5",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 5,
+  "code": "P15",
+  "face": "Japan_Sea_5.png",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "japan-sea-9",
+  "nation": "japan",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 9,
+  "code": "I9",
+  "face": "Japan_Sea_9.png",
+  "units": {
+   "carrier": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "soviet-land-26",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 26,
+  "code": "R1",
+  "face": "Soviet_Land_26.png",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": "soviet-air-11",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 11,
+  "code": "R1",
+  "face": "Soviet_Air_11.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "soviet-land-66",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 66,
+  "code": "R2",
+  "face": "Soviet_Land_66.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "soviet-land-67",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 67,
+  "code": "R3",
+  "face": "Soviet_Land_67.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "soviet-air-13",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 13,
+  "code": "R3",
+  "face": "Soviet_Air_13.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "soviet-land-29",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 29,
+  "code": "R4",
+  "face": "Soviet_Land_29.png",
+  "units": {
+   "artillery": 2,
+   "infantry": 4
+  },
+  "unitCount": 6
+ },
+ {
+  "id": "soviet-land-23",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 23,
+  "code": "R5",
+  "face": "Soviet_Land_23.png",
+  "units": {
+   "armor": 2,
+   "artillery": 1,
+   "infantry": 4
+  },
+  "unitCount": 7
+ },
+ {
+  "id": "soviet-air-15",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 15,
+  "code": "R5",
+  "face": "Soviet_Air_15.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "soviet-land-57",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 57,
+  "code": "R6",
+  "face": "Soviet_Land_57.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 4
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "soviet-land-21",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 21,
+  "code": "R7",
+  "face": "Soviet_Land_21.png",
+  "units": {
+   "armor": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "soviet-land-34",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 34,
+  "code": "R14",
+  "face": "Soviet_Land_34.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "soviet-land-58",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 58,
+  "code": "R16",
+  "face": "Soviet_Land_58.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "soviet-sea-1",
+  "nation": "soviet",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 1,
+  "code": "A4",
+  "face": "Soviet_Sea_1.png",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-51",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 51,
+  "code": "U1",
+  "face": "USA_Land_51.png",
+  "units": {
+   "armor": 2,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "usa-air-11",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 11,
+  "code": "U1",
+  "face": "USA_Air_11.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-land-27",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 27,
+  "code": "U2",
+  "face": "USA_Land_27.png",
+  "units": {
+   "armor": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-air-12",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 12,
+  "code": "U2",
+  "face": "USA_Air_12.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-land-69",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 69,
+  "code": "U3",
+  "face": "USA_Land_69.png",
+  "units": {
+   "armor": 1,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "usa-air-13",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 13,
+  "code": "U3",
+  "face": "USA_Air_13.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-land-35",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 35,
+  "code": "U4",
+  "face": "USA_Land_35.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-31",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 31,
+  "code": "U5",
+  "face": "USA_Land_31.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-64",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 64,
+  "code": "U6",
+  "face": "USA_Land_64.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-air-16",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 16,
+  "code": "U6",
+  "face": "USA_Air_16.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-air-17",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 17,
+  "code": "U7",
+  "face": "USA_Air_17.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-73",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 73,
+  "code": "U10",
+  "face": "USA_Land_73.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-air-15",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "air",
+  "num": 15,
+  "code": "U10",
+  "face": "USA_Air_15.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-land-43",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 43,
+  "code": "J25",
+  "face": "USA_Land_43.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-sea-1",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 1,
+  "code": "A10",
+  "face": "USA_Sea_1.png",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "usa-sea-2",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 2,
+  "code": "P5",
+  "face": "USA_Sea_2.png",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-sea-3",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 3,
+  "code": "P9",
+  "face": "USA_Sea_3.png",
+  "units": {
+   "carrier": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "usa-sea-4",
+  "nation": "usa",
+  "alliance": "allied",
+  "domain": "sea",
+  "num": 4,
+  "code": "P19",
+  "face": "USA_Sea_4.png",
+  "units": {
+   "carrier": 1,
+   "cruiser": 2,
+   "submarine": 1
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "china-land-101",
+  "nation": "china",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 101,
+  "code": "C1",
+  "face": "China_Land_101.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "china-land-102",
+  "nation": "china",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 102,
+  "code": "C2",
+  "face": "China_Land_102.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "china-land-103",
+  "nation": "china",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 103,
+  "code": "C3",
+  "face": "China_Land_103.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "china-land-104",
+  "nation": "china",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 104,
+  "code": "C4",
+  "face": "China_Land_104.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "china-land-105",
+  "nation": "china",
+  "alliance": "allied",
+  "domain": "land",
+  "num": 105,
+  "code": "C5",
+  "face": "China_Land_105.png",
+  "units": {
+   "infantry": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "italy-land-114",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 114,
+  "code": "T1",
+  "face": "Italy_Land_114.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 5
+ },
+ {
+  "id": "italy-air-11",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 11,
+  "code": "T1",
+  "face": "Italy_Air_11.png",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "italy-land-115",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 115,
+  "code": "T2",
+  "face": "Italy_Land_115.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "italy-air-12",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 12,
+  "code": "T2",
+  "face": "Italy_Air_12.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "italy-land-112",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 112,
+  "code": "T4",
+  "face": "Italy_Land_112.png",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": "italy-land-113",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 113,
+  "code": "T5",
+  "face": "Italy_Land_113.png",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": "germany-land-49",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "land",
+  "num": 49,
+  "code": "T5",
+  "face": "Germany_Land_49.png",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": "germany-air-17",
+  "nation": "germany",
+  "alliance": "axis",
+  "domain": "air",
+  "num": 17,
+  "code": "T5",
+  "face": "Germany_Air_17.png",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": "italy-sea-1",
+  "nation": "italy",
+  "alliance": "axis",
+  "domain": "sea",
+  "num": 1,
+  "code": "M2",
+  "face": "Italy_Sea_1.png",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 3
+ }
+]

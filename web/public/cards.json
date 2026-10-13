@@ -1,0 +1,1186 @@
+{
+ "britain": {
+  "prefix": "B",
+  "cols": 10,
+  "rows": 3,
+  "count": 30,
+  "cards": [
+   {
+    "num": 1,
+    "code": "B1",
+    "row": 0,
+    "col": 0,
+    "front": "Britain_1_front.png",
+    "back": "Britain_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "B2",
+    "row": 0,
+    "col": 1,
+    "front": "Britain_2_front.png",
+    "back": "Britain_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "B3",
+    "row": 0,
+    "col": 2,
+    "front": "Britain_3_front.png",
+    "back": "Britain_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "B4",
+    "row": 0,
+    "col": 3,
+    "front": "Britain_4_front.png",
+    "back": "Britain_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "B5",
+    "row": 0,
+    "col": 4,
+    "front": "Britain_5_front.png",
+    "back": "Britain_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "B6",
+    "row": 0,
+    "col": 5,
+    "front": "Britain_6_front.png",
+    "back": "Britain_6_back.png"
+   },
+   {
+    "num": 7,
+    "code": "B7",
+    "row": 0,
+    "col": 6,
+    "front": "Britain_7_front.png",
+    "back": "Britain_7_back.png"
+   },
+   {
+    "num": 8,
+    "code": "B8",
+    "row": 0,
+    "col": 7,
+    "front": "Britain_8_front.png",
+    "back": "Britain_8_back.png"
+   },
+   {
+    "num": 9,
+    "code": "B9",
+    "row": 0,
+    "col": 8,
+    "front": "Britain_9_front.png",
+    "back": "Britain_9_back.png"
+   },
+   {
+    "num": 10,
+    "code": "B10",
+    "row": 0,
+    "col": 9,
+    "front": "Britain_10_front.png",
+    "back": "Britain_10_back.png"
+   },
+   {
+    "num": 11,
+    "code": "B11",
+    "row": 1,
+    "col": 0,
+    "front": "Britain_11_front.png",
+    "back": "Britain_11_back.png"
+   },
+   {
+    "num": 12,
+    "code": "B12",
+    "row": 1,
+    "col": 1,
+    "front": "Britain_12_front.png",
+    "back": "Britain_12_back.png"
+   },
+   {
+    "num": 13,
+    "code": "B13",
+    "row": 1,
+    "col": 2,
+    "front": "Britain_13_front.png",
+    "back": "Britain_13_back.png"
+   },
+   {
+    "num": 14,
+    "code": "B14",
+    "row": 1,
+    "col": 3,
+    "front": "Britain_14_front.png",
+    "back": "Britain_14_back.png"
+   },
+   {
+    "num": 15,
+    "code": "B15",
+    "row": 1,
+    "col": 4,
+    "front": "Britain_15_front.png",
+    "back": "Britain_15_back.png"
+   },
+   {
+    "num": 16,
+    "code": "B16",
+    "row": 1,
+    "col": 5,
+    "front": "Britain_16_front.png",
+    "back": "Britain_16_back.png"
+   },
+   {
+    "num": 17,
+    "code": "B17",
+    "row": 1,
+    "col": 6,
+    "front": "Britain_17_front.png",
+    "back": "Britain_17_back.png"
+   },
+   {
+    "num": 18,
+    "code": "B18",
+    "row": 1,
+    "col": 7,
+    "front": "Britain_18_front.png",
+    "back": "Britain_18_back.png"
+   },
+   {
+    "num": 19,
+    "code": "B19",
+    "row": 1,
+    "col": 8,
+    "front": "Britain_19_front.png",
+    "back": "Britain_19_back.png"
+   },
+   {
+    "num": 20,
+    "code": "B20",
+    "row": 1,
+    "col": 9,
+    "front": "Britain_20_front.png",
+    "back": "Britain_20_back.png"
+   },
+   {
+    "num": 21,
+    "code": "B21",
+    "row": 2,
+    "col": 0,
+    "front": "Britain_21_front.png",
+    "back": "Britain_21_back.png"
+   },
+   {
+    "num": 22,
+    "code": "B22",
+    "row": 2,
+    "col": 1,
+    "front": "Britain_22_front.png",
+    "back": "Britain_22_back.png"
+   },
+   {
+    "num": 23,
+    "code": "B23",
+    "row": 2,
+    "col": 2,
+    "front": "Britain_23_front.png",
+    "back": "Britain_23_back.png"
+   },
+   {
+    "num": 24,
+    "code": "B24",
+    "row": 2,
+    "col": 3,
+    "front": "Britain_24_front.png",
+    "back": "Britain_24_back.png"
+   },
+   {
+    "num": 25,
+    "code": "B25",
+    "row": 2,
+    "col": 4,
+    "front": "Britain_25_front.png",
+    "back": "Britain_25_back.png"
+   },
+   {
+    "num": 26,
+    "code": "B26",
+    "row": 2,
+    "col": 5,
+    "front": "Britain_26_front.png",
+    "back": "Britain_26_back.png"
+   },
+   {
+    "num": 27,
+    "code": "B27",
+    "row": 2,
+    "col": 6,
+    "front": "Britain_27_front.png",
+    "back": "Britain_27_back.png"
+   },
+   {
+    "num": 28,
+    "code": "B28",
+    "row": 2,
+    "col": 7,
+    "front": "Britain_28_front.png",
+    "back": "Britain_28_back.png"
+   },
+   {
+    "num": 29,
+    "code": "B29",
+    "row": 2,
+    "col": 8,
+    "front": "Britain_29_front.png",
+    "back": "Britain_29_back.png"
+   },
+   {
+    "num": 30,
+    "code": "B30",
+    "row": 2,
+    "col": 9,
+    "front": "Britain_30_front.png",
+    "back": "Britain_30_back.png"
+   }
+  ]
+ },
+ "germany": {
+  "prefix": "G",
+  "cols": 6,
+  "rows": 3,
+  "count": 18,
+  "cards": [
+   {
+    "num": 1,
+    "code": "G1",
+    "row": 0,
+    "col": 0,
+    "front": "Germany_1_front.png",
+    "back": "Germany_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "G2",
+    "row": 0,
+    "col": 1,
+    "front": "Germany_2_front.png",
+    "back": "Germany_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "G3",
+    "row": 0,
+    "col": 2,
+    "front": "Germany_3_front.png",
+    "back": "Germany_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "G4",
+    "row": 0,
+    "col": 3,
+    "front": "Germany_4_front.png",
+    "back": "Germany_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "G5",
+    "row": 0,
+    "col": 4,
+    "front": "Germany_5_front.png",
+    "back": "Germany_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "G6",
+    "row": 0,
+    "col": 5,
+    "front": "Germany_6_front.png",
+    "back": "Germany_6_back.png"
+   },
+   {
+    "num": 7,
+    "code": "G7",
+    "row": 1,
+    "col": 0,
+    "front": "Germany_7_front.png",
+    "back": "Germany_7_back.png"
+   },
+   {
+    "num": 8,
+    "code": "G8",
+    "row": 1,
+    "col": 1,
+    "front": "Germany_8_front.png",
+    "back": "Germany_8_back.png"
+   },
+   {
+    "num": 9,
+    "code": "G9",
+    "row": 1,
+    "col": 2,
+    "front": "Germany_9_front.png",
+    "back": "Germany_9_back.png"
+   },
+   {
+    "num": 10,
+    "code": "G10",
+    "row": 1,
+    "col": 3,
+    "front": "Germany_10_front.png",
+    "back": "Germany_10_back.png"
+   },
+   {
+    "num": 11,
+    "code": "G11",
+    "row": 1,
+    "col": 4,
+    "front": "Germany_11_front.png",
+    "back": "Germany_11_back.png"
+   },
+   {
+    "num": 12,
+    "code": "G12",
+    "row": 1,
+    "col": 5,
+    "front": "Germany_12_front.png",
+    "back": "Germany_12_back.png"
+   },
+   {
+    "num": 13,
+    "code": "G13",
+    "row": 2,
+    "col": 0,
+    "front": "Germany_13_front.png",
+    "back": "Germany_13_back.png"
+   },
+   {
+    "num": 14,
+    "code": "G14",
+    "row": 2,
+    "col": 1,
+    "front": "Germany_14_front.png",
+    "back": "Germany_14_back.png"
+   },
+   {
+    "num": 15,
+    "code": "G15",
+    "row": 2,
+    "col": 2,
+    "front": "Germany_15_front.png",
+    "back": "Germany_15_back.png"
+   },
+   {
+    "num": 16,
+    "code": "G16",
+    "row": 2,
+    "col": 3,
+    "front": "Germany_16_front.png",
+    "back": "Germany_16_back.png"
+   },
+   {
+    "num": 17,
+    "code": "G17",
+    "row": 2,
+    "col": 4,
+    "front": "Germany_17_front.png",
+    "back": "Germany_17_back.png"
+   },
+   {
+    "num": 18,
+    "code": "G18",
+    "row": 2,
+    "col": 5,
+    "front": "Germany_18_front.png",
+    "back": "Germany_18_back.png"
+   }
+  ]
+ },
+ "japan": {
+  "prefix": "J",
+  "cols": 10,
+  "rows": 3,
+  "count": 30,
+  "cards": [
+   {
+    "num": 1,
+    "code": "J1",
+    "row": 0,
+    "col": 0,
+    "front": "Japan_1_front.png",
+    "back": "Japan_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "J2",
+    "row": 0,
+    "col": 1,
+    "front": "Japan_2_front.png",
+    "back": "Japan_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "J3",
+    "row": 0,
+    "col": 2,
+    "front": "Japan_3_front.png",
+    "back": "Japan_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "J4",
+    "row": 0,
+    "col": 3,
+    "front": "Japan_4_front.png",
+    "back": "Japan_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "J5",
+    "row": 0,
+    "col": 4,
+    "front": "Japan_5_front.png",
+    "back": "Japan_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "J6",
+    "row": 0,
+    "col": 5,
+    "front": "Japan_6_front.png",
+    "back": "Japan_6_back.png"
+   },
+   {
+    "num": 7,
+    "code": "J7",
+    "row": 0,
+    "col": 6,
+    "front": "Japan_7_front.png",
+    "back": "Japan_7_back.png"
+   },
+   {
+    "num": 8,
+    "code": "J8",
+    "row": 0,
+    "col": 7,
+    "front": "Japan_8_front.png",
+    "back": "Japan_8_back.png"
+   },
+   {
+    "num": 9,
+    "code": "J9",
+    "row": 0,
+    "col": 8,
+    "front": "Japan_9_front.png",
+    "back": "Japan_9_back.png"
+   },
+   {
+    "num": 10,
+    "code": "J10",
+    "row": 0,
+    "col": 9,
+    "front": "Japan_10_front.png",
+    "back": "Japan_10_back.png"
+   },
+   {
+    "num": 11,
+    "code": "J11",
+    "row": 1,
+    "col": 0,
+    "front": "Japan_11_front.png",
+    "back": "Japan_11_back.png"
+   },
+   {
+    "num": 12,
+    "code": "J12",
+    "row": 1,
+    "col": 1,
+    "front": "Japan_12_front.png",
+    "back": "Japan_12_back.png"
+   },
+   {
+    "num": 13,
+    "code": "J13",
+    "row": 1,
+    "col": 2,
+    "front": "Japan_13_front.png",
+    "back": "Japan_13_back.png"
+   },
+   {
+    "num": 14,
+    "code": "J14",
+    "row": 1,
+    "col": 3,
+    "front": "Japan_14_front.png",
+    "back": "Japan_14_back.png"
+   },
+   {
+    "num": 15,
+    "code": "J15",
+    "row": 1,
+    "col": 4,
+    "front": "Japan_15_front.png",
+    "back": "Japan_15_back.png"
+   },
+   {
+    "num": 16,
+    "code": "J16",
+    "row": 1,
+    "col": 5,
+    "front": "Japan_16_front.png",
+    "back": "Japan_16_back.png"
+   },
+   {
+    "num": 17,
+    "code": "J17",
+    "row": 1,
+    "col": 6,
+    "front": "Japan_17_front.png",
+    "back": "Japan_17_back.png"
+   },
+   {
+    "num": 18,
+    "code": "J18",
+    "row": 1,
+    "col": 7,
+    "front": "Japan_18_front.png",
+    "back": "Japan_18_back.png"
+   },
+   {
+    "num": 19,
+    "code": "J19",
+    "row": 1,
+    "col": 8,
+    "front": "Japan_19_front.png",
+    "back": "Japan_19_back.png"
+   },
+   {
+    "num": 20,
+    "code": "J20",
+    "row": 1,
+    "col": 9,
+    "front": "Japan_20_front.png",
+    "back": "Japan_20_back.png"
+   },
+   {
+    "num": 21,
+    "code": "J21",
+    "row": 2,
+    "col": 0,
+    "front": "Japan_21_front.png",
+    "back": "Japan_21_back.png"
+   },
+   {
+    "num": 22,
+    "code": "J22",
+    "row": 2,
+    "col": 1,
+    "front": "Japan_22_front.png",
+    "back": "Japan_22_back.png"
+   },
+   {
+    "num": 23,
+    "code": "J23",
+    "row": 2,
+    "col": 2,
+    "front": "Japan_23_front.png",
+    "back": "Japan_23_back.png"
+   },
+   {
+    "num": 24,
+    "code": "J24",
+    "row": 2,
+    "col": 3,
+    "front": "Japan_24_front.png",
+    "back": "Japan_24_back.png"
+   },
+   {
+    "num": 25,
+    "code": "J25",
+    "row": 2,
+    "col": 4,
+    "front": "Japan_25_front.png",
+    "back": "Japan_25_back.png"
+   },
+   {
+    "num": 26,
+    "code": "J26",
+    "row": 2,
+    "col": 5,
+    "front": "Japan_26_front.png",
+    "back": "Japan_26_back.png"
+   },
+   {
+    "num": 27,
+    "code": "J27",
+    "row": 2,
+    "col": 6,
+    "front": "Japan_27_front.png",
+    "back": "Japan_27_back.png"
+   },
+   {
+    "num": 28,
+    "code": "J28",
+    "row": 2,
+    "col": 7,
+    "front": "Japan_28_front.png",
+    "back": "Japan_28_back.png"
+   },
+   {
+    "num": 29,
+    "code": "J29",
+    "row": 2,
+    "col": 8,
+    "front": "Japan_29_front.png",
+    "back": "Japan_29_back.png"
+   },
+   {
+    "num": 30,
+    "code": "J30",
+    "row": 2,
+    "col": 9,
+    "front": "Japan_30_front.png",
+    "back": "Japan_30_back.png"
+   }
+  ]
+ },
+ "usa": {
+  "prefix": "U",
+  "cols": 5,
+  "rows": 2,
+  "count": 10,
+  "cards": [
+   {
+    "num": 1,
+    "code": "U1",
+    "row": 0,
+    "col": 0,
+    "front": "USA_1_front.png",
+    "back": "USA_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "U2",
+    "row": 0,
+    "col": 1,
+    "front": "USA_2_front.png",
+    "back": "USA_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "U3",
+    "row": 0,
+    "col": 2,
+    "front": "USA_3_front.png",
+    "back": "USA_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "U4",
+    "row": 0,
+    "col": 3,
+    "front": "USA_4_front.png",
+    "back": "USA_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "U5",
+    "row": 0,
+    "col": 4,
+    "front": "USA_5_front.png",
+    "back": "USA_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "U6",
+    "row": 1,
+    "col": 0,
+    "front": "USA_6_front.png",
+    "back": "USA_6_back.png"
+   },
+   {
+    "num": 7,
+    "code": "U7",
+    "row": 1,
+    "col": 1,
+    "front": "USA_7_front.png",
+    "back": "USA_7_back.png"
+   },
+   {
+    "num": 8,
+    "code": "U8",
+    "row": 1,
+    "col": 2,
+    "front": "USA_8_front.png",
+    "back": "USA_8_back.png"
+   },
+   {
+    "num": 9,
+    "code": "U9",
+    "row": 1,
+    "col": 3,
+    "front": "USA_9_front.png",
+    "back": "USA_9_back.png"
+   },
+   {
+    "num": 10,
+    "code": "U10",
+    "row": 1,
+    "col": 4,
+    "front": "USA_10_front.png",
+    "back": "USA_10_back.png"
+   }
+  ]
+ },
+ "soviet": {
+  "prefix": "R",
+  "cols": 5,
+  "rows": 4,
+  "count": 20,
+  "cards": [
+   {
+    "num": 1,
+    "code": "R1",
+    "row": 0,
+    "col": 0,
+    "front": "Soviet_1_front.png",
+    "back": "Soviet_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "R2",
+    "row": 0,
+    "col": 1,
+    "front": "Soviet_2_front.png",
+    "back": "Soviet_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "R3",
+    "row": 0,
+    "col": 2,
+    "front": "Soviet_3_front.png",
+    "back": "Soviet_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "R4",
+    "row": 0,
+    "col": 3,
+    "front": "Soviet_4_front.png",
+    "back": "Soviet_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "R5",
+    "row": 0,
+    "col": 4,
+    "front": "Soviet_5_front.png",
+    "back": "Soviet_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "R6",
+    "row": 1,
+    "col": 0,
+    "front": "Soviet_6_front.png",
+    "back": "Soviet_6_back.png"
+   },
+   {
+    "num": 7,
+    "code": "R7",
+    "row": 1,
+    "col": 1,
+    "front": "Soviet_7_front.png",
+    "back": "Soviet_7_back.png"
+   },
+   {
+    "num": 8,
+    "code": "R8",
+    "row": 1,
+    "col": 2,
+    "front": "Soviet_8_front.png",
+    "back": "Soviet_8_back.png"
+   },
+   {
+    "num": 9,
+    "code": "R9",
+    "row": 1,
+    "col": 3,
+    "front": "Soviet_9_front.png",
+    "back": "Soviet_9_back.png"
+   },
+   {
+    "num": 10,
+    "code": "R10",
+    "row": 1,
+    "col": 4,
+    "front": "Soviet_10_front.png",
+    "back": "Soviet_10_back.png"
+   },
+   {
+    "num": 11,
+    "code": "R11",
+    "row": 2,
+    "col": 0,
+    "front": "Soviet_11_front.png",
+    "back": "Soviet_11_back.png"
+   },
+   {
+    "num": 12,
+    "code": "R12",
+    "row": 2,
+    "col": 1,
+    "front": "Soviet_12_front.png",
+    "back": "Soviet_12_back.png"
+   },
+   {
+    "num": 13,
+    "code": "R13",
+    "row": 2,
+    "col": 2,
+    "front": "Soviet_13_front.png",
+    "back": "Soviet_13_back.png"
+   },
+   {
+    "num": 14,
+    "code": "R14",
+    "row": 2,
+    "col": 3,
+    "front": "Soviet_14_front.png",
+    "back": "Soviet_14_back.png"
+   },
+   {
+    "num": 15,
+    "code": "R15",
+    "row": 2,
+    "col": 4,
+    "front": "Soviet_15_front.png",
+    "back": "Soviet_15_back.png"
+   },
+   {
+    "num": 16,
+    "code": "R16",
+    "row": 3,
+    "col": 0,
+    "front": "Soviet_16_front.png",
+    "back": "Soviet_16_back.png"
+   },
+   {
+    "num": 17,
+    "code": "R17",
+    "row": 3,
+    "col": 1,
+    "front": "Soviet_17_front.png",
+    "back": "Soviet_17_back.png"
+   },
+   {
+    "num": 18,
+    "code": "R18",
+    "row": 3,
+    "col": 2,
+    "front": "Soviet_18_front.png",
+    "back": "Soviet_18_back.png"
+   },
+   {
+    "num": 19,
+    "code": "R19",
+    "row": 3,
+    "col": 3,
+    "front": "Soviet_19_front.png",
+    "back": "Soviet_19_back.png"
+   },
+   {
+    "num": 20,
+    "code": "R20",
+    "row": 3,
+    "col": 4,
+    "front": "Soviet_20_front.png",
+    "back": "Soviet_20_back.png"
+   }
+  ]
+ },
+ "italy": {
+  "prefix": "T",
+  "cols": 3,
+  "rows": 2,
+  "count": 6,
+  "cards": [
+   {
+    "num": 1,
+    "code": "T1",
+    "row": 0,
+    "col": 0,
+    "front": "Italy_1_front.png",
+    "back": "Italy_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "T2",
+    "row": 0,
+    "col": 1,
+    "front": "Italy_2_front.png",
+    "back": "Italy_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "T3",
+    "row": 0,
+    "col": 2,
+    "front": "Italy_3_front.png",
+    "back": "Italy_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "T4",
+    "row": 1,
+    "col": 0,
+    "front": "Italy_4_front.png",
+    "back": "Italy_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "T5",
+    "row": 1,
+    "col": 1,
+    "front": "Italy_5_front.png",
+    "back": "Italy_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "T6",
+    "row": 1,
+    "col": 2,
+    "front": "Italy_6_front.png",
+    "back": "Italy_6_back.png"
+   }
+  ]
+ },
+ "china": {
+  "prefix": "C",
+  "cols": 3,
+  "rows": 2,
+  "count": 6,
+  "cards": [
+   {
+    "num": 1,
+    "code": "C1",
+    "row": 0,
+    "col": 0,
+    "front": "China_1_front.png",
+    "back": "China_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "C2",
+    "row": 0,
+    "col": 1,
+    "front": "China_2_front.png",
+    "back": "China_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "C3",
+    "row": 0,
+    "col": 2,
+    "front": "China_3_front.png",
+    "back": "China_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "C4",
+    "row": 1,
+    "col": 0,
+    "front": "China_4_front.png",
+    "back": "China_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "C5",
+    "row": 1,
+    "col": 1,
+    "front": "China_5_front.png",
+    "back": "China_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "C6",
+    "row": 1,
+    "col": 2,
+    "front": "China_6_front.png",
+    "back": "China_6_back.png"
+   }
+  ]
+ },
+ "neutral": {
+  "prefix": "N",
+  "cols": 5,
+  "rows": 4,
+  "count": 20,
+  "cards": [
+   {
+    "num": 1,
+    "code": "N1",
+    "row": 0,
+    "col": 0,
+    "front": "Neutral_1_front.png",
+    "back": "Neutral_1_back.png"
+   },
+   {
+    "num": 2,
+    "code": "N2",
+    "row": 0,
+    "col": 1,
+    "front": "Neutral_2_front.png",
+    "back": "Neutral_2_back.png"
+   },
+   {
+    "num": 3,
+    "code": "N3",
+    "row": 0,
+    "col": 2,
+    "front": "Neutral_3_front.png",
+    "back": "Neutral_3_back.png"
+   },
+   {
+    "num": 4,
+    "code": "N4",
+    "row": 0,
+    "col": 3,
+    "front": "Neutral_4_front.png",
+    "back": "Neutral_4_back.png"
+   },
+   {
+    "num": 5,
+    "code": "N5",
+    "row": 0,
+    "col": 4,
+    "front": "Neutral_5_front.png",
+    "back": "Neutral_5_back.png"
+   },
+   {
+    "num": 6,
+    "code": "N6",
+    "row": 1,
+    "col": 0,
+    "front": "Neutral_6_front.png",
+    "back": "Neutral_6_back.png"
+   },
+   {
+    "num": 7,
+    "code": "N7",
+    "row": 1,
+    "col": 1,
+    "front": "Neutral_7_front.png",
+    "back": "Neutral_7_back.png"
+   },
+   {
+    "num": 8,
+    "code": "N8",
+    "row": 1,
+    "col": 2,
+    "front": "Neutral_8_front.png",
+    "back": "Neutral_8_back.png"
+   },
+   {
+    "num": 9,
+    "code": "N9",
+    "row": 1,
+    "col": 3,
+    "front": "Neutral_9_front.png",
+    "back": "Neutral_9_back.png"
+   },
+   {
+    "num": 10,
+    "code": "N10",
+    "row": 1,
+    "col": 4,
+    "front": "Neutral_10_front.png",
+    "back": "Neutral_10_back.png"
+   },
+   {
+    "num": 11,
+    "code": "N11",
+    "row": 2,
+    "col": 0,
+    "front": "Neutral_11_front.png",
+    "back": "Neutral_11_back.png"
+   },
+   {
+    "num": 12,
+    "code": "N12",
+    "row": 2,
+    "col": 1,
+    "front": "Neutral_12_front.png",
+    "back": "Neutral_12_back.png"
+   },
+   {
+    "num": 13,
+    "code": "N13",
+    "row": 2,
+    "col": 2,
+    "front": "Neutral_13_front.png",
+    "back": "Neutral_13_back.png"
+   },
+   {
+    "num": 14,
+    "code": "N14",
+    "row": 2,
+    "col": 3,
+    "front": "Neutral_14_front.png",
+    "back": "Neutral_14_back.png"
+   },
+   {
+    "num": 15,
+    "code": "N15",
+    "row": 2,
+    "col": 4,
+    "front": "Neutral_15_front.png",
+    "back": "Neutral_15_back.png"
+   },
+   {
+    "num": 16,
+    "code": "N16",
+    "row": 3,
+    "col": 0,
+    "front": "Neutral_16_front.png",
+    "back": "Neutral_16_back.png"
+   },
+   {
+    "num": 17,
+    "code": "N17",
+    "row": 3,
+    "col": 1,
+    "front": "Neutral_17_front.png",
+    "back": "Neutral_17_back.png"
+   },
+   {
+    "num": 18,
+    "code": "N18",
+    "row": 3,
+    "col": 2,
+    "front": "Neutral_18_front.png",
+    "back": "Neutral_18_back.png"
+   },
+   {
+    "num": 19,
+    "code": "N19",
+    "row": 3,
+    "col": 3,
+    "front": "Neutral_19_front.png",
+    "back": "Neutral_19_back.png"
+   },
+   {
+    "num": 20,
+    "code": "N20",
+    "row": 3,
+    "col": 4,
+    "front": "Neutral_20_front.png",
+    "back": "Neutral_20_back.png"
+   }
+  ]
+ }
+}

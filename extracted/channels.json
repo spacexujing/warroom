@@ -1,0 +1,69 @@
+[
+ {
+  "id": "gibraltar",
+  "name": "Strait of Gibraltar",
+  "controllerTerritories": [
+   "B3"
+  ],
+  "seaZones": [
+   "M1",
+   "A15"
+  ]
+ },
+ {
+  "id": "suez",
+  "name": "Suez Canal",
+  "controllerTerritories": [
+   "B5"
+  ],
+  "seaZones": [
+   "M3",
+   "M5"
+  ]
+ },
+ {
+  "id": "danish",
+  "name": "Danish Straits",
+  "controllerTerritories": [
+   "G2",
+   "G10"
+  ],
+  "seaZones": [
+   "A5",
+   "A6"
+  ]
+ },
+ {
+  "id": "malacca",
+  "name": "Strait of Malacca",
+  "controllerTerritories": [
+   "J9"
+  ],
+  "seaZones": [
+   "I9",
+   "P15"
+  ]
+ },
+ {
+  "id": "panama",
+  "name": "Panama Canal",
+  "controllerTerritories": [
+   "N2"
+  ],
+  "seaZones": [
+   "P7",
+   "A12"
+  ]
+ },
+ {
+  "id": "turkish",
+  "name": "Turkish Straits",
+  "controllerTerritories": [
+   "N14"
+  ],
+  "seaZones": [
+   "M3",
+   "M4"
+  ]
+ }
+]

@@ -1,0 +1,1354 @@
+[
+ {
+  "id": 53,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B1",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 11,
+  "domain": "air",
+  "nation": "britain",
+  "territory": "B1",
+  "units": {
+   "bomber": 1,
+   "fighter": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 13,
+  "domain": "air",
+  "nation": "britain",
+  "territory": "B3",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 47,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B5",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 1
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 15,
+  "domain": "air",
+  "nation": "britain",
+  "territory": "B5",
+  "units": {
+   "fighter": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 75,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B10",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 63,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B16",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 60,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B18",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 16,
+  "domain": "air",
+  "nation": "britain",
+  "territory": "B18",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 68,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B22",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 12,
+  "domain": "air",
+  "nation": "britain",
+  "territory": "B22",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 80,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B23",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 36,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B24",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 71,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B25",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 90,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B28",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 45,
+  "domain": "land",
+  "nation": "britain",
+  "territory": "B29",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 14,
+  "domain": "air",
+  "nation": "britain",
+  "territory": "B29",
+  "units": {
+   "fighter": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 6,
+  "domain": "sea",
+  "nation": "britain",
+  "territory": "A6",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 7,
+  "domain": "sea",
+  "nation": "britain",
+  "territory": "A7",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 9,
+  "domain": "sea",
+  "nation": "britain",
+  "territory": "A19",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 2,
+  "domain": "sea",
+  "nation": "britain",
+  "territory": "I2",
+  "units": {
+   "carrier": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 3,
+  "domain": "sea",
+  "nation": "britain",
+  "territory": "M3",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 8,
+  "domain": "sea",
+  "nation": "britain",
+  "territory": "P18",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 82,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "B1",
+  "units": {
+   "armor": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 14,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "B1",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 50,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "B27",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 48,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G1",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 3
+  },
+  "unitCount": 7
+ },
+ {
+  "id": 11,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "G1",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 38,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G2",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 72,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G3",
+  "units": {
+   "armor": 2,
+   "artillery": 3,
+   "infantry": 2
+  },
+  "unitCount": 7
+ },
+ {
+  "id": 13,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "G3",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 56,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G4",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 14,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "G4",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 33,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G5",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 15,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "G5",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 61,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G6",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": 16,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "G6",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 37,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G7",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 22,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G8",
+  "units": {
+   "armor": 1,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 40,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G9",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 55,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G10",
+  "units": {
+   "armor": 1,
+   "artillery": 3,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": 12,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "G10",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 59,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "G13",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 1,
+  "domain": "sea",
+  "nation": "germany",
+  "territory": "A5",
+  "units": {
+   "cruiser": 2,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 3,
+  "domain": "sea",
+  "nation": "germany",
+  "territory": "A13",
+  "units": {
+   "submarine": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 5,
+  "domain": "sea",
+  "nation": "germany",
+  "territory": "A15",
+  "units": {
+   "submarine": 3
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 44,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J1",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": 11,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J1",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 62,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J2",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 65,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J3",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 13,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J3",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 24,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J4",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 81,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J5",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 15,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J5",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 46,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J6",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 95,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J7",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 17,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J7",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 30,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J8",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 85,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J9",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 78,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J10",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 54,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J11",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 25,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J12",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 77,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J14",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 14,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J14",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 16,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J16",
+  "units": {
+   "fighter": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 89,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J17",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 52,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J20",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 39,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J22",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 12,
+  "domain": "air",
+  "nation": "japan",
+  "territory": "J22",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 87,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J23",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 76,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J24",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 92,
+  "domain": "land",
+  "nation": "japan",
+  "territory": "J25",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 1,
+  "domain": "sea",
+  "nation": "japan",
+  "territory": "P1",
+  "units": {
+   "battleship": 1,
+   "carrier": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 3,
+  "domain": "sea",
+  "nation": "japan",
+  "territory": "P13",
+  "units": {
+   "battleship": 1,
+   "carrier": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 4,
+  "domain": "sea",
+  "nation": "japan",
+  "territory": "P14",
+  "units": {
+   "cruiser": 2,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 5,
+  "domain": "sea",
+  "nation": "japan",
+  "territory": "P15",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 9,
+  "domain": "sea",
+  "nation": "japan",
+  "territory": "I9",
+  "units": {
+   "carrier": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 26,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R1",
+  "units": {
+   "armor": 2,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 6
+ },
+ {
+  "id": 11,
+  "domain": "air",
+  "nation": "soviet",
+  "territory": "R1",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 66,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R2",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 67,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R3",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 13,
+  "domain": "air",
+  "nation": "soviet",
+  "territory": "R3",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 29,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R4",
+  "units": {
+   "artillery": 2,
+   "infantry": 4
+  },
+  "unitCount": 6
+ },
+ {
+  "id": 23,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R5",
+  "units": {
+   "armor": 2,
+   "artillery": 1,
+   "infantry": 4
+  },
+  "unitCount": 7
+ },
+ {
+  "id": 15,
+  "domain": "air",
+  "nation": "soviet",
+  "territory": "R5",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 57,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R6",
+  "units": {
+   "artillery": 1,
+   "infantry": 4
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 21,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R7",
+  "units": {
+   "armor": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 34,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R14",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 58,
+  "domain": "land",
+  "nation": "soviet",
+  "territory": "R16",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 1,
+  "domain": "sea",
+  "nation": "soviet",
+  "territory": "A4",
+  "units": {
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 51,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U1",
+  "units": {
+   "armor": 2,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 11,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "U1",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 27,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U2",
+  "units": {
+   "armor": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 12,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "U2",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 69,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U3",
+  "units": {
+   "armor": 1,
+   "artillery": 2,
+   "infantry": 2
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 13,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "U3",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 35,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U4",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 31,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U5",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 64,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U6",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 16,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "U6",
+  "units": {
+   "bomber": 1,
+   "fighter": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 17,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "U7",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 73,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "U10",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 15,
+  "domain": "air",
+  "nation": "usa",
+  "territory": "U10",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 43,
+  "domain": "land",
+  "nation": "usa",
+  "territory": "J25",
+  "units": {
+   "artillery": 1,
+   "infantry": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 1,
+  "domain": "sea",
+  "nation": "usa",
+  "territory": "A10",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 2,
+  "domain": "sea",
+  "nation": "usa",
+  "territory": "P5",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 3,
+  "domain": "sea",
+  "nation": "usa",
+  "territory": "P9",
+  "units": {
+   "carrier": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 4,
+  "domain": "sea",
+  "nation": "usa",
+  "territory": "P19",
+  "units": {
+   "carrier": 1,
+   "cruiser": 2,
+   "submarine": 1
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 101,
+  "domain": "land",
+  "nation": "china",
+  "territory": "C1",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 102,
+  "domain": "land",
+  "nation": "china",
+  "territory": "C2",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 103,
+  "domain": "land",
+  "nation": "china",
+  "territory": "C3",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 104,
+  "domain": "land",
+  "nation": "china",
+  "territory": "C4",
+  "units": {
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 105,
+  "domain": "land",
+  "nation": "china",
+  "territory": "C5",
+  "units": {
+   "infantry": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 114,
+  "domain": "land",
+  "nation": "italy",
+  "territory": "T1",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 3
+  },
+  "unitCount": 5
+ },
+ {
+  "id": 11,
+  "domain": "air",
+  "nation": "italy",
+  "territory": "T1",
+  "units": {
+   "bomber": 1,
+   "fighter": 1
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 115,
+  "domain": "land",
+  "nation": "italy",
+  "territory": "T2",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 12,
+  "domain": "air",
+  "nation": "italy",
+  "territory": "T2",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 112,
+  "domain": "land",
+  "nation": "italy",
+  "territory": "T4",
+  "units": {
+   "infantry": 1
+  },
+  "unitCount": 1
+ },
+ {
+  "id": 113,
+  "domain": "land",
+  "nation": "italy",
+  "territory": "T5",
+  "units": {
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 3
+ },
+ {
+  "id": 49,
+  "domain": "land",
+  "nation": "germany",
+  "territory": "T5",
+  "units": {
+   "armor": 1,
+   "artillery": 1,
+   "infantry": 2
+  },
+  "unitCount": 4
+ },
+ {
+  "id": 17,
+  "domain": "air",
+  "nation": "germany",
+  "territory": "T5",
+  "units": {
+   "fighter": 2
+  },
+  "unitCount": 2
+ },
+ {
+  "id": 1,
+  "domain": "sea",
+  "nation": "italy",
+  "territory": "M2",
+  "units": {
+   "battleship": 1,
+   "cruiser": 1,
+   "submarine": 1
+  },
+  "unitCount": 3
+ }
+]

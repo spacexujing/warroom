@@ -1,0 +1,16 @@
+{
+  "name": "warroom-local",
+  "version": "0.1.0",
+  "description": "War Room 无鉴权伪线上服务（昵称声明式，无密码无账号）",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.8.4"
+  }
+}
