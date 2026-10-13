@@ -52,7 +52,7 @@
         <div id="unit-panel-reserve" class="unit-reserve"></div>
         <div id="unit-panel-active" class="unit-active"></div>
       </div>
-      <div class="action-page" data-page="production" hidden>生产 — 内容占位</div>
+      <div class="action-page" data-page="production" hidden></div>
     </div>
   </div>
 
@@ -63,6 +63,9 @@
   <div id="status-bar">
     <span id="phase-label">—</span>
     <span id="round-label">—</span>
+    <span id="connection-state">连接中</span>
+    <button id="open-reports">结算记录</button>
+    <a href="/api/export" download>导出存档</a>
   </div>
 
   <!-- 左下角：视窗类按钮工具栏（可扩展，后续在此增加更多开关） -->
@@ -128,5 +131,6 @@
   <button id="force-advance-btn" class="force-advance-btn" hidden>强制推进阶段<br><span class="fa-sub">（全体视为已确认）</span></button>
 
   <script src="/js/app.js"></script>
+  <script src="/js/settlement-ui.js"></script>
 </body>
 </html>
