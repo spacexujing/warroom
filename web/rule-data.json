@@ -1,0 +1,1435 @@
+{
+  "units": {
+    "infantry": {
+      "type": "infantry",
+      "domain": "land",
+      "vsAir": null,
+      "vsLand": null,
+      "vsSea": null,
+      "defensiveValue": 1,
+      "offensiveValue": 2,
+      "cost": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 2
+      },
+      "casualtyValue": 2
+    },
+    "artillery": {
+      "type": "artillery",
+      "domain": "land",
+      "vsAir": 2,
+      "vsLand": 2,
+      "vsSea": null,
+      "defensiveValue": null,
+      "offensiveValue": null,
+      "cost": {
+        "oil": 0,
+        "iron": 2,
+        "osr": 1
+      },
+      "casualtyValue": 2
+    },
+    "armor": {
+      "type": "armor",
+      "domain": "land",
+      "vsAir": 1,
+      "vsLand": null,
+      "vsSea": null,
+      "defensiveValue": 2,
+      "offensiveValue": 4,
+      "cost": {
+        "oil": 1,
+        "iron": 2,
+        "osr": 1
+      },
+      "casualtyValue": 4
+    },
+    "fighter": {
+      "type": "fighter",
+      "domain": "air",
+      "vsAir": 3,
+      "vsLand": 3,
+      "vsSea": 3,
+      "defensiveValue": null,
+      "offensiveValue": null,
+      "cost": {
+        "oil": 2,
+        "iron": 1,
+        "osr": 1
+      },
+      "casualtyValue": 4
+    },
+    "bomber": {
+      "type": "bomber",
+      "domain": "air",
+      "vsAir": 1,
+      "vsLand": 4,
+      "vsSea": 3,
+      "defensiveValue": null,
+      "offensiveValue": null,
+      "cost": {
+        "oil": 2,
+        "iron": 2,
+        "osr": 1
+      },
+      "casualtyValue": 6
+    },
+    "submarine": {
+      "type": "submarine",
+      "domain": "sea",
+      "vsAir": null,
+      "vsLand": null,
+      "vsSea": 2,
+      "defensiveValue": null,
+      "offensiveValue": null,
+      "cost": {
+        "oil": 1,
+        "iron": 2,
+        "osr": 1
+      },
+      "casualtyValue": 6
+    },
+    "cruiser": {
+      "type": "cruiser",
+      "domain": "sea",
+      "vsAir": 2,
+      "vsLand": null,
+      "vsSea": 2,
+      "defensiveValue": 2,
+      "offensiveValue": 3,
+      "cost": {
+        "oil": 2,
+        "iron": 3,
+        "osr": 2
+      },
+      "casualtyValue": 10
+    },
+    "carrier": {
+      "type": "carrier",
+      "domain": "sea",
+      "vsAir": 2,
+      "vsLand": null,
+      "vsSea": 1,
+      "defensiveValue": 2,
+      "offensiveValue": 2,
+      "cost": {
+        "oil": 4,
+        "iron": 3,
+        "osr": 3
+      },
+      "casualtyValue": 20
+    },
+    "battleship": {
+      "type": "battleship",
+      "domain": "sea",
+      "vsAir": 2,
+      "vsLand": null,
+      "vsSea": 3,
+      "defensiveValue": 2,
+      "offensiveValue": 4,
+      "cost": {
+        "oil": 3,
+        "iron": 4,
+        "osr": 3
+      },
+      "casualtyValue": 20
+    },
+    "carrier_fighter": {
+      "type": "carrier_fighter",
+      "domain": "air",
+      "vsAir": 3,
+      "vsLand": 3,
+      "vsSea": 3,
+      "defensiveValue": null,
+      "offensiveValue": null,
+      "cost": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "casualtyValue": 4
+    }
+  },
+  "ports": {
+    "B1": [
+      "A6",
+      "A7"
+    ],
+    "B3": [
+      "M1"
+    ],
+    "B5": [
+      "M3"
+    ],
+    "B10": [
+      "A19"
+    ],
+    "B11": [
+      "A18"
+    ],
+    "B13": [
+      "A18"
+    ],
+    "B14": [
+      "A18"
+    ],
+    "B16": [
+      "I1"
+    ],
+    "B17": [
+      "I1"
+    ],
+    "B18": [
+      "I1",
+      "I10"
+    ],
+    "B24": [
+      "P18"
+    ],
+    "B27": [
+      "P19"
+    ],
+    "B28": [
+      "P4"
+    ],
+    "B29": [
+      "A9"
+    ],
+    "G1": [
+      "A5"
+    ],
+    "G3": [
+      "M1",
+      "A15"
+    ],
+    "G5": [
+      "M4"
+    ],
+    "G6": [
+      "M4"
+    ],
+    "G9": [
+      "A5"
+    ],
+    "G10": [
+      "A5"
+    ],
+    "G11": [
+      "A15"
+    ],
+    "G12": [
+      "M2"
+    ],
+    "G13": [
+      "M2"
+    ],
+    "G15": [
+      "A17"
+    ],
+    "J1": [
+      "P1"
+    ],
+    "J2": [
+      "P1"
+    ],
+    "J3": [
+      "P0"
+    ],
+    "J4": [
+      "P0"
+    ],
+    "J5": [
+      "P0",
+      "P14"
+    ],
+    "J6": [
+      "P15"
+    ],
+    "J9": [
+      "P15"
+    ],
+    "J10": [
+      "P16"
+    ],
+    "J11": [
+      "P16"
+    ],
+    "J12": [
+      "P15"
+    ],
+    "J14": [
+      "P14"
+    ],
+    "J22": [
+      "P13"
+    ],
+    "R2": [
+      "A4"
+    ],
+    "R3": [
+      "A4"
+    ],
+    "R4": [
+      "A5"
+    ],
+    "R16": [
+      "P1"
+    ],
+    "U1": [
+      "A10"
+    ],
+    "U2": [
+      "A11"
+    ],
+    "U3": [
+      "P5"
+    ],
+    "U4": [
+      "P4"
+    ],
+    "U6": [
+      "P9"
+    ],
+    "T1": [
+      "M2"
+    ],
+    "T2": [
+      "M3"
+    ],
+    "T5": [
+      "M2"
+    ],
+    "N1": [
+      "P6",
+      "A11"
+    ],
+    "N4": [
+      "P7",
+      "A12"
+    ],
+    "N5": [
+      "A12"
+    ],
+    "N6": [
+      "A13"
+    ],
+    "N10": [
+      "A5"
+    ],
+    "N11": [
+      "M1"
+    ],
+    "N15": [
+      "I1"
+    ]
+  },
+  "convoys": [
+    {
+      "seaRegion": "A7",
+      "type": "coastal",
+      "linkedTerritory": "B1",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "M3",
+      "type": "coastal",
+      "linkedTerritory": "B5",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A19",
+      "type": "coastal",
+      "linkedTerritory": "B10",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A18",
+      "type": "coastal",
+      "linkedTerritory": "B11",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A18",
+      "type": "coastal",
+      "linkedTerritory": "B13",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A18",
+      "type": "coastal",
+      "linkedTerritory": "B14",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "I1",
+      "type": "coastal",
+      "linkedTerritory": "B16",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 0
+      },
+      "clusterId": "I1"
+    },
+    {
+      "seaRegion": "I1",
+      "type": "coastal",
+      "linkedTerritory": "B17",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 0
+      },
+      "clusterId": "I1"
+    },
+    {
+      "seaRegion": "I1",
+      "type": "coastal",
+      "linkedTerritory": "B18",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P18",
+      "type": "coastal",
+      "linkedTerritory": "B24",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P4",
+      "type": "coastal",
+      "linkedTerritory": "B28",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A9",
+      "type": "coastal",
+      "linkedTerritory": "B29",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A5",
+      "type": "coastal",
+      "linkedTerritory": "G1",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A15",
+      "type": "coastal",
+      "linkedTerritory": "G3",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A5",
+      "type": "coastal",
+      "linkedTerritory": "G9",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A5",
+      "type": "coastal",
+      "linkedTerritory": "G10",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A15",
+      "type": "coastal",
+      "linkedTerritory": "G11",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "M2",
+      "type": "coastal",
+      "linkedTerritory": "G12",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "M2",
+      "type": "coastal",
+      "linkedTerritory": "G13",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A17",
+      "type": "coastal",
+      "linkedTerritory": "G15",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P1",
+      "type": "coastal",
+      "linkedTerritory": "J1",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P1",
+      "type": "coastal",
+      "linkedTerritory": "J2",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P0",
+      "type": "coastal",
+      "linkedTerritory": "J3",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      },
+      "clusterId": "P0"
+    },
+    {
+      "seaRegion": "P0",
+      "type": "coastal",
+      "linkedTerritory": "J4",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      },
+      "clusterId": "P0"
+    },
+    {
+      "seaRegion": "P0",
+      "type": "coastal",
+      "linkedTerritory": "J5",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      },
+      "clusterId": "P0"
+    },
+    {
+      "seaRegion": "P15",
+      "type": "coastal",
+      "linkedTerritory": "J6",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      },
+      "clusterId": "P15"
+    },
+    {
+      "seaRegion": "P15",
+      "type": "coastal",
+      "linkedTerritory": "J9",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      },
+      "clusterId": "P15"
+    },
+    {
+      "seaRegion": "P16",
+      "type": "coastal",
+      "linkedTerritory": "J10",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 0
+      },
+      "clusterId": "P16"
+    },
+    {
+      "seaRegion": "P16",
+      "type": "coastal",
+      "linkedTerritory": "J11",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 0
+      },
+      "clusterId": "P16"
+    },
+    {
+      "seaRegion": "P15",
+      "type": "coastal",
+      "linkedTerritory": "J12",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 1
+      },
+      "clusterId": "P15"
+    },
+    {
+      "seaRegion": "P14",
+      "type": "coastal",
+      "linkedTerritory": "J14",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A4",
+      "type": "coastal",
+      "linkedTerritory": "R2",
+      "dice": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 1
+      },
+      "clusterId": "A4"
+    },
+    {
+      "seaRegion": "A4",
+      "type": "coastal",
+      "linkedTerritory": "R3",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      },
+      "clusterId": "A4"
+    },
+    {
+      "seaRegion": "P1",
+      "type": "coastal",
+      "linkedTerritory": "R16",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A10",
+      "type": "coastal",
+      "linkedTerritory": "U1",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A11",
+      "type": "coastal",
+      "linkedTerritory": "U2",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P5",
+      "type": "coastal",
+      "linkedTerritory": "U3",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "P4",
+      "type": "coastal",
+      "linkedTerritory": "U4",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "M2",
+      "type": "coastal",
+      "linkedTerritory": "T1",
+      "dice": {
+        "oil": 0,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "M3",
+      "type": "coastal",
+      "linkedTerritory": "T2",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "M2",
+      "type": "coastal",
+      "linkedTerritory": "T5",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 0
+      }
+    },
+    {
+      "seaRegion": "A8",
+      "type": "trans_ocean",
+      "origin": "B29",
+      "destination": "B1",
+      "defaultControllerNation": "britain",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 1
+      }
+    },
+    {
+      "seaRegion": "A9",
+      "type": "trans_ocean",
+      "origin": "U1",
+      "destination": "B1",
+      "defaultControllerNation": "usa",
+      "dice": {
+        "oil": 1,
+        "iron": 1,
+        "osr": 3
+      }
+    },
+    {
+      "seaRegion": "A3",
+      "type": "trans_ocean",
+      "origin": "U1",
+      "destination": "R2",
+      "defaultControllerNation": "usa",
+      "dice": {
+        "oil": 1,
+        "iron": 0,
+        "osr": 1
+      }
+    }
+  ],
+  "neutrals": [
+    {
+      "code": "N1",
+      "name": "Mexico",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "P6",
+        "A11",
+        "P5",
+        "P7",
+        "N2",
+        "U2",
+        "U3"
+      ],
+      "neutralAffiliation": "pro-allied",
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 1,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": true,
+        "osr": false
+      }
+    },
+    {
+      "code": "N2",
+      "name": "Central America",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "P7",
+        "A11",
+        "A12",
+        "N1",
+        "N4"
+      ],
+      "neutralAffiliation": "pro-allied",
+      "neutralForces": {
+        "infantry": 0,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N3",
+      "name": "West Indies",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A10",
+        "A12"
+      ],
+      "neutralAffiliation": "pro-allied",
+      "neutralForces": {
+        "infantry": 0,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N4",
+      "name": "Colombia",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "P7",
+        "A12",
+        "N2",
+        "N5",
+        "N6"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 4,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": true
+      }
+    },
+    {
+      "code": "N5",
+      "name": "Venezuela",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A12",
+        "N4",
+        "N6",
+        "B30"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 4,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": true,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N6",
+      "name": "Brazil",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A13",
+        "A12",
+        "N4",
+        "N5",
+        "B30"
+      ],
+      "neutralAffiliation": "pro-allied",
+      "neutralForces": {
+        "infantry": 4,
+        "artillery": 2,
+        "fighter": 1
+      },
+      "trades": {
+        "oil": false,
+        "iron": true,
+        "osr": false
+      }
+    },
+    {
+      "code": "N7",
+      "name": "Greenland",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A2",
+        "A3"
+      ],
+      "neutralAffiliation": "pro-allied",
+      "neutralForces": {
+        "infantry": 0,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N8",
+      "name": "Iceland",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A2",
+        "A7",
+        "A8"
+      ],
+      "neutralAffiliation": "pro-allied",
+      "neutralForces": {
+        "infantry": 0,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N9",
+      "name": "Ireland",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A7",
+        "B1"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N10",
+      "name": "Sweden",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A5",
+        "G9",
+        "G10"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 4,
+        "artillery": 1,
+        "fighter": 1
+      },
+      "trades": {
+        "oil": false,
+        "iron": true,
+        "osr": false
+      }
+    },
+    {
+      "code": "N11",
+      "name": "Spain",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "M1",
+        "A15",
+        "G3",
+        "N12",
+        "B3"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 6,
+        "artillery": 2,
+        "fighter": 1
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": true
+      }
+    },
+    {
+      "code": "N12",
+      "name": "Portugal",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A15",
+        "N11"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 4,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N13",
+      "name": "Switzerland",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "G1",
+        "G3",
+        "T1"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N14",
+      "name": "Turkey",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "M3",
+        "M4",
+        "G5",
+        "T2",
+        "R6",
+        "B16",
+        "B17"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 6,
+        "artillery": 2,
+        "fighter": 1
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N15",
+      "name": "Arabia",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": true,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "I1",
+        "I2",
+        "M5",
+        "B5",
+        "B16"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": true,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N16",
+      "name": "Angola",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "A19",
+        "B9",
+        "B10",
+        "B11"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N17",
+      "name": "Mozambique",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "I3",
+        "I4",
+        "A19",
+        "B8",
+        "B9",
+        "B10"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N18",
+      "name": "Afghanistan",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "R9",
+        "B17",
+        "B18",
+        "TIBET"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 4,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    },
+    {
+      "code": "N19",
+      "name": "Mongolia",
+      "type": "land",
+      "stratValue": 0,
+      "resources": {
+        "oil": 0,
+        "iron": 0,
+        "osr": 0
+      },
+      "industrySlotsTotal": 0,
+      "hasPort": false,
+      "hasRailroad": false,
+      "startingOwner": "neutral",
+      "adjacentTo": [
+        "R10",
+        "R14",
+        "J3",
+        "J4",
+        "C4",
+        "C5"
+      ],
+      "neutralAffiliation": null,
+      "neutralForces": {
+        "infantry": 3,
+        "artillery": 0,
+        "fighter": 0
+      },
+      "trades": {
+        "oil": false,
+        "iron": false,
+        "osr": false
+      }
+    }
+  ],
+  "thresholds": {
+    "global": {
+      "china": 4,
+      "britain": 6,
+      "soviet": 6,
+      "usa": 5,
+      "germany": 6,
+      "italy": 4,
+      "japan": 7
+    },
+    "european": {
+      "britain": 4,
+      "soviet": 5,
+      "usa": 4,
+      "germany": 6,
+      "italy": 4
+    },
+    "pacific": {
+      "china": 4,
+      "britain": 4,
+      "usa": 4,
+      "japan": 6
+    },
+    "north_africa": {
+      "britain": 4,
+      "usa": 4,
+      "germany": 6,
+      "italy": 4
+    },
+    "eastern_front": {
+      "soviet": 6,
+      "germany": 6
+    }
+  }
+}

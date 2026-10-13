@@ -1288,3 +1288,74 @@ html, body {
 
 /* 中国/意大利：3 列改 2 列 */
 .order-grid.limit-6 { grid-template-columns: repeat(2, 1fr); }
+/* Settlement controls share the existing warm, dark board palette. */
+.settlement-card { margin: 12px 0; padding: 14px; color: #e6decb; background: rgba(23,25,25,.92); border: 1px solid #514634; border-radius: 7px; }
+.settlement-card h3 { margin: 0 0 10px; color: #e8c887; font-size: 15px; }
+.settlement-card p, .report-item p { margin: 7px 0; line-height: 1.6; font-size: 13px; }
+.settlement-note { color: #b2a897; font-size: 12px; line-height: 1.7; }
+.settlement-status { color: #dfc48f; font-weight: 600; }
+.settlement-field { display: flex; gap: 10px; align-items: center; justify-content: space-between; margin: 9px 0; font-size: 12px; }
+.settlement-field span { flex: 1; }
+.settlement-field input, .settlement-field select { min-width: 0; width: 58%; max-width: 240px; padding: 8px; color: #eee5d4; background: #101719; border: 1px solid #5c574b; border-radius: 4px; font-size: 12px; }
+.settlement-field input[type=checkbox] { width: 20px; height: 20px; accent-color: #cba568; }
+.settlement-field input[type=number] { width: 68px; }
+.settlement-button { padding: 9px 12px; margin: 6px 5px 3px 0; border: 1px solid #bd9255; border-radius: 4px; color: #191b1c; background: #d5ad6f; cursor: pointer; font-size: 12px; font-weight: 600; }
+.settlement-button.secondary { background: #242b2c; color: #ddd1ba; border-color: #626151; }
+.settlement-button:disabled { cursor: default; opacity: .4; }
+.settlement-button:hover:not(:disabled) { filter: brightness(1.13); }
+.settlement-actions { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+.settlement-preview, .settlement-reports { color: #eee4d1; background: #182022; border: 1px solid #b99862; border-radius: 10px; padding: 24px; width: min(580px, 92vw); max-height: 86vh; box-shadow: 0 20px 80px #000b; }
+.settlement-preview::backdrop, .settlement-reports::backdrop { background: #000a; }
+.settlement-preview h2, .settlement-reports h2 { font-size: 21px; color: #edce94; margin: 0 0 14px; }
+.settlement-preview .settlement-card .settlement-card { padding: 10px; }
+.settlement-reports { width: min(700px, 92vw); }
+.report-item, .battle-group { padding: 10px 0; border-bottom: 1px solid #4c4d43; font-size: 12px; }
+.report-item summary, .battle-group summary { cursor: pointer; color: #d7bf94; line-height: 1.6; }
+.dice-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 12px 0; }
+.die { display: inline-grid; place-items: center; width: 29px; height: 31px; border-radius: 5px; border: 1px solid #fff4; font-size: 12px; box-shadow: 0 2px 4px #0006; }
+.die.yellow { background: #ccb840; color: #201e10; } .die.blue { background: #4975b0; color: white; }
+.die.green { background: #6d914b; color: white; } .die.red { background: #b74742; color: white; }
+.die.black { background: #0b0d0e; color: white; } .die.white { background: #e6e1d3; color: #171717; }
+.production-line { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; }
+.payment-grid { display: flex; flex-wrap: wrap; gap: 10px; } .payment-grid .settlement-field { display: block; }
+.payment-grid .settlement-field span { display: block; margin-bottom: 5px; }
+#status-bar button, #status-bar a { background: transparent; color: #dfcba5; border: 1px solid #807452; border-radius: 4px; padding: 4px 8px; margin-left: 8px; font-size: 11px; text-decoration: none; cursor: pointer; }
+#connection-state { margin-left: 10px; font-size: 11px; color: #a8c1a6; }
+@media (max-width: 900px), (max-height: 500px), (pointer: coarse) {
+  #action-panel { width: clamp(180px, 30vw, 280px); min-width: 0; max-width: 280px; left: auto; right: 0; top: 0; bottom: 0; height: 100%; background: rgba(15,22,24,.94); }
+  #action-panel .action-body { padding: 7px 8px; color: #c7bdab; }
+  #action-panel .action-tab { font-size: 10px; padding: 8px 2px; letter-spacing: 0; }
+  #action-panel .phase-progress { gap: 4px; margin-bottom: 8px; }
+  #action-panel .phase-steps { gap: 2px; }
+  #action-panel .phase-step { height: 18px; line-height: 18px; font-size: 9px; }
+  #action-panel .confirm-btn { padding: 6px; font-size: 11px; }
+  .settlement-card { padding: 9px; margin: 8px 0; }
+  .settlement-card h3 { font-size: 13px; margin-bottom: 7px; }
+  .settlement-card p, .report-item p, .settlement-field { font-size: 11px; }
+  .settlement-note { font-size: 10px; }
+  .settlement-field { gap: 5px; margin: 6px 0; }
+  .settlement-field input, .settlement-field select { padding: 6px 4px; font-size: 11px; }
+  .settlement-field input[type=number] { width: 55px; }
+  .settlement-button { padding: 7px 9px; font-size: 11px; }
+  .settlement-preview, .settlement-reports { padding: 14px; max-height: 90vh; }
+  #nation-panel { top: 8px; left: 8px; }
+  #nation-panel .nation-row, #nation-panel .nation-icon { height: 24px; }
+  #nation-panel .nation-icon { width: 24px; flex-basis: 24px; }
+  #nation-panel .self-toggle { height: 24px; }
+  #nation-panel .info-bar { font-size: 9px; padding: 3px 5px; gap: 5px; }
+  #panel-ally .info-bar, #panel-enemy .info-bar { display: none; }
+  #status-bar { left: 8px; bottom: 6px; transform: none; max-width: calc(70vw - 16px); flex-wrap: wrap; gap: 6px; font-size: 10px; padding: 5px 8px; }
+  #status-bar button, #status-bar a { margin-left: 0; padding: 4px 5px; }
+  #connection-state { margin-left: 0; }
+  #title { font-size: 12px; }
+  #action-toggle { width: 22px; height: 24px; font-size: 11px; }
+  #view-toolbar { bottom: 42px; }
+}
+@media (max-width: 500px) {
+  #action-panel .phase-progress { flex-wrap: wrap; }
+  #action-panel .phase-steps { flex-basis: 100%; }
+  .settlement-field { flex-wrap: wrap; }
+  .settlement-field select { width: 100%; max-width: none; }
+  #status-bar { max-width: calc(100vw - 196px); }
+  #view-toolbar { bottom: 100px; }
+}

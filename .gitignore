@@ -1,0 +1,6 @@
+.venv/
+**/node_modules/
+web/data/
+work/
+*.log
+__pycache__/

@@ -319,6 +319,7 @@ let cssW = 0;      // 视口宽（画布尺寸）
 let cssH = 0;      // 视口高
 const mapSide = MAP_SIDE;   // 地图逻辑边长（固定，正方形）
 let fitScale = 1;           // "适应视口"的基准缩放（视口短边铺满）
+let previousMapWidth = null;
 let focusScaleAbs = 3.2;    // focus 的绝对缩放（= 基准 × 倍数）
 let initialized = false;    // 是否已完成首次布局
 window.__view = view; // 调试/测试用
@@ -474,6 +475,8 @@ function isLandPassable(code) {
 // 某兵种从 code 出发、一回合可达的地区集合（不含自身）。
 // 返回 { reach:Set<code>, via:[{from,to,kind}] }，kind ∈ "channel"|"rail"（用于虚线连线）。
 function reachableFrom(code, domain, nation) {
+  const authoritativeUnit = UNITS.find(u => u.code === code && u.domain === domain && u.nation === nation);
+  if (SERVER_STATE?.legalMoves && authoritativeUnit && SERVER_STATE.legalMoves[authoritativeUnit.id]) return { reach: new Set(SERVER_STATE.legalMoves[authoritativeUnit.id].filter(c => c !== code)), via: [] };
   const map = territoryMap();
   const start = map[code];
   const out = new Set();
@@ -741,7 +744,7 @@ function loadUnits() {
   return fetch("/units.json")
     .then((r) => r.json())
     .then((list) => {
-      UNITS = Array.isArray(list) ? list : [];
+      UNITS = SERVER_STATE?.units ? Object.values(SERVER_STATE.units) : (Array.isArray(list) ? list : []);
       loadUnitFaces();
       drawMap();
       renderUnitPanel();   // 单位就绪后刷新部队栏目
@@ -911,6 +914,10 @@ fetch("/data_positions.json").then((r) => r.json()).then((p) => { positions = p;
 
 function resizeCanvas() {
   const dpr = window.devicePixelRatio || 1;
+  const prevH = cssH || window.innerHeight, prevFit = fitScale;
+  const centerWorld = initialized && view.scale > 0
+    ? { x: ((previousMapWidth || cssW || window.innerWidth) / 2 - view.x) / view.scale, y: (prevH / 2 - view.y) / view.scale }
+    : null;
   cssW = window.innerWidth;
   cssH = window.innerHeight;
   canvas.width = cssW * dpr;
@@ -920,17 +927,10 @@ function resizeCanvas() {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
   // 基准缩放：让地图"完整适配"视口短边（PC/手机 一致）
-  const prevW = cssW || window.innerWidth;
-  const prevH = cssH || window.innerHeight;
-  const prevFit = fitScale;
-  // 记录缩放前，屏幕中心对应的地图点（保持 resize 时不跳动）
-  const centerWorld = (view.scale > 0)
-    ? { x: (prevW / 2 - view.x) / view.scale, y: (prevH / 2 - view.y) / view.scale }
-    : null;
-  cssW = window.innerWidth;
-  cssH = window.innerHeight;
-
-  fitScale = Math.min(cssW, cssH) / mapSide;
+  const compact = window.matchMedia("(max-width: 900px), (max-height: 500px), (pointer: coarse)").matches;
+  const mapWidth = compact && !actionCollapsed ? cssW - document.getElementById("action-panel").offsetWidth : cssW;
+  previousMapWidth = mapWidth;
+  fitScale = Math.min(mapWidth, cssH) / mapSide;
   view.minScale = fitScale * 0.5;    // 允许缩小到一半
   view.maxScale = fitScale * 12;     // 允许放大到 12 倍
   focusScaleAbs = fitScale * 3.2;    // focus 的绝对缩放
@@ -945,7 +945,7 @@ function resizeCanvas() {
     view.scale = Math.max(view.minScale, Math.min(view.maxScale, view.scale));
     // 让之前屏幕中心的地图点，仍落在新的屏幕中心
     if (centerWorld) {
-      view.x = cssW / 2 - centerWorld.x * view.scale;
+      view.x = mapWidth / 2 - centerWorld.x * view.scale;
       view.y = cssH / 2 - centerWorld.y * view.scale;
     }
   }
@@ -955,7 +955,10 @@ function resizeCanvas() {
 
 // 将地图置为「初始居中」：水平居中、垂直居中
 function centerView() {
-  view.x = (cssW - mapSide * view.scale) / 2;
+  const compact = window.matchMedia("(max-width: 900px), (max-height: 500px), (pointer: coarse)").matches;
+  const mapWidth = compact && !actionCollapsed ? cssW - document.getElementById("action-panel").offsetWidth : cssW;
+  previousMapWidth = mapWidth;
+  view.x = (mapWidth - mapSide * view.scale) / 2;
   view.y = (cssH - mapSide * view.scale) / 2;
 }
 
@@ -1755,6 +1758,7 @@ const MERGE_GRID_ROWS = 2;
 
 function openMergeModal(code, unit) {
   const nation = currentNation;
+  if (!SERVER_STATE || !["phase2_planning", "phase5_refit"].includes(SERVER_STATE.phase) || isViewingPast()) { showToast("只能在规划或改装部署阶段重调部队"); return; }
   // 构造草稿：该地块内「本国」的番号
   const mine = UNITS.filter(u => u.code === code && u.nation === nation);
   const formations = mine.map((u, i) => ({
@@ -1825,26 +1829,17 @@ function closeMergeModal() {
 // 确认更改：回收空番号，落定到 UNITS
 function commitMergeModal() {
   if (!mergeDraft) { closeMergeModal(); return; }
-  const { formations } = mergeDraft;
-  // 回收空番号（units 为空的番号不再存在）
-  const kept = formations.filter(f => f.units.length > 0);
-  // 落定：更新 UNITS（移除该地块本国的旧番号，加入新的）
-  const code = mergeDraft.code, nation = mergeDraft.nation;
-  UNITS = UNITS.filter(u => !(u.code === code && u.nation === nation));
-  for (const f of kept) {
-    UNITS.push({
-      id: f.sourceId || `${nation}-${f.domain}-${f.num}`,
-      nation, alliance: f.alliance,
-      domain: f.domain, num: f.num, code,
-      face: f.face,
-      units: collapseUnits(f.units),
-      unitCount: f.units.length,
-    });
-  }
+  const { nation, code, formations } = mergeDraft;
+  const originals = UNITS.filter(u => u.code === code && u.nation === nation);
+  const kept = formations.filter(f => f.units.length);
+  if (kept.length === originals.length && kept.every(f => { const source = originals.find(u => u.id === f.sourceId); const counts = collapseUnits(f.units); return source && source.num === f.num && Object.keys({ ...source.units, ...counts }).every(t => (source.units[t] || 0) === (counts[t] || 0)); })) { closeMergeModal(); return; }
+  const operations = ["land", "air", "sea"].map(domain => ({
+    unitIds: originals.filter(u => u.domain === domain).map(u => u.id),
+    groups: formations.filter(f => f.domain === domain && f.units.length).map(f => collapseUnits(f.units)),
+    numbers: formations.filter(f => f.domain === domain && f.units.length).map(f => f.num),
+  })).filter(o => o.unitIds.length);
   closeMergeModal();
-  loadUnitFaces();     // 新番号可能引入了新的图face，需加载
-  renderUnitPanel();
-  drawMap();
+  if (window.previewSettlement) window.previewSettlement({ action: "reorganize_area", nation, operations });
 }
 
 // ---- 渲染 ----
@@ -2113,6 +2108,8 @@ function connect() {
     let msg;
     try { msg = JSON.parse(ev.data); } catch { return; }
     if (msg.type === "state") applyState(msg);
+    else if (window.handleSettlementMessage) window.handleSettlementMessage(msg);
+    else if (msg.type === "error") showToast(msg.message);
   };
 
   ws.onclose = () => {
@@ -2123,6 +2120,7 @@ function connect() {
 }
 
 /* 服务端全局状态（节选）——供行动页/进度条/确认按钮渲染 */
+let SERVER_META = null;
 let SERVER_STATE = null;      // snapshot().game
 
 /* ---- 回看模式 ----
@@ -2147,6 +2145,10 @@ function applyState(msg) {
   const g = msg.game;
   if (!g) return;
   SERVER_STATE = g;
+  if (msg.meta) SERVER_META = msg.meta;
+  if (g.units) { UNITS = Object.values(g.units); loadUnitFaces(); renderUnitPanel(); }
+  flippedCards.clear(); for (const [code, st] of Object.entries(g.territories || {})) if (st.embattled) flippedCards.add(code);
+  if (window.refreshSettlementChrome) window.refreshSettlementChrome(g);
   if (msg.meta && msg.meta.phases) PHASE_KEYS = msg.meta.phases;
   document.getElementById("phase-label").textContent = PHASE_NAMES[g.phase] || g.phase;
   document.getElementById("round-label").textContent = `第 ${g.round} 轮`;
@@ -2162,6 +2164,8 @@ function applyState(msg) {
   syncMoveEffect(g);
   renderMovePrompt(g);
   renderSplitModal(g);
+  if (window.renderProductionTab) window.renderProductionTab(g);
+  drawMap();
 }
 
 /* ---------- 部分压制：拆分弹窗 ---------- */
@@ -2371,7 +2375,7 @@ function syncNationInfoFromServer(g) {
       changed = true;
     }
   }
-  // 压力阈值：确保与 bundle 一致（此处已硬编码，无需改）
+  for (const [id, state] of Object.entries(g.nations)) { const info = NATION_INFO[id]; if (!info) continue; if (info.stress !== state.stress || info.stressMax !== state.threshold || info.zone !== state.zone) changed = true; info.stress = state.stress; info.stressMax = state.threshold; info.zone = state.zone; }
   if (changed) renderPanel();
 }
 
@@ -2519,16 +2523,16 @@ function renderConfirmButton(g) {
   const me = g.nations && g.nations[currentNation];
   const confirmed = !!(me && me.confirmed);
   btn.classList.toggle("confirmed", confirmed);
-  if (past) {
-    btn.textContent = "回看中";
+  if (past || g.status === "finished" || me?.collapsed) {
+    btn.textContent = past ? "回看中" : "已结束";
     btn.disabled = true;
     btn.classList.add("disabled");
     btn.title = "正在回看过去的阶段；点击进度条当前格返回";
   } else {
     btn.textContent = confirmed ? "已确认" : "确认";
-    btn.disabled = false;
+    btn.disabled = !!g.blocker && !confirmed;
     btn.classList.remove("disabled");
-    btn.title = confirmed ? "点击取消确认" : "点击确认";
+    btn.title = confirmed ? "点击取消确认" : g.blocker || "点击确认";
   }
 }
 
@@ -2581,7 +2585,8 @@ function renderActionContent(g) {
     tag.textContent = `回看 · 第 ${round} 轮 ${PHASE_NAMES[phaseKey] || phaseKey}（已冻结）`;
     box.appendChild(tag);
     if (snap) {
-      renderPhaseFromSnapshot(box, phaseKey, snap, me, true);
+      if (window.renderSettlementReports && !["phase1_economy", "phase2_planning"].includes(phaseKey)) window.renderSettlementReports(box, snap.reports || []);
+      else renderPhaseFromSnapshot(box, phaseKey, snap, me, true);
     } else {
       const empty = document.createElement("div");
       empty.className = "change-empty";
@@ -2601,9 +2606,10 @@ function renderActionContent(g) {
   } else {
     const hint = document.createElement("div");
     hint.className = "change-empty";
-    hint.textContent = `${PHASE_NAMES[phaseKey] || phaseKey} — 内容待实现`;
-    box.appendChild(hint);
+    if (window.renderSettlementPhase) window.renderSettlementPhase(box, g);
+    else { hint.textContent = "结算界面加载中"; box.appendChild(hint); }
   }
+  if (window.renderPhaseTools) window.renderPhaseTools(box, g);
 }
 
 /* 由历史快照渲染（冻结只读） */
@@ -2631,11 +2637,11 @@ function renderEconomyLive(box, g, me) {
   const changes = (g.changes && g.changes[currentNation]) || [];
   // 「结算后储量」= 当前储量 + 本回合收入（实时预览）
   const settled = {
-    oil:  (stRes.oil  || 0) + ((currentNation === "china") ? 0 : income.oil),
-    iron: (stRes.iron || 0) + income.iron,
-    osr:  (stRes.osr  || 0) + income.osr,
+    oil:  (stRes.oil  || 0) + ((currentNation === "china" || me.zone >= 4) ? 0 : income.oil),
+    iron: (stRes.iron || 0) + (me.zone >= 4 ? 0 : income.iron),
+    osr:  (stRes.osr  || 0) + (me.zone >= 4 ? 0 : income.osr),
   };
-  renderEconomyInner(box, { gain: income, settled, changes, hasSnapshot: g.hasSnapshot }, currentNation, false);
+  renderEconomyInner(box, { gain: me.zone >= 4 ? {oil:0,iron:0,osr:0} : income, settled, changes, hasSnapshot: g.hasSnapshot }, currentNation, false);
 }
 
 function renderEconomyInner(box, data, nation, frozen) {
@@ -3758,6 +3764,7 @@ function toggleActionPanel() {
   if (!panel || !btn) return;
   actionCollapsed = !actionCollapsed;
   panel.classList.toggle("collapsed", actionCollapsed);
+  if (window.matchMedia("(max-width: 900px), (max-height: 500px), (pointer: coarse)").matches) { view.scale = actionCollapsed ? Math.min(cssW, cssH) / mapSide : fitScale; centerView(); drawMap(); }
   // 收起后标签指向左（可展开），展开时指向右（可收起）
   btn.textContent = actionCollapsed ? "◀" : "▶";
 }
@@ -3808,7 +3815,9 @@ function initActionPanel() {
 /* 发送操作到服务端（无身份） */
 function sendAction(action, extra) {
   if (!ws || ws.readyState !== WebSocket.OPEN) { console.warn("[ws] 未连接，忽略操作:", action); return; }
-  ws.send(JSON.stringify(Object.assign({ action }, extra || {})));
+  const requestId = typeof crypto.randomUUID === "function" ? crypto.randomUUID() : Array.from(crypto.getRandomValues(new Uint8Array(16)), b => b.toString(16).padStart(2, "0")).join("");
+  ws.send(JSON.stringify(Object.assign({ action, requestId, revision: SERVER_STATE?.revision }, extra || {})));
+  return requestId;
 }
 
 /* ---------- 底部：强制推进按钮（收起小 tab → 居中大按钮） ---------- */
@@ -3854,6 +3863,7 @@ function selectActionTab(name) {
   });
   // 切到「部队」页时刷新
   if (name === "unit") renderUnitPanel();
+  if (name === "production" && window.renderProductionTab) window.renderProductionTab(SERVER_STATE);
   // 切到「地块」页时刷新地块卡
   if (name === "territory") renderTerritoryCards();
 }
@@ -4008,4 +4018,3 @@ window.__econ = {
     renderPanel();
   },
 };
-connect();

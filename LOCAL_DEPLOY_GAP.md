@@ -1,4 +1,6 @@
-# 本地复现 War Room 服务 —— 缺口分析
+# 本地复现 War Room 服务 —— 原站镜像缺口分析
+
+> 此文分析原站后端源码的缺失，不代表当前仓库没有本地引擎。现在已有 `web/` 全球战场七阶段协作版本；运行、结算范围及待开发项见 [web/README.md](web/README.md)。`server/` 仍为镜像兼容骨架。
 
 分析对象: https://www.playwarroom.com （前端 bundle: site/index-BtF6H2JA.js）
 

@@ -1,4 +1,21 @@
-# War Room — 本地资源镜像
+# War Room — 全球战场协作棋盘与资源镜像
+
+当前可运行的开发入口为 `web/`。需要 Node.js 20+，运行：
+
+```sh
+cd web
+npm start
+```
+
+打开 http://127.0.0.1:3000 。独立引擎提供七阶段的主要结算、操作预览、自动存档与结算记录。
+
+- [运行与规则说明](web/README.md)
+- [界面截图与审阅顺序](docs/UI_REVIEW.md)
+- `cd web && npm test` 运行引擎与传输测试。
+
+本版使用全球剧本；原站镜像与 `server/` 兼容骨架仍保留作为参考。其他剧本和可选规则的范围见运行说明。
+
+## 原始资源镜像说明
 
 来源: https://www.playwarroom.com  (Azure 托管, 香港 eastasia 节点)
 镜像时间: 2026-10-12
