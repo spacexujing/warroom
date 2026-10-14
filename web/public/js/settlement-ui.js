@@ -25,7 +25,7 @@
   const drawer = el("dialog", undefined, "settlement-reports"); drawer.setAttribute("aria-label", "结算记录"); document.body.append(drawer);
   function showPreview(msg) {
     preview = msg; modal.replaceChildren(); modal.append(el("h2", "操作预览"));
-    const description = { set_production: "保存生产清单，资源在全体确认后统一扣减。", finish_battle: "确认维修选择并结算战斗报告。", morale_submit: "提交当前压力步骤，全部国家完成后进入下一步骤。", deploy: "将生产单位编入现役部队。", land_air: "将待着陆空军移动至友方领土。", trade: "立即支付并获得贸易资源。", reorganize_area: "按当前方案重调部队，相关旧指令会清空。", force_confirm: "全体视为确认；仍须先完成本阶段的必要操作。", resolve_order: "按合法路线结算本条移动指令。", launch_carrier: "从航空母舰出动舰载战斗机。" }[msg.operation.action] || "核对本次操作的变化，执行后所有视角同步。";
+    const description = { set_production: "保存生产清单，资源在全体确认后统一扣减。", finish_battle: "确认维修选择并结算战斗报告。", morale_submit: "提交当前压力步骤，全部国家完成后进入下一步骤。", deploy: "将生产单位编入现役部队。", land_air: "将待着陆空军移动至友方领土。", trade: "立即支付并获得贸易资源。", reorganize_area: "按当前方案重调部队，相关旧指令会清空。", force_confirm: "全体视为确认；阶段二将保留已选顺位，随机补齐剩余顺位并支付竞价石油；其他阶段须先完成必要操作。", resolve_order: "按合法路线结算本条移动指令。", launch_carrier: "从航空母舰出动舰载战斗机。" }[msg.operation.action] || "核对本次操作的变化，执行后所有视角同步。";
     modal.append(el("p", description, "settlement-note"));
     if (msg.production) { const c = card(modal, "生产清单"); c.append(el("p", costText(msg.production.cost))); for (const item of msg.production.items) c.append(el("p", `${loc(item.code)} · ${UNIT[item.type]} ×${item.count}${item.immediate ? " · 立即动员" : " · 下一轮部署"}`)); if (msg.production.civilianGoods) c.append(el("p", `民用物资 +${msg.production.civilianGoods}`)); }
     const nation = msg.operation.nation, previous = SERVER_STATE.nations[nation];

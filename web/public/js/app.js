@@ -268,6 +268,7 @@ function selectNation(id) {
     renderConfirmButton(SERVER_STATE);
     renderActionContent(SERVER_STATE);
     renderNationConfirmHighlights(SERVER_STATE);
+    renderTurnOrder(SERVER_STATE);
   }
 }
 
@@ -1008,12 +1009,6 @@ function drawMap() {
 
   if (mapReady) ctx.drawImage(mapImg, 0, 0, mapSide, mapSide);
 
-  // 指令箭头（番号 → 目的地）：已填指令的常驻箭头 + 悬停临时箭头
-  drawOrderArrows(ctx);
-
-  // 阶段3：移动结算特效（箭头生长/悬停高亮/沿箭头移动）
-  drawMoveEffect(ctx);
-
   // 绘制单位（番号）
   drawUnits(ctx);
 
@@ -1021,6 +1016,10 @@ function drawMap() {
   //   左下角「地块编号」按钮开启，或关注时唤起可达标点
   if (showCardMarks) drawCardMarks(ctx);
   if (focusHighlight) drawFocusHighlight(ctx);
+
+  // 箭头最后绘制，避免被番号、地块标点和关注高亮遮挡。
+  drawOrderArrows(ctx);
+  drawMoveEffect(ctx);
 
   ctx.restore();
 }
@@ -1122,7 +1121,7 @@ function drawArrow(ctx, ax, ay, bx, by, color, width, progress) {
   const p = progress === undefined ? 1 : Math.max(0, Math.min(1, progress));
   const dx = bx - ax, dy = by - ay;
   const len = Math.hypot(dx, dy);
-  if (len < 1) return;
+  if (len <= 26 / s || p === 0) return;
   const ux = dx / len, uy = dy / len;
   // 缩短两端，避免压住番号/标点
   const padA = 14 / s, padB = 12 / s;
@@ -1136,23 +1135,33 @@ function drawArrow(ctx, ax, ay, bx, by, color, width, progress) {
   const ex = sx + ux * reached, ey = sy + uy * reached;
 
   ctx.save();
-  ctx.strokeStyle = color;
   ctx.fillStyle = color;
-  ctx.lineWidth = (width || 2.5) / s;
+  const shaftWidth = Math.max(5, (width || 2.5) * 1.4) / s;
+  const outlineWidth = 2 / s;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
   // 线身（生长中只画到 reached）
   ctx.beginPath();
   ctx.moveTo(sx, sy);
   ctx.lineTo(ex, ey);
+  ctx.strokeStyle = "#000";
+  ctx.lineWidth = shaftWidth + outlineWidth * 2;
+  ctx.stroke();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = shaftWidth;
   ctx.stroke();
   // 箭头头部：只在接近全长时出现（p>0.6），随生长淡入
   if (p > 0.6) {
-    const headLen = 10 / s, headW = 5.5 / s;
-    ctx.globalAlpha = Math.min(1, (p - 0.6) / 0.4);
+    const headLen = 15 / s, headW = 9 / s;
+    ctx.globalAlpha *= Math.min(1, (p - 0.6) / 0.4);
     ctx.beginPath();
     ctx.moveTo(ex, ey);
     ctx.lineTo(ex - ux * headLen - uy * headW, ey - uy * headLen + ux * headW);
     ctx.lineTo(ex - ux * headLen + uy * headW, ey - uy * headLen - ux * headW);
     ctx.closePath();
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = outlineWidth * 2;
+    ctx.stroke();
     ctx.fill();
   }
   ctx.restore();
@@ -2466,6 +2475,16 @@ function renderTurnOrder(g) {
     if (!nat) continue;
     const cell = document.createElement("div");
     cell.className = "to-bid";
+    if (!done && id === queue[to.currentIndex]) {
+      cell.classList.add("picking");
+      cell.title = `轮到${nat.name}选择顺位，点击切换视角`;
+      cell.tabIndex = 0;
+      cell.setAttribute("role", "button");
+      cell.addEventListener("click", () => selectNation(id));
+      cell.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectNation(id); }
+      });
+    }
     if (pickedNations.has(id)) cell.classList.add("done");
     const img = document.createElement("img");
     img.className = "to-bid-flag";

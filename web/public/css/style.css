@@ -465,6 +465,7 @@ html, body {
   transition: opacity 0.25s;
 }
 .to-bid.done { opacity: 0.28; }        /* 已选完 → 暗下 */
+.to-bid.picking { outline: 2px solid #ffd700; background: rgba(255, 215, 0, 0.18); cursor: pointer; }
 .to-bid-flag { width: 26px; height: 18px; object-fit: cover; border-radius: 2px; border: 1px solid #555; }
 .to-bid-num { font-size: 11px; font-weight: bold; color: #ffd700; }
 .to-bid.picking .to-bid-num { color: #7ad07a; }

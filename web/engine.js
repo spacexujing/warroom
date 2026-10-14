@@ -688,6 +688,15 @@ function legacyHandle(conn, raw) {
 
     // 强制推进：等价于所有国家同时确认并按阶段结算，然后推进
     case "force_confirm": {
+      if (game.phase === "phase2_planning") {
+        if (!game.turnOrder.active) startTurnOrder();
+        while (!game.turnOrder.done) {
+          const empty = game.turnOrder.picks.map((id, i) => id === null ? i : -1).filter(i => i >= 0);
+          pickTurnSlot(currentPicker(), empty[randomInt(empty.length)]);
+        }
+        payTurnOrderBids();
+        pushLog("强制推进：保留已选顺位，随机分配剩余行动顺位并支付竞价石油");
+      }
       for (const id in game.nations) game.nations[id].confirmed = true;
       pushLog("强制推进：全体视为已确认");
       maybeAdvanceOnAllConfirmed();
@@ -810,7 +819,7 @@ function validate(msg) {
   if (msg.action === "sync") return;
   R.check(game.status === "playing", "对局已经结束");
   if (["confirm", "unconfirm", "set_bid", "pick_slot", "resolve_order", "resolve_split", "set_order", "move_order"].includes(msg.action)) settlement.nation(msg.nation);
-  if (["confirm", "force_confirm"].includes(msg.action)) settlement.ready();
+  if (msg.action === "confirm" || (msg.action === "force_confirm" && game.phase !== "phase2_planning")) settlement.ready();
   if (["set_bid", "start_turn_order", "pick_slot", "pay_bids", "set_order", "move_order"].includes(msg.action)) settlement.phase("phase2_planning");
   if (["set_order", "move_order", "set_bid"].includes(msg.action)) R.check(!game.nations[msg.nation].confirmed, "请先取消确认，再修改操作");
   if (msg.action === "set_bid") { R.check(!game.turnOrder.active, "竞价已展示，不能修改"); R.integer(msg.value, 0, game.nations[msg.nation].resources.oil); R.check(msg.nation !== "china" || msg.value === 0, "中国不能使用石油竞价"); }

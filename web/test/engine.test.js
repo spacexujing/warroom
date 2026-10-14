@@ -28,7 +28,7 @@ test("planning validates nation, destination, duplicate formation and finite bid
 test("bids are frozen, all slots chosen and payment applied exactly once", () => {
   const e = setup({ randomInt: () => 0 }); ok(e, { action: "force_confirm" });
   ok(e, { action: "set_bid", nation: "germany", value: 2 }); const oil = e.game.nations.germany.resources.oil;
-  assert.equal(e.send({ action: "force_confirm" }).type, "error"); ok(e, { action: "start_turn_order" });
+  assert.equal(e.send({ action: "confirm", nation: "germany" }).type, "error"); ok(e, { action: "start_turn_order" });
   assert.equal(e.send({ action: "set_bid", nation: "germany", value: 0 }).type, "error");
   while (!e.game.turnOrder.done) { const nation = e.game.turnOrder.queue[e.game.turnOrder.currentIndex], slot = e.game.turnOrder.picks.indexOf(null); ok(e, { action: "pick_slot", nation, slot }); }
   assert.equal(e.game.nations.germany.resources.oil, oil - 2); ok(e, { action: "pay_bids" }); assert.equal(e.game.nations.germany.resources.oil, oil - 2);
@@ -193,4 +193,30 @@ test("a battle commander can be chosen only from the declaring nation's alliance
   const e = setup(); phase(e, "phase4_combat"); const units = [stack("germany", "land", 48, "G1", { infantry: 1 }), stack("soviet", "land", 21, "G1", { infantry: 1 }), stack("usa", "land", 51, "G1", { infantry: 1 })];
   e.game.units = Object.fromEntries(units.map(u => [u.id, u])); e.game.roundOrder = ["germany", "soviet", "usa"]; e.settlement.startCombat(); ok(e, { action: "choose_battle", nation: "germany", battleId: "battle-G1" });
   assert.equal(e.send({ action: "set_commander", nation: "germany", commander: "usa" }).type, "error"); ok(e, { action: "set_commander", nation: "soviet", commander: "usa" }); assert.equal(e.game.combat.current.commanders.allies, "usa");
+});
+
+ test("force planning completes random slots, preserves existing picks and pays bids once", () => {
+  for (const started of [false, true]) {
+    const e = setup({ randomInt: () => 0 });
+    ok(e, { action: "force_confirm" });
+    ok(e, { action: "set_bid", nation: "germany", value: 2 });
+    const oil = e.game.nations.germany.resources.oil;
+    let picker;
+    if (started) {
+      ok(e, { action: "start_turn_order" });
+      picker = e.game.turnOrder.queue[0];
+      ok(e, { action: "pick_slot", nation: picker, slot: 5 });
+    }
+    const before = JSON.stringify(e.game);
+    ok(e, { action: "preview", operation: { action: "force_confirm" } });
+    assert.equal(JSON.stringify(e.game), before);
+    ok(e, { action: "force_confirm", requestId: "force-planning" });
+    assert.equal(e.game.phase, "phase3_movement");
+    assert.equal(e.game.roundOrder.length, 7);
+    assert.equal(new Set(e.game.roundOrder).size, 7);
+    if (started) assert.equal(e.game.roundOrder[5], picker);
+    assert.equal(e.game.nations.germany.resources.oil, oil - 2);
+    ok(e, { action: "force_confirm", requestId: "force-planning" });
+    assert.equal(e.game.nations.germany.resources.oil, oil - 2);
+  }
 });
