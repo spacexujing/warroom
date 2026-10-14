@@ -851,6 +851,16 @@ function applyLegacy(conn, msg) {
   legacyHandle(conn, JSON.stringify(msg));
 }
 function restore(before) { for (const k of Object.keys(game)) delete game[k]; Object.assign(game, before); }
+function autoAdvanceCompletedActions() {
+  while (game.status === "playing" && (
+    (game.phase === "phase2_planning" && game.turnOrder.done && game.turnOrder.paid) ||
+    (game.phase === "phase3_movement" && game.movePhase.done)
+  )) {
+    for (const nation of Object.values(game.nations)) nation.confirmed = true;
+    pushLog("本阶段操作已全部完成，自动确认并推进");
+    maybeAdvanceOnAllConfirmed();
+  }
+}
 function dispatch(conn, raw) {
   let msg;
   try {
@@ -869,6 +879,7 @@ function dispatch(conn, raw) {
         R.check(!["start_battle", "roll_combat", "roll_bombing", "roll_convoy", "start_turn_order"].includes(candidate.action), "随机投骰只能实际执行，不能预览结果");
         validate(candidate); const reportIds = new Set(game.reports.map(r => r.id));
         if (!settlement.handle(candidate)) { R.check(["confirm", "unconfirm", "force_confirm", "set_bid", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"].includes(candidate.action), "未知操作"); applyLegacy(conn, candidate); }
+        autoAdvanceCompletedActions();
         const result = { type: "preview", requestId: msg.requestId, revision: before.revision, operation: candidate, reports: game.reports.filter(r => !reportIds.has(r.id)), nation: game.nations[candidate.nation], production: game.productionDrafts[candidate.nation], morale: game.morale, units: game.units, phase: game.phase };
         restore(before); conn.send(result); return;
       }
@@ -876,6 +887,7 @@ function dispatch(conn, raw) {
         R.check(["confirm", "unconfirm", "force_confirm", "set_bid", "start_turn_order", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"].includes(action), "未知操作或调试接口已禁用");
         applyLegacy(conn, msg);
       }
+      autoAdvanceCompletedActions();
       game.revision++; refreshIncomes();
       if (savePath) { fs.mkdirSync(path.dirname(savePath), { recursive: true }); fs.writeFileSync(savePath + ".tmp", JSON.stringify({ version: 1, game })); fs.renameSync(savePath + ".tmp", savePath); }
     } catch (error) { restore(before); throw error; }

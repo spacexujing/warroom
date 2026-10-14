@@ -1196,6 +1196,22 @@ function tickArrowAnim() {
  */
 function drawOrderArrows(ctx) {
   if (!SERVER_STATE || !SERVER_STATE.nations || !positions) return;
+  if (SERVER_STATE.phase === "phase3_movement") {
+    const mp = SERVER_STATE.movePhase;
+    const activeNation = mp?.cur?.nation;
+    if (!activeNation) return;
+    // 已执行箭头使用结算时记录的起止地块，不能使用移动后的番号位置。
+    for (const result of mp.resolved || []) {
+      if (!["done", "pinned"].includes(result.result) || NATION_ALLIANCE[result.nation] !== NATION_ALLIANCE[activeNation]) continue;
+      const a = positions[result.from], b = positions[result.to];
+      if (!a || !b || result.from === result.to) continue;
+      const color = NATION_COLOR[result.nation] || "#ffffff";
+      const dark = color.replace(/[0-9a-f]{2}/gi, channel => Math.round(parseInt(channel, 16) * 0.55).toString(16).padStart(2, "0"));
+      drawArrow(ctx, a.x * mapSide, a.y * mapSide, b.x * mapSide, b.y * mapSide, dark, 3.5, 1);
+    }
+    // 当前待执行箭头由 drawMoveEffect 单独绘制，其他未执行指令不显示。
+    return;
+  }
   const myAlliance = NATION_ALLIANCE[currentNation];
   const seenKeys = new Set();
   // 1) 常驻箭头（每个国家用自己的国家色）
@@ -1235,7 +1251,7 @@ function drawOrderArrows(ctx) {
 /* 阶段3 移动特效绘制：箭头（生长/高亮/反向消失）+ 沿箭头移动的单位 */
 function drawMoveEffect(ctx) {
   const me = moveEffect;
-  if (!me) return;
+  if (!me || SERVER_STATE?.phase !== "phase3_movement" || me.key !== `${SERVER_STATE.movePhase?.cur?.nation}#${SERVER_STATE.movePhase?.cur?.orderIndex}#${SERVER_STATE.movePhase?.cur?.formationId}->${SERVER_STATE.movePhase?.cur?.dest}`) return;
   const color = NATION_COLOR[me.nation] || "#fff";
   const a = me.startPos, b = me.destPos;
   const now = performance.now();

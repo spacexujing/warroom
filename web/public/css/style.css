@@ -596,16 +596,27 @@ html, body {
 .move-order-list { display: flex; flex-direction: column; gap: 4px; }
 .move-order-row {
   display: grid;
-  grid-template-columns: 88px 1fr 20px auto;
+  grid-template-columns: 88px minmax(0, 1fr) 16px minmax(40px, 70px);
   align-items: center;
   gap: 6px;
   padding: 3px 4px;
   border-radius: 4px;
   background: rgba(255,255,255,0.03);
 }
-.move-order-row .row-face-box { display: flex; justify-content: center; }
-.move-order-comp { display: flex; flex-wrap: wrap; gap: 2px; align-items: center; }
-.move-order-dest { color: #ffd700; font-size: 12px; }
+.move-order-row .row-face-box { display: flex; align-items: center; justify-content: center; min-width: 0; }
+.move-order-row .row-face { display: block; width: 36px; height: 36px; object-fit: contain; }
+.move-order-row .row-face.sea { width: 88px; height: 36px; }
+.move-order-comp { display: flex; flex-flow: row nowrap; min-width: 0; overflow-x: auto; gap: 2px; align-items: center; }
+.move-order-comp .u-icon { flex: 0 0 auto; width: 20px; height: 20px; object-fit: contain; }
+.move-order-comp.naval .u-icon { width: 55px; }
+.move-order-dest { min-width: 0; overflow-wrap: anywhere; color: #ffd700; font-size: 12px; }
+@media (max-width: 900px), (max-height: 500px), (pointer: coarse) {
+  .move-order-row { grid-template-columns: 44px minmax(0, 1fr) 12px 40px; gap: 3px; }
+  .move-order-row .row-face { width: 24px; height: 24px; }
+  .move-order-row .row-face.sea { width: 44px; height: 24px; }
+  .move-order-comp .u-icon { width: 16px; height: 16px; }
+  .move-order-comp.naval .u-icon { width: 44px; }
+}
 .move-order-dest.none { color: #777; }
 /* 行动页指令状态：执行成功=变暗；取消=变暗且打叉 */
 .move-order-row.done { opacity: 0.4; }

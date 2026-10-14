@@ -30,8 +30,8 @@ test("bids are frozen, all slots chosen and payment applied exactly once", () =>
   ok(e, { action: "set_bid", nation: "germany", value: 2 }); const oil = e.game.nations.germany.resources.oil;
   assert.equal(e.send({ action: "confirm", nation: "germany" }).type, "error"); ok(e, { action: "start_turn_order" });
   assert.equal(e.send({ action: "set_bid", nation: "germany", value: 0 }).type, "error");
-  while (!e.game.turnOrder.done) { const nation = e.game.turnOrder.queue[e.game.turnOrder.currentIndex], slot = e.game.turnOrder.picks.indexOf(null); ok(e, { action: "pick_slot", nation, slot }); }
-  assert.equal(e.game.nations.germany.resources.oil, oil - 2); ok(e, { action: "pay_bids" }); assert.equal(e.game.nations.germany.resources.oil, oil - 2);
+  while (e.game.phase === "phase2_planning") { const nation = e.game.turnOrder.queue[e.game.turnOrder.currentIndex], slot = e.game.turnOrder.picks.indexOf(null); ok(e, { action: "pick_slot", nation, slot }); }
+  assert.equal(e.game.nations.germany.resources.oil, oil - 2); assert.equal(e.game.phase, "phase4_combat"); assert.equal(e.send({ action: "pay_bids" }).type, "error"); assert.equal(e.game.nations.germany.resources.oil, oil - 2);
 });
 test("pinning counts the matching surface domain and ignores air", () => {
   const e = setup(), a = stack("germany", "land", 48, "G1", { infantry: 2 }), b = stack("soviet", "air", 11, "G1", { fighter: 8 }); e.game.units = { [a.id]: a, [b.id]: b };
@@ -187,7 +187,7 @@ test("selected route previews and executions use the same path without moving du
   e.game.movePhase = { active: true, order: ["germany"], natIndex: 0, ordIndex: 0, cur: { nation: "germany", orderIndex: 0, formationId: u.id, dest: "M3", pinned: false, invalid: false, partial: false }, awaiting: true, resolved: [], done: false };
   const operation = { action: "resolve_order", nation: "germany", result: "execute", route: ["M1", "M2", "M3"] }, before = JSON.stringify(e.game), preview = e.send({ action: "preview", operation });
   assert.equal(preview.type, "preview"); assert.deepEqual(preview.reports[0].details.route, operation.route); assert.equal(JSON.stringify(e.game), before);
-  ok(e, operation); assert.equal(e.game.units[u.id].code, "M3"); assert.deepEqual(e.game.reports.at(-1).details.route, operation.route);
+  ok(e, operation); assert.equal(e.game.phase, "phase4_combat"); assert.equal(e.game.units[u.id].code, "M3"); assert.deepEqual(e.game.reports.at(-1).details.route, operation.route);
 });
 test("a battle commander can be chosen only from the declaring nation's alliance", () => {
   const e = setup(); phase(e, "phase4_combat"); const units = [stack("germany", "land", 48, "G1", { infantry: 1 }), stack("soviet", "land", 21, "G1", { infantry: 1 }), stack("usa", "land", 51, "G1", { infantry: 1 })];
@@ -211,7 +211,7 @@ test("a battle commander can be chosen only from the declaring nation's alliance
     ok(e, { action: "preview", operation: { action: "force_confirm" } });
     assert.equal(JSON.stringify(e.game), before);
     ok(e, { action: "force_confirm", requestId: "force-planning" });
-    assert.equal(e.game.phase, "phase3_movement");
+    assert.equal(e.game.phase, "phase4_combat");
     assert.equal(e.game.roundOrder.length, 7);
     assert.equal(new Set(e.game.roundOrder).size, 7);
     if (started) assert.equal(e.game.roundOrder[5], picker);
@@ -219,4 +219,25 @@ test("a battle commander can be chosen only from the declaring nation's alliance
     ok(e, { action: "force_confirm", requestId: "force-planning" });
     assert.equal(e.game.nations.germany.resources.oil, oil - 2);
   }
+});
+
+test("last slot automatically starts movement; last canceled order automatically starts combat", () => {
+  const e = setup({ randomInt: () => 0 });
+  ok(e, { action: "force_confirm" });
+  ok(e, { action: "set_order", nation: "germany", index: 0, order: { formationId: "germany-land-48", dest: "G2" } });
+  ok(e, { action: "start_turn_order" });
+  while (e.game.phase === "phase2_planning") {
+    const nation = e.game.turnOrder.queue[e.game.turnOrder.currentIndex];
+    const slot = e.game.turnOrder.picks.indexOf(null);
+    ok(e, { action: "pick_slot", nation, slot });
+  }
+  assert.equal(e.game.phase, "phase3_movement");
+  assert.equal(e.game.movePhase.cur.nation, "germany");
+  assert.ok(e.game.phaseHistory[1].phase2_planning);
+  const revision = e.game.revision;
+  ok(e, { action: "resolve_order", nation: "germany", result: "cancel", requestId: "last-order" });
+  assert.equal(e.game.phase, "phase4_combat");
+  assert.ok(e.game.phaseHistory[1].phase3_movement);
+  ok(e, { action: "resolve_order", nation: "germany", result: "cancel", requestId: "last-order" });
+  assert.equal(e.game.revision, revision + 1);
 });
