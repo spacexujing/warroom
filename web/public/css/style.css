@@ -1371,3 +1371,12 @@ html, body {
   #status-bar { max-width: calc(100vw - 196px); }
   #view-toolbar { bottom: 100px; }
 }
+
+/* 与强制推进同时展开，位于大红按钮正下方。 */
+.reset-game-btn {
+  position: fixed; left: 50%; top: calc(75% + 12px); transform: translateX(-50%);
+  width: 46%; max-width: 520px; height: 48px; z-index: 41;
+  background: #080808; color: #fff; border: 2px solid #666;
+  border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer;
+}
+.reset-game-btn:hover { background: #222; border-color: #aaa; }

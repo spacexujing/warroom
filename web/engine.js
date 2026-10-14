@@ -263,6 +263,7 @@ function snapshot() {
     type: "state",
     game: {
       revision: game.revision,
+      resetRevision: game.resetRevision,
       scenario: game.scenario,
       round: game.round,
       phase: game.phase,
@@ -811,12 +812,13 @@ function legacyHandle(conn, raw) {
 const movement = new MovementRules(game, TERR, JSON.parse(fs.readFileSync(path.join(PUBLIC_DIR, "channels.json"), "utf8")), JSON.parse(fs.readFileSync(path.join(PUBLIC_DIR, "railroads.json"), "utf8")));
 const settlement = new Settlements(game, TERR, FORMATIONS_ALL, movement, pushLog, randomInt);
 game.revision = 0;
+const initialGame = R.clone(game);
 const requests = new WeakMap();
 function validate(msg) {
   R.check(msg && typeof msg === "object" && !Array.isArray(msg) && typeof msg.action === "string", "操作格式无效");
-  const allowed = new Set(["sync", "confirm", "unconfirm", "force_confirm", "set_bid", "start_turn_order", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"]);
+  const allowed = new Set(["sync", "reset_game", "confirm", "unconfirm", "force_confirm", "set_bid", "start_turn_order", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"]);
   if (!allowed.has(msg.action)) return;
-  if (msg.action === "sync") return;
+  if (msg.action === "sync" || msg.action === "reset_game") return;
   R.check(game.status === "playing", "对局已经结束");
   if (["confirm", "unconfirm", "set_bid", "pick_slot", "resolve_order", "resolve_split", "set_order", "move_order"].includes(msg.action)) settlement.nation(msg.nation);
   if (msg.action === "confirm" || (msg.action === "force_confirm" && game.phase !== "phase2_planning")) settlement.ready();
@@ -842,6 +844,13 @@ function validate(msg) {
   }
 }
 function applyLegacy(conn, msg) {
+  if (msg.action === "reset_game") {
+    const revision = game.revision;
+    restore(R.clone(initialGame));
+    game.revision = revision;
+    game.resetRevision = revision + 1;
+    return;
+  }
         if (msg.action === "resolve_order" && msg.route) {
           const cur = game.movePhase.cur, u = game.units[cur.formationId];
           if (cur.remainingRoute) R.check(msg.route.length <= cur.remainingRoute.length, "中途改选路线不能增加本条指令的剩余移动距离");
@@ -878,13 +887,13 @@ function dispatch(conn, raw) {
         const candidate = msg.operation; R.check(candidate && candidate.action !== "preview" && candidate.action !== "sync", "预览操作无效");
         R.check(!["start_battle", "roll_combat", "roll_bombing", "roll_convoy", "start_turn_order"].includes(candidate.action), "随机投骰只能实际执行，不能预览结果");
         validate(candidate); const reportIds = new Set(game.reports.map(r => r.id));
-        if (!settlement.handle(candidate)) { R.check(["confirm", "unconfirm", "force_confirm", "set_bid", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"].includes(candidate.action), "未知操作"); applyLegacy(conn, candidate); }
+        if (!settlement.handle(candidate)) { R.check(["reset_game", "confirm", "unconfirm", "force_confirm", "set_bid", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"].includes(candidate.action), "未知操作"); applyLegacy(conn, candidate); }
         autoAdvanceCompletedActions();
         const result = { type: "preview", requestId: msg.requestId, revision: before.revision, operation: candidate, reports: game.reports.filter(r => !reportIds.has(r.id)), nation: game.nations[candidate.nation], production: game.productionDrafts[candidate.nation], morale: game.morale, units: game.units, phase: game.phase };
         restore(before); conn.send(result); return;
       }
       if (!settlement.handle(msg)) {
-        R.check(["confirm", "unconfirm", "force_confirm", "set_bid", "start_turn_order", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"].includes(action), "未知操作或调试接口已禁用");
+        R.check(["reset_game", "confirm", "unconfirm", "force_confirm", "set_bid", "start_turn_order", "pick_slot", "pay_bids", "resolve_order", "resolve_split", "set_order", "move_order"].includes(action), "未知操作或调试接口已禁用");
         applyLegacy(conn, msg);
       }
       autoAdvanceCompletedActions();

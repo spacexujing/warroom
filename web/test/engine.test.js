@@ -241,3 +241,32 @@ test("last slot automatically starts movement; last canceled order automatically
   ok(e, { action: "resolve_order", nation: "germany", result: "cancel", requestId: "last-order" });
   assert.equal(e.game.revision, revision + 1);
 });
+
+test("reset preview is pure; reset broadcasts a fresh game and persists it with monotonic revision", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "warroom-reset-")), savePath = path.join(dir, "game.json"), states = [];
+  try {
+    const e = setup({ savePath, emit: s => states.push(s) });
+    ok(e, { action: "force_confirm" });
+    e.game.status = "finished"; e.game.winner = "axis";
+    const before = JSON.stringify(e.game), revision = e.game.revision;
+    const preview = ok(e, { action: "preview", operation: { action: "reset_game" } });
+    assert.equal(preview.type, "preview");
+    assert.equal(preview.phase, "phase1_economy");
+    assert.equal(JSON.stringify(e.game), before);
+    ok(e, { action: "reset_game", revision, requestId: "reset" });
+    assert.equal(e.game.phase, "phase1_economy");
+    assert.equal(e.game.round, 1); assert.equal(e.game.status, "playing");
+    assert.equal(e.game.winner, undefined);
+    assert.equal(e.game.revision, revision + 1);
+    assert.equal(e.game.resetRevision, revision + 1);
+    assert.deepEqual(e.game.phaseHistory, {});
+    assert.equal(e.game.reports.length, 0);
+    assert.equal(Object.keys(e.game.units).length, 122);
+    assert.deepEqual(e.game.nations.germany.resources, R.ZERO());
+    assert.equal(states.at(-1).game.resetRevision, revision + 1);
+    ok(e, { action: "reset_game", requestId: "reset" });
+    assert.equal(e.game.revision, revision + 1);
+    const restored = setup({ savePath }); assert.deepEqual(restored.game, e.game);
+    assert.equal(e.send({ action: "reset_game", revision }).code, "STALE_STATE");
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});

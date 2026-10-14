@@ -2169,6 +2169,11 @@ const PHASE_SHORT = ["国", "规", "移", "战", "装", "压", "产"];
 function applyState(msg) {
   const g = msg.game;
   if (!g) return;
+  if (g.resetRevision && g.resetRevision !== SERVER_STATE?.resetRevision) {
+    viewed = null; moveTabIndex = 0; moveEffect = null; hoverArrow = null;
+    focusHighlight = null; selectedUnit = null; arrowAnimStart.clear();
+    if (window.clearSettlementDrafts) window.clearSettlementDrafts();
+  }
   SERVER_STATE = g;
   if (msg.meta) SERVER_META = msg.meta;
   if (g.units) { UNITS = Object.values(g.units); loadUnitFaces(); renderUnitPanel(); }
@@ -3867,11 +3872,13 @@ function initForceAdvance() {
     forceOpen = true;
     backdrop.hidden = false;
     btn.hidden = false;
+    document.getElementById("reset-game-btn").hidden = false;
     // 下一帧加 .open → 触发 0.5s 上移动画
     requestAnimationFrame(() => btn.classList.add("open"));
   };
   const close = () => {
     forceOpen = false;
+    document.getElementById("reset-game-btn").hidden = true;
     btn.classList.remove("open");
     // 等动画结束再隐藏
     setTimeout(() => { if (!forceOpen) { btn.hidden = true; backdrop.hidden = true; } }, 500);
