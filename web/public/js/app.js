@@ -794,7 +794,7 @@ function unitSizeForScale(scale, domain) {
 function layoutArea(list, scale) {
   // 分阵营
   const axis = list.filter(u => u.alliance === "axis");
-  const allied = list.filter(u => u.alliance === "allied");
+  const allied = list.filter(u => u.alliance === "allies" || u.alliance === "allied");
   const singleAlliance = axis.length === 0 || allied.length === 0;
 
   // 每个"半区"内部排序：空军优先，其次陆/海（保持原始顺序稳定）
