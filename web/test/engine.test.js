@@ -270,3 +270,31 @@ test("reset preview is pure; reset broadcasts a fresh game and persists it with 
     assert.equal(e.send({ action: "reset_game", revision }).code, "STALE_STATE");
   } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });
+
+test("entering movement clears invalid orders, preserves units and continues valid orders", () => {
+  const e = setup({ randomInt: () => 0 });
+  ok(e, { action: "force_confirm" });
+  const army = e.game.units["germany-land-48"], before = R.clone(army);
+  ok(e, { action: "set_order", nation: "germany", index: 0, order: { formationId: army.id } });
+  e.game.nations.germany.orders[1] = { formationId: "missing-unit", dest: "G2" };
+  e.game.nations.germany.orders[2] = { formationId: army.id, dest: "UNKNOWN" };
+  e.game.nations.germany.orders[3] = { formationId: army.id, dest: "G2" };
+  ok(e, { action: "force_confirm" });
+  assert.equal(e.game.phase, "phase3_movement");
+  assert.deepEqual(e.game.nations.germany.orders.slice(0, 3), [null, null, null]);
+  assert.equal(e.game.movePhase.cur.orderIndex, 3);
+  assert.deepEqual(e.game.units[army.id], before);
+  assert.equal(e.game.movePhase.resolved.length, 3);
+  assert.equal(e.game.movePhase.resolved[0].reason, "未指定目的地");
+});
+
+test("an incomplete order is removed automatically without deleting its formation", () => {
+  const e = setup({ randomInt: () => 0 });
+  ok(e, { action: "force_confirm" });
+  const before = R.clone(e.game.units);
+  ok(e, { action: "set_order", nation: "germany", index: 0, order: { formationId: "germany-land-48" } });
+  ok(e, { action: "force_confirm" });
+  assert.equal(e.game.phase, "phase4_combat");
+  assert.equal(e.game.nations.germany.orders[0], null);
+  assert.deepEqual(e.game.units, before);
+});

@@ -461,6 +461,13 @@ function stepMovement() {
   while (mp.natIndex < mp.order.length) {
     const nat = mp.order[mp.natIndex];
     const orders = (game.nations[nat] && game.nations[nat].orders) || [];
+    const discardInvalidOrder = reason => {
+      const orderIndex = mp.ordIndex, order = orders[orderIndex];
+      mp.resolved.push({ nation: nat, orderIndex, result: "cancel", reason, formationId: order?.formationId, dest: order?.dest });
+      orders[orderIndex] = null;
+      pushLog(`${nationLabel(nat)} 无效指令 #${orderIndex + 1} 已清除：${reason}`);
+      mp.ordIndex++;
+    };
     // 找到该国 ordIndex 起的第一条非空指令
     while (mp.ordIndex < orders.length && !(orders[mp.ordIndex] && orders[mp.ordIndex].formationId)) {
       mp.ordIndex++;
@@ -470,14 +477,15 @@ function stepMovement() {
       // 该部队是否已被下过更早的指令（只执行第一个）→ 若是，自动放弃本条
       const dup = orders.slice(0, mp.ordIndex).some((p) => p && p.formationId === o.formationId);
       if (dup) {
-        mp.resolved.push({ nation: nat, orderIndex: mp.ordIndex, result: "cancel", reason: "重复指令" }); mp.ordIndex++;
+        discardInvalidOrder("重复指令");
         continue;
       }
       // 设为当前，等待所属国点击
       const u = game.units[o.formationId];
-      if (!u || u.nation !== nat) { mp.resolved.push({ nation: nat, orderIndex: mp.ordIndex, result: "cancel", reason: "番号无效" }); mp.ordIndex++; continue; }
+      if (!u || u.nation !== nat) { discardInvalidOrder("番号无效"); continue; }
       let route = null; try { if (o.dest) route = movement.validate(u, o.dest, false, o.route); } catch { /* An order may become unreachable as the board changes. */ }
       const invalid = !route;
+      if (invalid) { discardInvalidOrder(o.dest ? "目的地当前不可达" : "未指定目的地"); continue; }
       const pinned = computePinned(nat, u, o.dest || null);
       // 部分压制（仅在非完全压制时评估）
       let partial = false, partialX = 0, freeFormation = null;
